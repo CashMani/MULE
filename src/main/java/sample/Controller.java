@@ -10,6 +10,7 @@ import javafx.stage.Stage;
 import javafx.scene.control.Slider;
 
 import java.awt.*;
+import java.net.URL;
 import java.util.ArrayList;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ColorPicker;
@@ -21,8 +22,9 @@ import javafx.scene.control.Label;
 
 import java.awt.event.ActionEvent;
 import java.io.IOException;
+import java.util.ResourceBundle;
 
-public class Controller {
+public class Controller implements Initializable {
     @FXML
     public Slider difficultySlider;
     public Slider mapTypeSlider;
@@ -31,9 +33,15 @@ public class Controller {
     public Stage addPlayerStage = new Stage();
     public Label listPlayers = new Label();
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+    }
+
+
     @FXML
     public void aboutTeamClicked(Event event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("aboutTeam.fxml"));
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("aboutTeam.fxml"));
         Scene scene = new Scene(root);
 
         Main.primary.setScene(scene);
@@ -41,7 +49,7 @@ public class Controller {
 
     @FXML
     public void gameConfigClicked(Event event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("gameConfig.fxml"));
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("gameConfig.fxml"));
         Scene scene = new Scene(root);
 
         Main.primary.setScene(scene);
@@ -49,7 +57,7 @@ public class Controller {
 
     @FXML
     public void backToMainMenu(Event event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample.fxml"));
         Scene scene = new Scene(root);
 
         Main.primary.setScene(scene);
@@ -86,22 +94,25 @@ public class Controller {
         System.out.println("Difficulty Selected: " + Main.difficulty);
         System.out.println("Map Type Selected: " + Main.mapType);
 
-    }
-
-    @FXML
-    public void addAPlayer(Event event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("gameConfigAdvanced.fxml"));
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("addPlayers.fxml"));
         Scene scene = new Scene(root);
 
-        addPlayerStage.setScene(scene);
-
-        addPlayerStage.show();
+        Main.primary.setScene(scene);
     }
 
     @FXML
-    public void addNewPlayer(Event event) throws IOException {
-        Player newPlayer = new Player(namePicker.getText(),"", colorChooser.getValue().toString());
-        Main.players.add(newPlayer);
-        listPlayers.setText(listPlayers.getText() + Main.players.get(0).getName() + "\n");
+    public void playGame(Event event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("playScreen.fxml"));
+        Scene scene = new Scene(root);
+
+        Main.primary.setScene(scene);
     }
+
+
+//    @FXML
+//    public void addNewPlayer(Event event) throws IOException {
+//        Player newPlayer = new Player(namePicker.getText(),"", colorChooser.getValue().toString());
+//        Main.players.add(newPlayer);
+//        listPlayers.setText(listPlayers.getText() + Main.players.get(0).getName() + "\n");
+//    }
 }

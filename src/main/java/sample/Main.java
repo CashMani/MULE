@@ -25,7 +25,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         init();
         primary = primaryStage;
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample.fxml"));
         primary.setTitle("Welcome to M.U.L.E.");
         primary.setScene(new Scene(root, 500, 500));
         primary.show();
