@@ -35,14 +35,10 @@
             <Label layoutX="411.0" layoutY="127.0" text="Tournament" />
             <Separator layoutX="5.0" layoutY="161.0" prefHeight="17.0" prefWidth="490.0" />
             <Label layoutX="185.0" layoutY="178.0" text="Select the Map Type:" />
-            <Separator layoutX="4.0" layoutY="305.0" prefHeight="17.0" prefWidth="490.0" />
-            <Label layoutX="294.0" layoutY="322.0" text="Players:" />
-            <Button fx:id="playGame" defaultButton="true" layoutX="428.0" layoutY="445.0" mnemonicParsing="false" onMouseClicked="#gameConfigPage2" text="Play!" />
+            <Button fx:id="playGame" defaultButton="true" layoutX="380.0" layoutY="445.0" mnemonicParsing="false" onMouseClicked="#gameConfigPage2" text="Add Players" />
             <Slider id="mapTypeSlider" fx:id="mapTypeSlider" blockIncrement="1.0" layoutX="24.0" layoutY="242.0" majorTickUnit="1.0" max="2.0" min="1.0" minorTickCount="0" prefHeight="15.0" prefWidth="450.0" showTickMarks="true" snapToTicks="true" />
             <Label layoutX="13.0" layoutY="272.0" text="Standard" />
-            <Button fx:id="addAPlayer" layoutX="69.0" layoutY="376.0" mnemonicParsing="false" onMouseClicked="#addAPlayer" text="Add a Player" />
             <Label layoutX="426.0" layoutY="272.0" text="Random" />
-            <Label id="curPlayers" fx:id="curPlayers" alignment="TOP_LEFT" layoutX="312.0" layoutY="339.0" prefHeight="95.0" prefWidth="150.0" />
          </children>
       </Pane>
    </children>

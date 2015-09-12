@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Pane prefHeight="500.0" prefWidth="500.0">
+         <children>
+            <Button fx:id="backToMainBut" layoutX="14.0" layoutY="459.0" mnemonicParsing="false" onMouseClicked="#backToMainMenu" text="Back to Main Menu" />
+            <Accordion layoutX="-1.0" layoutY="1.0" prefHeight="444.0" prefWidth="500.0">
+              <panes>
+                <TitledPane text="Player 1">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="17.0" layoutY="14.0" text="Player Name:" />
+                              <TextField layoutX="104.0" layoutY="9.0" prefHeight="27.0" prefWidth="380.0" />
+                              <Label layoutX="17.0" layoutY="48.0" text="Select Race:" />
+                              <RadioButton layoutX="68.0" layoutY="77.0" mnemonicParsing="false" selected="true" text="Packer">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="race_player1" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton layoutX="68.0" layoutY="106.0" mnemonicParsing="false" text="Spheroid" toggleGroup="$race_player1" />
+                              <RadioButton layoutX="161.0" layoutY="77.0" mnemonicParsing="false" text="Humanoid" toggleGroup="$race_player1" />
+                              <RadioButton layoutX="161.0" layoutY="106.0" mnemonicParsing="false" text="Leggite" toggleGroup="$race_player1" />
+                              <RadioButton layoutX="265.0" layoutY="77.0" mnemonicParsing="false" text="Flapper" toggleGroup="$race_player1" />
+                              <RadioButton layoutX="265.0" layoutY="106.0" mnemonicParsing="false" text="Bonzoid" toggleGroup="$race_player1" />
+                              <RadioButton layoutX="347.0" layoutY="77.0" mnemonicParsing="false" text="Mechtron" toggleGroup="$race_player1" />
+                              <RadioButton layoutX="347.0" layoutY="106.0" mnemonicParsing="false" text="Gollumer" toggleGroup="$race_player1" />
+                              <Label layoutX="14.0" layoutY="141.0" text="Select Color:" />
+                              <ColorPicker layoutX="45.0" layoutY="168.0" prefHeight="27.0" prefWidth="440.0" />
+                           </children></AnchorPane>
+                  </content>
+                </TitledPane>
+                <TitledPane expanded="false" text="Player 2">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextField layoutX="104.0" layoutY="14.0" prefHeight="27.0" prefWidth="380.0" />
+                              <Label layoutX="14.0" layoutY="19.0" text="Player Name:" />
+                              <Label layoutX="14.0" layoutY="54.0" text="Select Race:" />
+                              <RadioButton layoutX="356.0" layoutY="110.0" mnemonicParsing="false" text="Gollumer">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="race_player2" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton layoutX="356.0" layoutY="83.0" mnemonicParsing="false" text="Mechtron" toggleGroup="$race_player2" />
+                              <RadioButton layoutX="264.0" layoutY="110.0" mnemonicParsing="false" text="Bonzoid" toggleGroup="$race_player2" />
+                              <RadioButton layoutX="264.0" layoutY="83.0" mnemonicParsing="false" text="Flapper" toggleGroup="$race_player2" />
+                              <RadioButton layoutX="162.0" layoutY="110.0" mnemonicParsing="false" text="Leggite" toggleGroup="$race_player2" />
+                              <RadioButton layoutX="162.0" layoutY="83.0" mnemonicParsing="false" text="Humanoid" toggleGroup="$race_player2" />
+                              <RadioButton layoutX="59.0" layoutY="110.0" mnemonicParsing="false" text="Spheroid" toggleGroup="$race_player2" />
+                              <RadioButton layoutX="59.0" layoutY="83.0" mnemonicParsing="false" selected="true" text="Packer" toggleGroup="$race_player2" />
+                              <ColorPicker layoutX="44.0" layoutY="172.0" prefHeight="27.0" prefWidth="440.0" />
+                              <Label layoutX="13.0" layoutY="151.0" text="Select Color:" />
+                           </children></AnchorPane>
+                  </content>
+                </TitledPane>
+                <TitledPane expanded="false" text="Player 3 (Optional)">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="19.0" text="Player Name:" />
+                              <TextField layoutX="104.0" layoutY="14.0" prefHeight="27.0" prefWidth="380.0" />
+                              <Label layoutX="14.0" layoutY="58.0" text="Select Race:" />
+                              <RadioButton layoutX="66.0" layoutY="86.0" mnemonicParsing="false" selected="true" text="Packer">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="race_player3" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton layoutX="66.0" layoutY="113.0" mnemonicParsing="false" text="Spheroid" toggleGroup="$race_player3" />
+                              <RadioButton layoutX="160.0" layoutY="86.0" mnemonicParsing="false" text="Humanoid" toggleGroup="$race_player3" />
+                              <RadioButton layoutX="160.0" layoutY="113.0" mnemonicParsing="false" text="Leggite" toggleGroup="$race_player3" />
+                              <RadioButton layoutX="266.0" layoutY="86.0" mnemonicParsing="false" text="Flapper" toggleGroup="$race_player3" />
+                              <RadioButton layoutX="266.0" layoutY="113.0" mnemonicParsing="false" text="Bonzoid" toggleGroup="$race_player3" />
+                              <RadioButton layoutX="350.0" layoutY="86.0" mnemonicParsing="false" text="Mechtron" toggleGroup="$race_player3" />
+                              <RadioButton layoutX="350.0" layoutY="113.0" mnemonicParsing="false" text="Gollumer" toggleGroup="$race_player3" />
+                              <Label layoutX="14.0" layoutY="159.0" text="Select Color:" />
+                              <ColorPicker layoutX="46.0" layoutY="188.0" prefHeight="27.0" prefWidth="440.0" />
+                           </children></AnchorPane>
+                  </content>
+                </TitledPane>
+                 <TitledPane expanded="false" text="Player 4 (Optional)">
+                    <content>
+                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextField layoutX="104.0" layoutY="14.0" prefHeight="27.0" prefWidth="380.0" />
+                              <Label layoutX="14.0" layoutY="19.0" text="Player Name:" />
+                              <Label layoutX="14.0" layoutY="61.0" text="Select Race:" />
+                              <RadioButton layoutX="352.0" layoutY="121.0" mnemonicParsing="false" text="Gollumer">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="race_player4" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton layoutX="352.0" layoutY="92.0" mnemonicParsing="false" text="Mechtron" toggleGroup="$race_player4" />
+                              <RadioButton layoutX="260.0" layoutY="121.0" mnemonicParsing="false" text="Bonzoid" toggleGroup="$race_player4" />
+                              <RadioButton layoutX="260.0" layoutY="92.0" mnemonicParsing="false" text="Flapper" toggleGroup="$race_player4" />
+                              <RadioButton layoutX="161.0" layoutY="121.0" mnemonicParsing="false" text="Leggite" toggleGroup="$race_player4" />
+                              <RadioButton layoutX="161.0" layoutY="92.0" mnemonicParsing="false" text="Humanoid" toggleGroup="$race_player4" />
+                              <RadioButton layoutX="70.0" layoutY="121.0" mnemonicParsing="false" text="Spheroid" toggleGroup="$race_player4" />
+                              <RadioButton layoutX="70.0" layoutY="92.0" mnemonicParsing="false" selected="true" text="Packer" toggleGroup="$race_player4" />
+                              <ColorPicker layoutX="40.0" layoutY="188.0" prefHeight="27.0" prefWidth="440.0" />
+                              <Label layoutX="16.0" layoutY="159.0" text="Select Color:" />
+                           </children></AnchorPane>
+                    </content>
+                 </TitledPane>
+              </panes>
+            </Accordion>
+            <Button fx:id="playButton" defaultButton="true" layoutX="438.0" layoutY="459.0" mnemonicParsing="false" onMouseClicked="#playGame" text="Play!" />
+         </children>
+      </Pane>
+   </children>
+</GridPane>
