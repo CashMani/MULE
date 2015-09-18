@@ -19,10 +19,10 @@
       <RowConstraints />
    </rowConstraints>
    <children>
-      <Pane prefHeight="500.0" prefWidth="500.0">
+      <Pane prefHeight="1000.0" prefWidth="1000.0">
          <children>
-            <Button fx:id="backToMainBut" layoutX="183.0" layoutY="446.0" mnemonicParsing="false" onMouseClicked="#backToMainMenu" text="Back to Main Menu" />
-            <Label layoutX="219.0" layoutY="242.0" text="You did it!" />
+            <Button fx:id="backToMainBut" layoutX="14.0" layoutY="906.0" mnemonicParsing="false" onMouseClicked="#backToMainMenu" text="Back to Main Menu" />
+            <Button layoutX="138.0" layoutY="153.0" mnemonicParsing="false" onMouseClicked="#helloWorld" text="Plain" />
          </children>
       </Pane>
    </children>
