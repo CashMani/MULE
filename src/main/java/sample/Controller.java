@@ -108,6 +108,11 @@ public class Controller implements Initializable {
         Main.primary.setScene(scene);
     }
 
+    @FXML
+    public void helloWorld(Event event) {
+        System.out.println("Hi, This is Sara's Button!");
+    }
+
 
 //    @FXML
 //    public void addNewPlayer(Event event) throws IOException {
