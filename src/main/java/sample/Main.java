@@ -35,6 +35,8 @@ public class Main extends Application {
         primary.show();
     }
 
+
+    //updated land selection
     public void landSelection () {
         boolean landBought  = false;
         switch (howMany) {
