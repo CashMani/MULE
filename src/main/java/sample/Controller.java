@@ -62,7 +62,20 @@ public class Controller implements Initializable {
 
         Main.primary.setScene(scene);
     }
+    @FXML
+    public void goToTown(Event event) throws IOException {
+        Scene scene = new Scene(FXMLLoader.load(getClass().getClassLoader().getResource("showTown.fxml")));
+        Main.primary.setScene(scene);
+    }
+    @FXML
+    public void getLand(Event event) throws IOException {
+        if (getX() > 75 && getX() < 675){
 
+        }
+        if (getX() > 675 && getX() < 1350) {
+
+        }
+    }
     @FXML
     public void exitGame(Event event) {
         Main.primary.close();
