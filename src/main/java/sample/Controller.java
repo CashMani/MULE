@@ -33,6 +33,12 @@ public class Controller implements Initializable {
     public Stage addPlayerStage = new Stage();
     public Label listPlayers = new Label();
 
+
+    public Main.NumPlayers howMany;
+
+    public int playerTurn = 1; // always begins with first player
+    public int turnRound = 0; // increases by one after every player goes once
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
@@ -120,4 +126,62 @@ public class Controller implements Initializable {
 //        Main.players.add(newPlayer);
 //        listPlayers.setText(listPlayers.getText() + Main.players.get(0).getName() + "\n");
 //    }
+
+
+    //updated land selection
+    public void landSelection () {
+        boolean landBought  = false;
+        switch (howMany) {
+            case TWO;
+                while (playerTurn < 3) {
+                    if (turnRound < 3) {
+                        //land is free!
+                        //set color of land
+                        //place land in inventory
+                    } else {
+                        //land cost $300
+                        if (CLICK LAND) {
+                            this.subtractMoney(300); // subtract money from user, "this" should be player
+                            landBought = true;
+                        }
+                    }
+
+                    playerTurn++;
+                }
+                break;
+            case THREE:
+                while (playerTurn < 4) {
+                    if (turnRound < 3) {
+                        //land is free!
+                    } else {
+                        //land cost $300
+                        if (CLICK LAND) {
+                            this.subtractMoney(300); // subtract money from user
+                            landBought = true;
+                        }
+                    }
+                    playerTurn++;
+                }
+                break;
+            case FOUR:
+                while (playerTurn < 5) {
+                    if (turnRound < 3) {
+                        //land is free!
+                    } else {
+                        //land cost $300
+                        if (CLICK LAND) {
+                            this.subtractMoney(300); // subtract money from user
+                            landBought = true;
+                        }
+                    }
+                    playerTurn++; //go to next player's turn
+                }
+                break;
+        }
+        turnRound++; //increase turn round
+        //Land selection ends when every player choose to not buy land in a round
+        if (landBought == true) {
+            landSelection();
+        }
+    }
 }
