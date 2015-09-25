@@ -14,7 +14,7 @@ public class Player implements Inventory {
         this.name = name;
         this.race = race;
         this.color = color;
-        moneyStash = 0; // changes based on certain criteria?
+        moneyStash = 1000;
     }
 
     public String toString() {
@@ -25,6 +25,10 @@ public class Player implements Inventory {
     public String getName() {
         return name;
     }
+
+    public Color getColor() { return this.color; }
+
+    public int getMoneyStash() { return this.moneyStash; }
 
     public void addMoney(int valueToAdd) {
         if (valueToAdd < 0) {

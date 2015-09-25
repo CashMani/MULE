@@ -7,10 +7,14 @@ import javafx.scene.Parent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
 import javafx.stage.Stage;
+import javafx.scene.paint.Paint;
 
 import java.awt.*;
 import java.net.URL;
@@ -21,6 +25,7 @@ import javafx.collections.FXCollections;
 
 import java.awt.event.ActionEvent;
 import java.io.IOException;
+import java.util.LinkedList;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
@@ -47,6 +52,67 @@ public class Controller implements Initializable {
     public TextField name_player4;
     public ToggleGroup race_player4;
     public ColorPicker color_player4;
+
+    public boolean[][] landTaken = new boolean[5][9];
+
+    //Map Buttons
+    public Button zeroZero;
+    public Button zeroOne;
+    public Button zeroTwo;
+    public Button zeroThree;
+    public Button zeroFour;
+    public Button zeroFive;
+    public Button zeroSix;
+    public Button zeroSeven;
+    public Button zeroEight;
+
+    public Button oneZero;
+    public Button oneOne;
+    public Button oneTwo;
+    public Button oneThree;
+    public Button oneFour;
+    public Button oneFive;
+    public Button oneSix;
+    public Button oneSeven;
+    public Button oneEight;
+
+    public Button twoZero;
+    public Button twoOne;
+    public Button twoTwo;
+    public Button twoThree;
+    public Button twoFive;
+    public Button twoSix;
+    public Button twoSeven;
+    public Button twoEight;
+
+    public Button threeZero;
+    public Button threeOne;
+    public Button threeTwo;
+    public Button threeThree;
+    public Button threeFour;
+    public Button threeFive;
+    public Button threeSix;
+    public Button threeSeven;
+    public Button threeEight;
+
+    public Button fourZero;
+    public Button fourOne;
+    public Button fourTwo;
+    public Button fourThree;
+    public Button fourFour;
+    public Button fourFive;
+    public Button fourSix;
+    public Button fourSeven;
+    public Button fourEight;
+
+
+    
+
+
+    public static LinkedList<Player> players = new LinkedList<>();
+    public static int currentPlayerTurn = 0;
+    public static boolean landSelectionMode = true;
+    public static int roundNum = 0;
 
     public Stage addPlayerStage = new Stage();
     public Label listPlayers = new Label();
@@ -134,13 +200,18 @@ public class Controller implements Initializable {
             Player player3 = null;
             Player player4 = null;
 
+            players.add(player1);
+            players.add(player2);
+
             System.out.println(race_player1.getSelectedToggle());
 
             if (!(name_player3.getText().isEmpty())) {
                 player3 = new Player(Verifier.verifyName(name_player3.getText()), Verifier.verifyRace(race_player3), color_player3.getValue());
+                players.add(player3);
                 Main.numPlayers = Main.NumPlayers.THREE;
                 if (!(name_player4.getText().isEmpty())) {
                     player4 = new Player(Verifier.verifyName(name_player4.getText()), Verifier.verifyRace(race_player4), color_player4.getValue());
+                    players.add(player4);
                     Main.numPlayers = Main.NumPlayers.FOUR;
                 }
             }
@@ -148,6 +219,8 @@ public class Controller implements Initializable {
             if (!(name_player4.getText().isEmpty())) {
                 player3 = new Player(Verifier.verifyName(name_player3.getText()), Verifier.verifyRace(race_player3), color_player3.getValue());
                 player4 = new Player(Verifier.verifyName(name_player4.getText()), Verifier.verifyRace(race_player4), color_player4.getValue());
+                players.add(player3);
+                players.add(player4);
                 Main.numPlayers = Main.NumPlayers.FOUR;
             }
 
@@ -168,8 +241,698 @@ public class Controller implements Initializable {
             Scene scene = new Scene(root);
 
             Main.primary.setScene(scene);
+
+            System.out.println("Welcome Players!");
+            GameController.landSelectionPhase();
         }
     }
+
+    @FXML
+    public void leaveTown(Event event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("playScreen.fxml"));
+        Scene scene = new Scene(root);
+
+        Main.primary.setScene(scene);
+    }
+
+    @FXML
+    public void goToTown(Event event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("townScreen.fxml"));
+        Scene scene = new Scene(root);
+
+        Main.primary.setScene(scene);
+    }
+
+    // Row Zero
+    public void zeroZeroClicked(Event event) {
+        if (!landTaken[0][0]) {
+            if (landSelectionMode || GameController.buyProperty()) {
+                zeroZero.setBackground(
+                        new Background(
+                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                        null,
+                                        null)));
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+                landTaken[0][0] = true;
+            }
+        }
+    }
+
+    public void zeroTwoClicked(Event event) {
+        if (!landTaken[0][2]) {
+            if (landSelectionMode || GameController.buyProperty()) {
+                zeroTwo.setBackground(
+                        new Background(
+                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                        null,
+                                        null)));
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+                landTaken[0][2] = true;
+            }
+        }
+    }
+
+    public void zeroOneClicked(Event event) {
+        if (!landTaken[0][1]) {
+            if (landSelectionMode || GameController.buyProperty()) {
+                zeroOne.setBackground(
+                        new Background(
+                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                        null,
+                                        null)));
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+                landTaken[0][1] = true;
+            }
+        }
+    }
+
+    public void zeroThreeClicked(Event event) {
+        if (!landTaken[0][3]) {
+            if (landSelectionMode || GameController.buyProperty()) {
+                zeroThree.setBackground(
+                        new Background(
+                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                        null,
+                                        null)));
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+                landTaken[0][3] = true;
+            }
+        }
+    }
+
+    public void zeroFourClicked(Event event) {
+        if (!landTaken[0][4]) {
+            if (landSelectionMode || GameController.buyProperty()) {
+                zeroFour.setBackground(
+                        new Background(
+                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                        null,
+                                        null)));
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+                landTaken[0][4] = true;
+            }
+        }
+    }
+
+    public void zeroFiveClicked(Event event) {
+        if (!landTaken[0][5]) {
+            if (landSelectionMode || GameController.buyProperty()) {
+                zeroFive.setBackground(
+                        new Background(
+                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                        null,
+                                        null)));
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+                landTaken[0][5] = true;
+            }
+        }
+    }
+
+    public void zeroSixClicked(Event event) {
+        if (!landTaken[0][6]) {
+            if (landSelectionMode || GameController.buyProperty()) {
+                zeroSix.setBackground(
+                        new Background(
+                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                        null,
+                                        null)));
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+                landTaken[0][6] = true;
+            }
+        }
+    }
+
+    public void zeroEightClicked(Event event) {
+        if (!landTaken[0][8]) {
+            if (landSelectionMode || GameController.buyProperty()) {
+                zeroEight.setBackground(
+                        new Background(
+                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                        null,
+                                        null)));
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+                landTaken[0][8] = true;
+            }
+        }
+    }
+
+    public void zeroSevenClicked(Event event) {
+        if (!landTaken[0][7]) {
+            if (landSelectionMode || GameController.buyProperty()) {
+                zeroSeven.setBackground(
+                        new Background(
+                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                        null,
+                                        null)));
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+                landTaken[0][7] = true;
+            }
+        }
+    }
+
+    //Row One
+
+    public void oneZeroClicked(Event event) {
+        if (!landTaken[1][0]) {
+            if (landSelectionMode || GameController.buyProperty()) {
+                oneZero.setBackground(
+                        new Background(
+                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                        null,
+                                        null)));
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+                landTaken[1][0] = true;
+            }
+        }
+    }
+
+    public void oneTwoClicked(Event event) {
+        if (!landTaken[1][2]) {
+            if (landSelectionMode || GameController.buyProperty()) {
+                oneTwo.setBackground(
+                        new Background(
+                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                        null,
+                                        null)));
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+                landTaken[1][2] = true;
+            }
+        }
+    }
+
+    public void oneOneClicked(Event event) {
+        if (!landTaken[1][1]) {
+            if (landSelectionMode || GameController.buyProperty()) {
+                oneOne.setBackground(
+                        new Background(
+                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                        null,
+                                        null)));
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+                landTaken[1][1] = true;
+            }
+        }
+    }
+
+    public void oneThreeClicked(Event event) {
+        if (!landTaken[1][3]) {
+            if (landSelectionMode || GameController.buyProperty()) {
+                oneThree.setBackground(
+                        new Background(
+                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                        null,
+                                        null)));
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+                landTaken[1][3] = true;
+            }
+        }
+    }
+
+    public void oneFourClicked(Event event) {
+        if (!landTaken[1][4]) {
+            if (landSelectionMode || GameController.buyProperty()) {
+                oneFour.setBackground(
+                        new Background(
+                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                        null,
+                                        null)));
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+                landTaken[1][4] = true;
+            }
+        }
+    }
+
+    public void oneFiveClicked(Event event) {
+        if (!landTaken[1][5]) {
+            if (landSelectionMode || GameController.buyProperty()) {
+                oneFive.setBackground(
+                        new Background(
+                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                        null,
+                                        null)));
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+                landTaken[1][5] = true;
+            }
+        }
+    }
+
+    public void oneSixClicked(Event event) {
+        if (!landTaken[1][6]) {
+            if (landSelectionMode || GameController.buyProperty()) {
+                oneSix.setBackground(
+                        new Background(
+                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                        null,
+                                        null)));
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+                landTaken[1][6] = true;
+            }
+        }
+    }
+
+    public void oneEightClicked(Event event) {
+        if (!landTaken[1][8]) {
+            if (landSelectionMode || GameController.buyProperty()) {
+                oneEight.setBackground(
+                        new Background(
+                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                        null,
+                                        null)));
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+                landTaken[1][8] = true;
+            }
+        }
+    }
+
+    public void oneSevenClicked(Event event) {
+        if (!landTaken[1][7]) {
+            if (landSelectionMode || GameController.buyProperty()) {
+                oneSeven.setBackground(
+                        new Background(
+                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                        null,
+                                        null)));
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+                landTaken[1][7] = true;
+            }
+        }
+    }
+
+    //Row Two
+    public void twoZeroClicked(Event event) {
+        if (!landTaken[2][0]) {
+            if (landSelectionMode || GameController.buyProperty()) {
+                twoZero.setBackground(
+                        new Background(
+                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                        null,
+                                        null)));
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+                landTaken[2][0] = true;
+            }
+        }
+    }
+
+    public void twoTwoClicked(Event event) {
+        if (!landTaken[2][2]) {
+            if (landSelectionMode || GameController.buyProperty()) {
+                twoTwo.setBackground(
+                        new Background(
+                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                        null,
+                                        null)));
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+                landTaken[2][2] = true;
+            }
+        }
+    }
+
+    public void twoOneClicked(Event event) {
+        if (!landTaken[2][1]) {
+            if (landSelectionMode || GameController.buyProperty()) {
+                twoOne.setBackground(
+                        new Background(
+                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                        null,
+                                        null)));
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+                landTaken[2][1] = true;
+            }
+        }
+    }
+
+    public void twoThreeClicked(Event event) {
+        if (!landTaken[2][3]) {
+            if (landSelectionMode || GameController.buyProperty()) {
+                twoThree.setBackground(
+                        new Background(
+                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                        null,
+                                        null)));
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+                landTaken[2][3] = true;
+            }
+        }
+    }
+
+    public void twoFiveClicked(Event event) {
+        if (!landTaken[2][5]) {
+            if (landSelectionMode || GameController.buyProperty()) {
+                twoFive.setBackground(
+                        new Background(
+                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                        null,
+                                        null)));
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+                landTaken[2][5] = true;
+            }
+        }
+    }
+
+    public void twoSixClicked(Event event) {
+        if (!landTaken[2][6]) {
+            if (landSelectionMode || GameController.buyProperty()) {
+                twoSix.setBackground(
+                        new Background(
+                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                        null,
+                                        null)));
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+                landTaken[2][6] = true;
+            }
+        }
+    }
+
+    public void twoEightClicked(Event event) {
+        if (!landTaken[2][8]) {
+            if (landSelectionMode || GameController.buyProperty()) {
+                twoEight.setBackground(
+                        new Background(
+                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                        null,
+                                        null)));
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+                landTaken[2][8] = true;
+            }
+        }
+    }
+
+    public void twoSevenClicked(Event event) {
+        if (!landTaken[2][7]) {
+            if (landSelectionMode || GameController.buyProperty()) {
+                twoSeven.setBackground(
+                        new Background(
+                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                        null,
+                                        null)));
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+                landTaken[2][7] = true;
+            }
+        }
+    }
+
+    //Row Three
+
+    public void threeZeroClicked(Event event) {
+        if (!landTaken[3][0]) {
+            if (landSelectionMode || GameController.buyProperty()) {
+                threeZero.setBackground(
+                        new Background(
+                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                        null,
+                                        null)));
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+                landTaken[3][0] = true;
+            }
+        }
+    }
+
+    public void threeTwoClicked(Event event) {
+        if (!landTaken[3][2]) {
+            if (landSelectionMode || GameController.buyProperty()) {
+                threeTwo.setBackground(
+                        new Background(
+                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                        null,
+                                        null)));
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+                landTaken[3][2] = true;
+            }
+        }
+    }
+
+    public void threeOneClicked(Event event) {
+        if (!landTaken[3][1]) {
+            if (landSelectionMode || GameController.buyProperty()) {
+                threeOne.setBackground(
+                        new Background(
+                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                        null,
+                                        null)));
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+                landTaken[3][1] = true;
+            }
+        }
+    }
+
+    public void threeThreeClicked(Event event) {
+        if (!landTaken[3][3]) {
+            if (landSelectionMode || GameController.buyProperty()) {
+                threeThree.setBackground(
+                        new Background(
+                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                        null,
+                                        null)));
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+                landTaken[3][3] = true;
+            }
+        }
+    }
+
+    public void threeFourClicked(Event event) {
+        if (!landTaken[3][4]) {
+            if (landSelectionMode || GameController.buyProperty()) {
+                threeFour.setBackground(
+                        new Background(
+                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                        null,
+                                        null)));
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+                landTaken[3][4] = true;
+            }
+        }
+    }
+
+    public void threeFiveClicked(Event event) {
+        if (!landTaken[3][5]) {
+            if (landSelectionMode || GameController.buyProperty()) {
+                threeFive.setBackground(
+                        new Background(
+                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                        null,
+                                        null)));
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+                landTaken[3][5] = true;
+            }
+        }
+    }
+
+    public void threeSixClicked(Event event) {
+        if (!landTaken[3][6]) {
+            if (landSelectionMode || GameController.buyProperty()) {
+                threeSix.setBackground(
+                        new Background(
+                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                        null,
+                                        null)));
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+                landTaken[3][6] = true;
+            }
+        }
+    }
+
+    public void threeEightClicked(Event event) {
+        if (!landTaken[3][8]) {
+            if (landSelectionMode || GameController.buyProperty()) {
+                threeEight.setBackground(
+                        new Background(
+                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                        null,
+                                        null)));
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+                landTaken[3][8] = true;
+            }
+        }
+    }
+
+    public void threeSevenClicked(Event event) {
+        if (!landTaken[3][7]) {
+            if (landSelectionMode || GameController.buyProperty()) {
+                threeSeven.setBackground(
+                        new Background(
+                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                        null,
+                                        null)));
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+                landTaken[3][7] = true;
+            }
+        }
+    }
+
+    //Row Four
+
+    public void fourZeroClicked(Event event) {
+        if (!landTaken[4][0]) {
+            if (landSelectionMode || GameController.buyProperty()) {
+                fourZero.setBackground(
+                        new Background(
+                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                        null,
+                                        null)));
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+                landTaken[4][0] = true;
+            }
+        }
+    }
+
+    public void fourTwoClicked(Event event) {
+        if (!landTaken[4][2]) {
+            if (landSelectionMode || GameController.buyProperty()) {
+                fourTwo.setBackground(
+                        new Background(
+                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                        null,
+                                        null)));
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+                landTaken[4][2] = true;
+            }
+        }
+    }
+
+    public void fourOneClicked(Event event) {
+        if (!landTaken[4][1]) {
+            if (landSelectionMode || GameController.buyProperty()) {
+                fourOne.setBackground(
+                        new Background(
+                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                        null,
+                                        null)));
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+                landTaken[4][1] = true;
+            }
+        }
+    }
+
+    public void fourThreeClicked(Event event) {
+        if (!landTaken[4][3]) {
+            if (landSelectionMode || GameController.buyProperty()) {
+                fourThree.setBackground(
+                        new Background(
+                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                        null,
+                                        null)));
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+                landTaken[4][3] = true;
+            }
+        }
+    }
+
+    public void fourFourClicked(Event event) {
+        if (!landTaken[4][4]) {
+            if (landSelectionMode || GameController.buyProperty()) {
+                fourFour.setBackground(
+                        new Background(
+                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                        null,
+                                        null)));
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+                landTaken[4][4] = true;
+            }
+        }
+    }
+
+    public void fourFiveClicked(Event event) {
+        if (!landTaken[4][5]) {
+            if (landSelectionMode || GameController.buyProperty()) {
+                fourFive.setBackground(
+                        new Background(
+                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                        null,
+                                        null)));
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+                landTaken[4][5] = true;
+            }
+        }
+    }
+
+    public void fourSixClicked(Event event) {
+        if (!landTaken[4][6]) {
+            if (landSelectionMode || GameController.buyProperty()) {
+                fourSix.setBackground(
+                        new Background(
+                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                        null,
+                                        null)));
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+                landTaken[4][6] = true;
+            }
+        }
+    }
+
+    public void fourEightClicked(Event event) {
+        if (!landTaken[4][8]) {
+            if (landSelectionMode || GameController.buyProperty()) {
+                fourEight.setBackground(
+                        new Background(
+                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                        null,
+                                        null)));
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+                landTaken[4][8] = true;
+            }
+        }
+    }
+
+    public void fourSevenClicked(Event event) {
+        if (!landTaken[4][7]) {
+            if (landSelectionMode || GameController.buyProperty()) {
+                fourSeven.setBackground(
+                        new Background(
+                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                        null,
+                                        null)));
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+                landTaken[4][7] = true;
+            }
+        }
+    }
+
+
+
 
 
 //    @FXML
