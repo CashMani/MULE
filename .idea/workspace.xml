@@ -1,14 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="263a2456-7145-415f-b620-cab273f3a152" name="Default" comment="">
+    <list default="true" id="417151d5-b762-4db3-a38f-3db05effaa73" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/sample/Verifier.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/resources/main/gameConfigAdvanced.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/gameConfigAdvanced.fxml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/sample/Controller.class" afterPath="$PROJECT_DIR$/build/classes/main/sample/Controller.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/sample/Main.class" afterPath="$PROJECT_DIR$/build/classes/main/sample/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/sample/Player.class" afterPath="$PROJECT_DIR$/build/classes/main/sample/Player.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sample/Controller.java" afterPath="$PROJECT_DIR$/src/main/java/sample/Controller.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sample/Inventory.java" afterPath="$PROJECT_DIR$/src/main/java/sample/Inventory.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sample/Main.java" afterPath="$PROJECT_DIR$/src/main/java/sample/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sample/Player.java" afterPath="$PROJECT_DIR$/src/main/java/sample/Player.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/resources/main/addPlayers.fxml" afterPath="$PROJECT_DIR$/build/resources/main/addPlayers.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/addPlayers.fxml" afterPath="$PROJECT_DIR$/src/main/resources/addPlayers.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MULE.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
+    <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,11 +40,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sample/Controller.java">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sample/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44117647">
-              <caret line="143" column="105" selection-start-line="143" selection-start-column="105" selection-end-line="143" selection-end-column="105" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -40,37 +54,17 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/sample/Inventory.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sample/Player.java">
+      <file leaf-file-name="addPlayers.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/addPlayers.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sample/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="102" selection-start-line="21" selection-start-column="102" selection-end-line="21" selection-end-column="102" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="playScreen.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sample/playScreen.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.310345">
-              <caret line="18" column="24" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="24" />
+            <state vertical-scroll-proportion="-10.862069">
+              <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -79,7 +73,48 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sample/Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.47859922">
+              <caret line="127" column="55" selection-start-line="127" selection-start-column="55" selection-end-line="127" selection-end-column="55" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Verifier.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sample/Verifier.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="31" column="86" selection-start-line="31" selection-start-column="86" selection-end-line="31" selection-end-column="86" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sample/Player.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -242,7 +277,8 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="1442594010471" />
+        <entry key="$PROJECT_DIR$" value="1443122306000" />
+        <entry key="$PROJECT_DIR$/../../MULE" value="1442001247000" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -269,119 +305,63 @@
               <option name="name" value="MULE" />
               <option name="projectBuildClasspath">
                 <list>
-                  <option value="C:/Program Files/gradle-2.6/src/announce" />
-                  <option value="C:/Program Files/gradle-2.6/src/antlr" />
-                  <option value="C:/Program Files/gradle-2.6/src/base-services" />
-                  <option value="C:/Program Files/gradle-2.6/src/base-services-groovy" />
-                  <option value="C:/Program Files/gradle-2.6/src/build-comparison" />
-                  <option value="C:/Program Files/gradle-2.6/src/build-init" />
-                  <option value="C:/Program Files/gradle-2.6/src/cli" />
-                  <option value="C:/Program Files/gradle-2.6/src/code-quality" />
-                  <option value="C:/Program Files/gradle-2.6/src/core" />
-                  <option value="C:/Program Files/gradle-2.6/src/dependency-management" />
-                  <option value="C:/Program Files/gradle-2.6/src/diagnostics" />
-                  <option value="C:/Program Files/gradle-2.6/src/ear" />
-                  <option value="C:/Program Files/gradle-2.6/src/ide" />
-                  <option value="C:/Program Files/gradle-2.6/src/ide-native" />
-                  <option value="C:/Program Files/gradle-2.6/src/internal-integ-testing" />
-                  <option value="C:/Program Files/gradle-2.6/src/internal-testing" />
-                  <option value="C:/Program Files/gradle-2.6/src/ivy" />
-                  <option value="C:/Program Files/gradle-2.6/src/jacoco" />
-                  <option value="C:/Program Files/gradle-2.6/src/javascript" />
-                  <option value="C:/Program Files/gradle-2.6/src/jetty" />
-                  <option value="C:/Program Files/gradle-2.6/src/language-groovy" />
-                  <option value="C:/Program Files/gradle-2.6/src/language-java" />
-                  <option value="C:/Program Files/gradle-2.6/src/language-jvm" />
-                  <option value="C:/Program Files/gradle-2.6/src/language-native" />
-                  <option value="C:/Program Files/gradle-2.6/src/language-scala" />
-                  <option value="C:/Program Files/gradle-2.6/src/launcher" />
-                  <option value="C:/Program Files/gradle-2.6/src/maven" />
-                  <option value="C:/Program Files/gradle-2.6/src/messaging" />
-                  <option value="C:/Program Files/gradle-2.6/src/model-core" />
-                  <option value="C:/Program Files/gradle-2.6/src/model-groovy" />
-                  <option value="C:/Program Files/gradle-2.6/src/native" />
-                  <option value="C:/Program Files/gradle-2.6/src/open-api" />
-                  <option value="C:/Program Files/gradle-2.6/src/osgi" />
-                  <option value="C:/Program Files/gradle-2.6/src/platform-base" />
-                  <option value="C:/Program Files/gradle-2.6/src/platform-jvm" />
-                  <option value="C:/Program Files/gradle-2.6/src/platform-native" />
-                  <option value="C:/Program Files/gradle-2.6/src/platform-play" />
-                  <option value="C:/Program Files/gradle-2.6/src/plugin-development" />
-                  <option value="C:/Program Files/gradle-2.6/src/plugin-use" />
-                  <option value="C:/Program Files/gradle-2.6/src/plugins" />
-                  <option value="C:/Program Files/gradle-2.6/src/publish" />
-                  <option value="C:/Program Files/gradle-2.6/src/reporting" />
-                  <option value="C:/Program Files/gradle-2.6/src/resources" />
-                  <option value="C:/Program Files/gradle-2.6/src/resources-http" />
-                  <option value="C:/Program Files/gradle-2.6/src/resources-s3" />
-                  <option value="C:/Program Files/gradle-2.6/src/resources-sftp" />
-                  <option value="C:/Program Files/gradle-2.6/src/scala" />
-                  <option value="C:/Program Files/gradle-2.6/src/signing" />
-                  <option value="C:/Program Files/gradle-2.6/src/sonar" />
-                  <option value="C:/Program Files/gradle-2.6/src/test-kit" />
-                  <option value="C:/Program Files/gradle-2.6/src/testing-native" />
-                  <option value="C:/Program Files/gradle-2.6/src/tooling-api" />
-                  <option value="C:/Program Files/gradle-2.6/src/tooling-api-builders" />
-                  <option value="C:/Program Files/gradle-2.6/src/ui" />
-                  <option value="C:/Program Files/gradle-2.6/src/wrapper" />
-                  <option value="C:/Program Files/gradle-2.6/lib/ant-1.9.3.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/ant-launcher-1.9.3.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/gradle-base-services-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/gradle-base-services-groovy-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/gradle-cli-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/gradle-core-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/gradle-docs-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/gradle-launcher-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/gradle-messaging-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/gradle-model-core-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/gradle-model-groovy-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/gradle-native-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/gradle-open-api-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/gradle-resources-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/gradle-tooling-api-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/gradle-ui-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/gradle-wrapper-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/groovy-all-2.3.10.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/plugins/gradle-announce-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/plugins/gradle-antlr-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/plugins/gradle-build-comparison-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/plugins/gradle-build-init-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/plugins/gradle-code-quality-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/plugins/gradle-dependency-management-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/plugins/gradle-diagnostics-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/plugins/gradle-ear-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/plugins/gradle-ide-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/plugins/gradle-ide-native-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/plugins/gradle-ivy-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/plugins/gradle-jacoco-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/plugins/gradle-javascript-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/plugins/gradle-jetty-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/plugins/gradle-language-groovy-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/plugins/gradle-language-java-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/plugins/gradle-language-jvm-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/plugins/gradle-language-native-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/plugins/gradle-language-scala-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/plugins/gradle-maven-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/plugins/gradle-osgi-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/plugins/gradle-platform-base-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/plugins/gradle-platform-jvm-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/plugins/gradle-platform-native-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/plugins/gradle-platform-play-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/plugins/gradle-plugin-development-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/plugins/gradle-plugin-use-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/plugins/gradle-plugins-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/plugins/gradle-publish-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/plugins/gradle-reporting-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/plugins/gradle-resources-http-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/plugins/gradle-resources-s3-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/plugins/gradle-resources-sftp-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/plugins/gradle-scala-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/plugins/gradle-signing-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/plugins/gradle-sonar-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/plugins/gradle-test-kit-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/plugins/gradle-testing-native-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/plugins/gradle-tooling-api-builders-2.6.jar" />
-                  <option value="C:/Program Files/gradle-2.6/lib/plugins/ivy-2.2.0.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/ant-1.9.3.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/ant-launcher-1.9.3.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/gradle-base-services-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/gradle-base-services-groovy-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/gradle-cli-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/gradle-core-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/gradle-docs-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/gradle-launcher-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/gradle-messaging-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/gradle-model-core-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/gradle-model-groovy-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/gradle-native-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/gradle-open-api-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/gradle-resources-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/gradle-tooling-api-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/gradle-ui-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/gradle-wrapper-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/groovy-all-2.3.10.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-announce-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-antlr-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-build-comparison-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-build-init-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-code-quality-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-dependency-management-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-diagnostics-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-ear-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-ide-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-ide-native-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-ivy-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-jacoco-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-javascript-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-jetty-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-language-groovy-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-language-java-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-language-jvm-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-language-native-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-language-scala-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-maven-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-osgi-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-platform-base-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-platform-jvm-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-platform-native-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-platform-play-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-plugin-development-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-plugin-use-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-plugins-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-publish-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-reporting-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-resources-http-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-resources-s3-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-resources-sftp-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-scala-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-signing-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-sonar-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-testing-native-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-tooling-api-builders-2.6.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/ivy-2.2.0.jar" />
                   <option value="$PROJECT_DIR$/buildSrc/src/main/java" />
                   <option value="$PROJECT_DIR$/buildSrc/src/main/groovy" />
                 </list>
@@ -398,20 +378,27 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/sample/playScreen.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/Inventory.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/addPlayers.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/Player.java" />
         <option value="$PROJECT_DIR$/src/main/java/sample/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/Verifier.java" />
         <option value="$PROJECT_DIR$/src/main/java/sample/Controller.java" />
       </list>
     </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
   </component>
   <component name="NamedScopeManager">
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="25" />
+    <option name="x" value="71" />
     <option name="y" value="23" />
-    <option name="width" value="1255" />
-    <option name="height" value="777" />
+    <option name="width" value="1398" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -436,7 +423,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -472,6 +459,10 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -501,22 +492,16 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../git/RepositoryCS2340" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="FullScreen" value="false" />
-    <property name="GenerateAntBuildDialog.generateSingleFile" value="false" />
-    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
-    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
-    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
-    <property name="GenerateAntBuildDialog.inclineRuntiemClasspath" value="false" />
-    <property name="GenerateAntBuildDialog.generateIdeaHomeProperty" value="false" />
-    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="mule" />
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -608,6 +593,74 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/Applications/Flash Player Debugger.app" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/Applications/Flash Player Debugger.app" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
     <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -624,13 +677,14 @@
       </ExternalSystemSettings>
       <method />
     </configuration>
-    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
       <module name="" />
-      <setting name="path" value="" />
       <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$" />
-      <setting name="debug" value="false" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="depsClasspath" value="false" />
+      <setting name="passParentEnv" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <setting name="launchBrowser" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -659,12 +713,21 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -695,6 +758,15 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
+      <method />
+    </configuration>
     <list size="1">
       <item index="0" class="java.lang.String" itemvalue="Application.Main" />
     </list>
@@ -710,82 +782,55 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="263a2456-7145-415f-b620-cab273f3a152" name="Default" comment="" />
-      <created>1442600282925</created>
+      <changelist id="417151d5-b762-4db3-a38f-3db05effaa73" name="Default" comment="" />
+      <created>1443122387070</created>
       <option name="number" value="Default" />
-      <updated>1442600282925</updated>
+      <updated>1443122387070</updated>
+      <workItem from="1443122388757" duration="7060000" />
     </task>
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="7060000" />
+  </component>
   <component name="ToolWindowManager">
-    <frame x="25" y="23" width="1255" height="777" extended-state="6" />
+    <frame x="71" y="23" width="1398" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18565737" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32920793" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32920793" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24964234" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32958305" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39975247" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32958305" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
-  </component>
-  <component name="Vcs.Log.UiProperties">
-    <option name="RECENTLY_FILTERED_USER_GROUPS">
-      <collection />
-    </option>
-    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-      <collection />
-    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -793,23 +838,7 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="112" column="38" selection-start-line="112" selection-start-column="38" selection-end-line="112" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="52" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/playScreen.fxml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/gameConfig.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -820,23 +849,7 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="60" selection-start-line="42" selection-start-column="60" selection-end-line="42" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="59" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/playScreen.fxml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/aboutTeam.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -849,8 +862,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sample/playScreen.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.310345">
-          <caret line="18" column="24" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.55925435">
+          <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -858,10 +871,54 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/sample.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="102" selection-start-line="21" selection-start-column="102" selection-end-line="21" selection-end-column="102" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/sample.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/playScreen.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35952064">
+          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/MULE/sample/gameConfigAdvanced.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.65912116">
+          <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/javafx-src.zip!/javafx/beans/property/ObjectPropertyBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="131" column="0" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -869,24 +926,81 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/sample/Player.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/javafx-src.zip!/javafx/scene/control/TextField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+          <folding>
+            <element signature="e#3321#3322#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/javafx-src.zip!/javafx/scene/control/TextInputControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="280" column="0" selection-start-line="280" selection-start-column="0" selection-end-line="280" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/javafx-src.zip!/javafx/scene/control/ComboBoxBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29571983">
+          <caret line="167" column="0" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/Verifier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="86" selection-start-line="31" selection-start-column="86" selection-end-line="31" selection-end-column="86" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sample/Inventory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/addPlayers.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.862069">
+          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sample/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44117647">
-          <caret line="143" column="105" selection-start-line="143" selection-start-column="105" selection-end-line="143" selection-end-column="105" />
-          <folding />
+        <state vertical-scroll-proportion="0.47859922">
+          <caret line="127" column="55" selection-start-line="127" selection-start-column="55" selection-end-line="127" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
