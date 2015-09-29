@@ -14,12 +14,13 @@ public class Main extends Application {
     public enum Difficulty { BEGINNER, STANDARD, TOURNAMENT};
     public enum MapType {STANDARD, RANDOM};
     public enum NumPlayers {ONE, TWO, THREE, FOUR};
+    public enum Race {PACKER, SPHEROID, HUMANOID, LEGGITE, FLAPPER, BONZOID, MECHTRON, GOLLUMER};
 
     public static ArrayList<Player> players = new ArrayList<>();
 
     public static Difficulty difficulty = Difficulty.BEGINNER;
     public static MapType mapType = MapType.STANDARD;
-    //public static NumPlayers numPlayers = NumPlayers.ONE; // what does this do? why define just one?
+    public static NumPlayers numPlayers = NumPlayers.TWO;
 
     @Override
     public void start(Stage primaryStage) throws Exception{

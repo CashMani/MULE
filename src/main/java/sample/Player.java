@@ -1,29 +1,34 @@
 package sample;
 
+import javafx.scene.paint.Color;
 /**
  * Created by mani on 9/10/15.
  */
 public class Player implements Inventory {
     private String name;
-    private String race;
-    private String color;
+    private Main.Race race;
+    private Color color;
     private int moneyStash;
 
-    public Player(String name, String race, String color) {
+    public Player(String name, Main.Race race, Color color) {
         this.name = name;
         this.race = race;
         this.color = color;
-        moneyStash = 0; // changes based on certain criteria?
+        moneyStash = 1000;
     }
 
     public String toString() {
-        String ret = "Name: " + this.name + "\n" + "Race: " + this.race + "\n" + "Color: " + this.color;
+        String ret = "Name: " + this.name + "\n" + "Race: " + this.race.toString() + "\n" + "Color: " + this.color.toString();
         return ret;
     }
 
     public String getName() {
         return name;
     }
+
+    public Color getColor() { return this.color; }
+
+    public int getMoneyStash() { return this.moneyStash; }
 
     public void addMoney(int valueToAdd) {
         if (valueToAdd < 0) {
@@ -37,7 +42,7 @@ public class Player implements Inventory {
         if (valueToSubtract < 0) {
             System.out.println("The value is negative.");
         } else {
-            moneyStash = moneyStash + valueToSubtract;
+            moneyStash = moneyStash - valueToSubtract;
         }
     }
 }
