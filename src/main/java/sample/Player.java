@@ -107,6 +107,13 @@ public class Player implements InventoryInterface {
         }
     }
 
+    public String inventoryToString() {
+        String inventoryList = (this.name + "'s Inventory: \n Money: " + inventory.moneyStash + "\n Energy: "
+            + inventory.energy + "\n Food: " + inventory.food + "\n Ore: " + inventory.ore);
+            // + "\n Mules: " + mules.toString();
+        return inventoryList;
+    }
+
 
 
 //***************************************************************************************************************

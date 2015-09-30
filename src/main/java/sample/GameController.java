@@ -1,4 +1,5 @@
 package sample;
+import javafx.util.Duration;
 
 
 /**
@@ -6,6 +7,7 @@ package sample;
  */
 public class GameController {
 
+    //***************************** Land Selection ********************************************************************
     public static void nextTurn() {
         if (Controller.currentPlayerTurn == Controller.players.size() - 1) {
             Controller.currentPlayerTurn = 0;
@@ -33,5 +35,20 @@ public class GameController {
 
     public static void landSelectionPhase() {
         System.out.println(Controller.players.get(Controller.currentPlayerTurn).getName() + " please select a plot of land...");
+    }
+
+    //********************************** Main Game Controls *********************************************
+    public static void startTurn() {
+        Player cur = Controller.players.get(Controller.currentPlayerTurn);
+        Duration turnTime = calcTime(cur);
+    }
+
+    public static void endTurn() {
+        Player cur = Controller.players.get(Controller.currentPlayerTurn);
+            System.out.println(cur.getName() + "'s turn is over.");
+            System.out.println(cur.inventoryToString());
+    }
+    private Duration calcTime(Player cur) {
+
     }
 }

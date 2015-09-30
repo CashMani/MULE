@@ -6,19 +6,16 @@ import java.util.Random;
 public class Pub {
 
     private Random rand;
-    private int[] roundBonus = {50, 50, 50, 100, 100, 100, 100, 150, 150, 150, 150, 200; }
     private int timeBonus;
-    private int currentRound;
 
 
     public Pub(int round, int timeRemaining) {
         rand = new Random();
         timeBonus = timeRemaining;
-        currentRound = round;
     }
 
     public int gamble() {
-        int moneyBonus = roundBonus[currentRound - 1] * (risk());
+        int moneyBonus = Round.getRoundBonus() * (risk());
         if (moneyBonus > 250) {
             return 250;
         } else {
