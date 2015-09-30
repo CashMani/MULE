@@ -3,7 +3,7 @@ package sample;
 /**
  * Created by mckenzieelliott on 9/18/15.
  */
-public interface Inventory {
+public interface InventoryInterface {
 
     //int moneyStash;
 
