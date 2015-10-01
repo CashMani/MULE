@@ -107,7 +107,8 @@ public class Controller implements Initializable {
 
 
     
-
+    //Timer
+    public static Timer timer = new Timer();
 
     public static LinkedList<Player> players = new LinkedList<>();
     public static int currentPlayerTurn = 0;
@@ -931,8 +932,26 @@ public class Controller implements Initializable {
         }
     }
 
+    @FXML
+    public void goToPub(Event event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("Pub.fxml"));
+        Scene scene = new Scene(root);
 
+        Main.primary.setScene(scene);
+    }
 
+    @FXML
+    public void returnToTown(Event event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("townScreen.fxml"));
+        Scene scene = new Scene(root);
+
+        Main.primary.setScene(scene);
+    }
+
+    @FXML
+    public void gamble(Event event) {
+
+    }
 
 
 //    @FXML
