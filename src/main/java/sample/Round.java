@@ -5,30 +5,24 @@ package sample;
  */
 public class Round {
 
-    public static int round;
     public static int[] foodReq = {3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5};
     public static int[] randEventFactor = {25, 25, 25, 50, 50, 50, 50, 75, 75, 75, 75, 100};
     public static int[] roundBonus = {50, 50, 50, 100, 100, 100, 100, 150, 150, 150, 150, 200};
 
     public Round() {
-        round = 0;
-    }
 
-    public static void increment() {
-        round++;
-        System.out.println("Game now set to round " + round);
     }
 
     public static int getFoodReq() {
-        return foodReq[round];
+        return foodReq[Controller.roundNum];
     }
 
     public static int getRandEventFactor() {
-        return randEventFactor[round];
+        return randEventFactor[Controller.roundNum];
     }
 
     public static int getRoundBonus() {
-        return roundBonus[round];
+        return roundBonus[Controller.roundNum];
     }
 
 }

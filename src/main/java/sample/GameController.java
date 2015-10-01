@@ -9,6 +9,9 @@ public class GameController {
 
     //***************************** Land Selection ********************************************************************
     public static void nextTurn() {
+        if (Controller.currentPlayerTurn == 0 && Controller.roundNum == 0) {
+            
+        } else endTurn();
         if (Controller.currentPlayerTurn == Controller.players.size() - 1) {
             Controller.currentPlayerTurn = 0;
             Controller.roundNum++;
@@ -19,6 +22,7 @@ public class GameController {
             }
         }
         else Controller.currentPlayerTurn++;
+        startTurn();
     }
 
     public static boolean buyProperty() {
@@ -40,16 +44,20 @@ public class GameController {
     //********************************** Main Game Controls *********************************************
     public static void startTurn() {
         Player cur = Controller.players.get(Controller.currentPlayerTurn);
-        Duration turnTime = calcTime(cur);
+        int timeInSec = 50;
+        if (Round.getFoodReq() <= cur.getFood()) timeInSec = 50;
+        else if (Round.getFoodReq() > cur.getFood() && cur.getFood() > 0) timeInSec = 30;
+        else timeInSec = 5;
+        Duration turnTime = new Duration(timeInSec * 1000);
+
+        Controller.timer.setTimeline(turnTime);
+        Controller.timer.startTimer();
     }
 
     public static void endTurn() {
+        Controller.timer.stopTimer();
         Player cur = Controller.players.get(Controller.currentPlayerTurn);
             System.out.println(cur.getName() + "'s turn is over.");
             System.out.println(cur.inventoryToString());
-    }
-
-    private Duration calcTime(Player cur) {
-
     }
 }
