@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
@@ -20,14 +22,17 @@
    <children>
       <Pane prefHeight="500.0" prefWidth="500.0">
          <children>
-            <Label layoutX="82.0" layoutY="119.0" text="Welcome to M.U.L.E.">
+            <ImageView fitHeight="507.0" fitWidth="500.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../resources/Mule%20Opening.jpg" />
+               </image>
+            </ImageView>
+            <Button id="aboutTeamBut" fx:id="aboutTeamBut" layoutX="366.0" layoutY="426.0" mnemonicParsing="false" onMouseClicked="#aboutTeamClicked" text="About the Team" />
+            <Button id="gameConfigBut" fx:id="gameConfigBut" layoutX="193.0" layoutY="309.0" mnemonicParsing="false" onMouseClicked="#gameConfigClicked" style="-fx-background-color: #000000;" text="PLAY!" textFill="#d0cfcf">
                <font>
-                  <Font size="34.0" />
-               </font>
-            </Label>
-            <Button id="aboutTeamBut" fx:id="aboutTeamBut" layoutX="190.0" layoutY="287.0" mnemonicParsing="false" onMouseClicked="#aboutTeamClicked" text="About the Team" />
-            <Button id="gameConfigBut" fx:id="gameConfigBut" layoutX="179.0" layoutY="250.0" mnemonicParsing="false" onMouseClicked="#gameConfigClicked" text="Game Configuration" />
-            <Button fx:id="exitBut" layoutX="230.0" layoutY="320.0" mnemonicParsing="false" onMouseClicked="#exitGame" text="Exit" />
+                  <Font name="System Bold" size="34.0" />
+               </font></Button>
+            <Button fx:id="exitBut" layoutX="437.0" layoutY="460.0" mnemonicParsing="false" onMouseClicked="#exitGame" text="Exit" />
          </children>
       </Pane>
    </children>
