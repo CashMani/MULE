@@ -48,6 +48,7 @@ public class GameController {
             System.out.println(cur.getName() + "'s turn is over.");
             System.out.println(cur.inventoryToString());
     }
+
     private Duration calcTime(Player cur) {
 
     }
