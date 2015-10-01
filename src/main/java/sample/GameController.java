@@ -10,7 +10,7 @@ public class GameController {
     //***************************** Land Selection ********************************************************************
     public static void nextTurn() {
         if (Controller.currentPlayerTurn == 0 && Controller.roundNum == 0) {
-            
+
         } else endTurn();
         if (Controller.currentPlayerTurn == Controller.players.size() - 1) {
             Controller.currentPlayerTurn = 0;
@@ -57,7 +57,7 @@ public class GameController {
     public static void endTurn() {
         Controller.timer.stopTimer();
         Player cur = Controller.players.get(Controller.currentPlayerTurn);
-            System.out.println(cur.getName() + "'s turn is over.");
-            System.out.println(cur.inventoryToString());
+        System.out.println(cur.getName() + "'s turn is over.");
+        System.out.println(cur.inventoryToString());
     }
 }

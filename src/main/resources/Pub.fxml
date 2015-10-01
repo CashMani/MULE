@@ -17,7 +17,7 @@
   <children>
     <ImageView fitHeight="712.5" fitWidth="950.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
       <image>
-        <Image url="Pub Interior.jpg" />
+        <Image url="@Pub%20Interior.jpg" />
       </image>
     </ImageView>
     <Pane prefHeight="750.0" prefWidth="900.0">

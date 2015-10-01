@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.text.*?>
@@ -21,20 +22,22 @@
    <children>
       <Pane prefHeight="500.0" prefWidth="500.0">
          <children>
-            <Label layoutX="82.0" layoutY="14.0" text="Welcome to M.U.L.E.">
+            <ImageView fitHeight="500.0" fitWidth="500.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../resources/Mule%20Opening.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="170.0" layoutY="291.0" text="Team 15: What Ratio?">
                <font>
-                  <Font size="34.0" />
-               </font>
-            </Label>
-            <Label layoutX="183.0" layoutY="85.0" text="Team 15: What Ratio?" />
-            <Label layoutX="48.0" layoutY="164.0" text="Mani Japra" />
-            <Label layoutX="222.0" layoutY="164.0" text="Alex Link" />
-            <Label layoutX="383.0" layoutY="164.0" text="Sara Norris" />
-            <Label layoutX="48.0" layoutY="233.0" text="McKenzie Elliott" />
-            <Label layoutX="196.0" layoutY="233.0" text="Joanna Parkhurst" />
-            <Label layoutX="338.0" layoutY="233.0" text="Justin Thornburgh" />
-            <Label layoutX="201.0" layoutY="136.0" text="Team Members:" />
-            <Button fx:id="backToMainBut" layoutX="182.0" layoutY="429.0" mnemonicParsing="false" onMouseClicked="#backToMainMenu" text="Back to Main Menu" />
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <Label layoutX="62.0" layoutY="341.0" text="Mani Japra" />
+            <Label layoutX="223.0" layoutY="341.0" text="Alex Link" />
+            <Label layoutX="385.0" layoutY="341.0" text="Sara Norris" />
+            <Label layoutX="47.0" layoutY="388.0" text="McKenzie Elliott" />
+            <Label layoutX="198.0" layoutY="388.0" text="Joanna Parkhurst" />
+            <Label layoutX="364.0" layoutY="388.0" text="Justin Thornburgh" />
+            <Button fx:id="backToMainBut" layoutX="28.0" layoutY="460.0" mnemonicParsing="false" onMouseClicked="#backToMainMenu" text="Back to Main Menu" />
          </children>
       </Pane>
    </children>
