@@ -95,6 +95,8 @@
                   <Button fx:id="fourEight" mnemonicParsing="false" onMouseClicked="#fourEightClicked" opacity="0.1" prefHeight="100.0" prefWidth="153.0" text="2 Mountain" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
                </children>
             </GridPane>
+            <Label layoutX="22.0" layoutY="17.0" text="Time Remaining:" />
+            <Label fx:id="timeLeftDisp" layoutX="141.0" layoutY="18.0" text="TimeLeft" />
          </children>
       </Pane>
    </children>

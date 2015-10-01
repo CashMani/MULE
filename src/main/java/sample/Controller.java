@@ -1,5 +1,7 @@
 package sample;
 
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -15,12 +17,14 @@ import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
 import javafx.stage.Stage;
 import javafx.scene.paint.Paint;
+import javafx.util.Duration;
 
 import java.awt.*;
 import java.net.URL;
 import java.util.ArrayList;
 
 import javafx.collections.FXCollections;
+import sun.util.resources.cldr.sr.TimeZoneNames_sr_Latn;
 
 
 import java.awt.event.ActionEvent;
@@ -105,10 +109,10 @@ public class Controller implements Initializable {
     public Button fourSeven;
     public Button fourEight;
 
-
-    
     //Timer
     public static Timer timer = new Timer();
+//    public Label timeLeftDisp;
+//    public final Timeline timeline = new Timeline(new KeyFrame(new Duration(1000) , ae -> displayTime()));
 
     public static LinkedList<Player> players = new LinkedList<>();
     public static int currentPlayerTurn = 0;
@@ -126,9 +130,12 @@ public class Controller implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+//        timeline.play();
     }
 
+//    public final void displayTime() {
+//        timeLeftDisp.setText(Controller.timer.getTimeRemaining().toString());
+//    }
 
     @FXML
     public void aboutTeamClicked(Event event) throws IOException {
