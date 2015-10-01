@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="417151d5-b762-4db3-a38f-3db05effaa73" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sample/Controller.java" afterPath="$PROJECT_DIR$/src/main/java/sample/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sample/GameController.java" afterPath="$PROJECT_DIR$/src/main/java/sample/GameController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sample/Timer.java" afterPath="$PROJECT_DIR$/src/main/java/sample/Timer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/playScreen.fxml" afterPath="$PROJECT_DIR$/src/main/resources/playScreen.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="417151d5-b762-4db3-a38f-3db05effaa73" name="Default" comment="" />
     <ignored path="MULE.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -853,12 +847,12 @@
       <workItem from="1443728961543" duration="2514000" />
       <workItem from="1443733644428" duration="786000" />
       <workItem from="1443734979236" duration="92000" />
-      <workItem from="1443735152448" duration="3657000" />
+      <workItem from="1443735152448" duration="3753000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32315000" />
+    <option name="totallyTimeSpent" value="32411000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="41" y="23" width="1399" height="877" extended-state="6" />
