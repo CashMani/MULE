@@ -931,8 +931,8 @@ public class Controller implements Initializable {
         }
     }
 
-
-
+    public void goToPub(Event event) {
+    }
 
 
 //    @FXML
