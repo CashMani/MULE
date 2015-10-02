@@ -1,17 +1,20 @@
 package sample;
 import java.util.Random;
+import javafx.util.Duration;
 /**
  * Created by Alexandra Link on 9/29/15.
  */
 public class Pub {
 
     private Random rand;
-    private int timeBonus;
+    private Duration time;
+    private double timeBonus;
 
 
-    public Pub(int round, int timeRemaining) {
+    public Pub(int round, Duration timeRemaining) {
         rand = new Random();
-        timeBonus = timeRemaining;
+        time = timeRemaining;
+        timeBonus = time.toSeconds();
     }
 
     public int gamble() {
@@ -25,6 +28,7 @@ public class Pub {
 
     private int risk() {
         int bonusMax = 0;
+        System.out.println("PUB used " + timeBonus + " as the time bonus calc.");
         if (timeBonus >= 37) {
             bonusMax = 200;
         } else if (timeBonus >= 25 && timeBonus < 37) {
