@@ -125,7 +125,7 @@ public class Controller implements Initializable {
 
     public Main.NumPlayers howMany;
 
-    public int playerTurn = 1; // always begins with first player
+    public int playerTurn = 0; // always begins with first player
     public int turnRound = 0; // increases by one after every player goes once
 
     @Override
@@ -280,10 +280,10 @@ public class Controller implements Initializable {
                                 new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
-                GameController.nextTurn();
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
                         players.get(currentPlayerTurn).getColor(),zeroZero));
+                GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[0][0] = true;
             }
@@ -1092,10 +1092,10 @@ public class Controller implements Initializable {
         Duration timeToGamble = timer.stopTimer();
         Pub pubFun = new Pub(roundNum, timeToGamble);
         int earnings = pubFun.gamble();
-        System.out.println(players.get(currentPlayerTurn).getName() + " just won $" + earnings);
+        System.out.println(players.get(currentPlayerTurn).getName() + " just won $" + earnings + "\n");
         //Try to get a visual to pop up later
         players.get(currentPlayerTurn).addMoney(earnings);
-        GameController.endTurn();
+        GameController.nextTurn();
     }
 
 

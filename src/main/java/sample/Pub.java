@@ -28,7 +28,7 @@ public class Pub {
 
     private int risk() {
         int bonusMax = 0;
-        System.out.println("PUB used " + timeBonus + " as the time bonus calc.");
+        System.out.println("\nPUB used " + timeBonus + " seconds as the time bonus calc.\n");
         if (timeBonus >= 37) {
             bonusMax = 200;
         } else if (timeBonus >= 25 && timeBonus < 37) {

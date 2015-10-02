@@ -12,6 +12,7 @@ public class Player implements InventoryInterface {
     private Inventory inventory;
     private ArrayList<LandPlot> landOwned;
     private int landCount;
+    private int score;
 
     public Player(String name, Main.Race race, Color color) {
         this.name = name;
@@ -27,6 +28,14 @@ public class Player implements InventoryInterface {
         return ret;
     }
 
+    public int getScore() {
+        calculateScore();
+        return score;
+    }
+
+    public void calculateScore() {
+        score = 1 * getMoneyStash() + 500 * getLandCount() + 1 * (getFood() + getEnergy() + getOre());
+    }
 
     public String getName() {return this.name; }
 
@@ -39,6 +48,8 @@ public class Player implements InventoryInterface {
     public int getFood() {return this.inventory.food; }
 
     public int getOre() {return this.inventory.ore; }
+
+    public int getLandCount() { return this.landCount; }
 
     public void addLand(LandPlot land) {
         landOwned.add(land);
