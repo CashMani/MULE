@@ -135,54 +135,7 @@ public class Controller implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        map[0][0] = zeroZero;
-        map[0][1] = zeroOne;
-        map[0][2] = zeroTwo;
-        map[0][3] = zeroThree;
-        map[0][4] = zeroFour;
-        map[0][5] = zeroFive;
-        map[0][6] = zeroSix;
-        map[0][7] = zeroSeven;
-        map[0][8] = zeroEight;
 
-        map[1][0] = oneZero;
-        map[1][1] = oneOne;
-        map[1][2] = oneTwo;
-        map[1][3] = oneThree;
-        map[1][4] = oneFour;
-        map[1][5] = oneFive;
-        map[1][6] = oneSix;
-        map[1][7] = oneSeven;
-        map[1][8] = oneEight;
-
-        map[2][0] = twoZero;
-        map[2][1] = twoOne;
-        map[2][2] = twoTwo;
-        map[2][3] = twoThree;
-        map[2][5] = twoFive;
-        map[2][6] = twoSix;
-        map[2][7] = twoSeven;
-        map[2][8] = twoEight;
-
-        map[3][0] = threeZero;
-        map[3][1] = threeOne;
-        map[3][2] = threeTwo;
-        map[3][3] = threeThree;
-        map[3][4] = threeFour;
-        map[3][5] = threeFive;
-        map[3][6] = threeSix;
-        map[3][7] = threeSeven;
-        map[3][8] = threeEight;
-
-        map[4][0] = fourZero;
-        map[4][1] = fourOne;
-        map[4][2] = fourTwo;
-        map[4][3] = fourThree;
-        map[4][4] = fourFour;
-        map[4][5] = fourFive;
-        map[4][6] = fourSix;
-        map[4][7] = fourSeven;
-        map[4][8] = fourEight;
 //        timeline.play();
     }
 
@@ -304,6 +257,54 @@ public class Controller implements Initializable {
         }
 
         if (validNames) {
+            map[0][0] = zeroZero;
+            map[0][1] = zeroOne;
+            map[0][2] = zeroTwo;
+            map[0][3] = zeroThree;
+            map[0][4] = zeroFour;
+            map[0][5] = zeroFive;
+            map[0][6] = zeroSix;
+            map[0][7] = zeroSeven;
+            map[0][8] = zeroEight;
+
+            map[1][0] = oneZero;
+            map[1][1] = oneOne;
+            map[1][2] = oneTwo;
+            map[1][3] = oneThree;
+            map[1][4] = oneFour;
+            map[1][5] = oneFive;
+            map[1][6] = oneSix;
+            map[1][7] = oneSeven;
+            map[1][8] = oneEight;
+
+            map[2][0] = twoZero;
+            map[2][1] = twoOne;
+            map[2][2] = twoTwo;
+            map[2][3] = twoThree;
+            map[2][5] = twoFive;
+            map[2][6] = twoSix;
+            map[2][7] = twoSeven;
+            map[2][8] = twoEight;
+
+            map[3][0] = threeZero;
+            map[3][1] = threeOne;
+            map[3][2] = threeTwo;
+            map[3][3] = threeThree;
+            map[3][4] = threeFour;
+            map[3][5] = threeFive;
+            map[3][6] = threeSix;
+            map[3][7] = threeSeven;
+            map[3][8] = threeEight;
+
+            map[4][0] = fourZero;
+            map[4][1] = fourOne;
+            map[4][2] = fourTwo;
+            map[4][3] = fourThree;
+            map[4][4] = fourFour;
+            map[4][5] = fourFive;
+            map[4][6] = fourSix;
+            map[4][7] = fourSeven;
+            map[4][8] = fourEight;
             Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("playScreen.fxml"));
             Scene scene = new Scene(root);
 
@@ -339,7 +340,7 @@ public class Controller implements Initializable {
                 System.out.println(coloredMap[0][i].toString());
                 b.setBackground(
                         new Background(
-                                new BackgroundFill(valueOf(coloredMap[0][i].toString()),
+                                new BackgroundFill(coloredMap[0][i],
                                         null,
                                         null)));
             }
