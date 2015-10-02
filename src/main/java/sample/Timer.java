@@ -29,7 +29,6 @@ public class Timer {
     public Duration stopTimer() {
         stopTime = timeline.getCurrentTime();
         timeline.stop();
-        System.out.println("Timer stopped at " + startTime.subtract(stopTime).toSeconds() + "\n");
         return startTime.subtract(stopTime);
     }
 
