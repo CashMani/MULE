@@ -72,6 +72,7 @@ public class GameController {
         if (Round.getFoodReq() <= cur.getFood()) timeInSec = 50;
         else if (Round.getFoodReq() > cur.getFood() && cur.getFood() > 0) timeInSec = 30;
         else timeInSec = 5;
+        System.out.println(cur.getName() + " has " + timeInSec + " seconds to play.");
         Duration turnTime = new Duration(timeInSec * 1000);
 
         Controller.timer.setTimeline(turnTime);

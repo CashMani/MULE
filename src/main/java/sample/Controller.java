@@ -32,6 +32,8 @@ import java.io.IOException;
 import java.util.LinkedList;
 import java.util.ResourceBundle;
 
+import static javafx.scene.paint.Paint.*;
+
 public class Controller implements Initializable {
     @FXML
     public Slider difficultySlider;
@@ -58,6 +60,7 @@ public class Controller implements Initializable {
     public ColorPicker color_player4;
 
     public boolean[][] landTaken = new boolean[5][9];
+    public Paint[][] coloredMap = new Paint[5][9];
 
     //Map Buttons
     public Button zeroZero;
@@ -169,20 +172,26 @@ public class Controller implements Initializable {
     @FXML
     public void gameConfigPage2(Event event) throws IOException {
         switch ((int) difficultySlider.getValue()) {
-            case 0: Main.difficulty = Main.Difficulty.BEGINNER;
+            case 0:
+                Main.difficulty = Main.Difficulty.BEGINNER;
                 break;
-            case 1: Main.difficulty = Main.Difficulty.STANDARD;
+            case 1:
+                Main.difficulty = Main.Difficulty.STANDARD;
                 break;
-            case 2: Main.difficulty = Main.Difficulty.TOURNAMENT;
+            case 2:
+                Main.difficulty = Main.Difficulty.TOURNAMENT;
                 break;
-            default: Main.difficulty = Main.Difficulty.BEGINNER;
+            default:
+                Main.difficulty = Main.Difficulty.BEGINNER;
                 break;
         }
 
         switch ((int) mapTypeSlider.getValue()) {
-            case 1: Main.mapType = Main.MapType.STANDARD;
+            case 1:
+                Main.mapType = Main.MapType.STANDARD;
                 break;
-            case 2: Main.mapType = Main.MapType.RANDOM;
+            case 2:
+                Main.mapType = Main.MapType.RANDOM;
                 break;
             default:
                 Main.mapType = Main.MapType.STANDARD;
@@ -277,15 +286,16 @@ public class Controller implements Initializable {
             if (landSelectionMode || GameController.buyProperty()) {
                 zeroZero.setBackground(
                         new Background(
-                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(),zeroZero));
+                        players.get(currentPlayerTurn).getColor(), zeroZero));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[0][0] = true;
+                coloredMap[0][0] = valueOf(players.get(currentPlayerTurn).getColor().toString());
             }
         }
     }
@@ -295,15 +305,16 @@ public class Controller implements Initializable {
             if (landSelectionMode || GameController.buyProperty()) {
                 zeroTwo.setBackground(
                         new Background(
-                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("1 Mountain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(),zeroTwo));
+                        players.get(currentPlayerTurn).getColor(), zeroTwo));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[0][2] = true;
+                coloredMap[0][2] = valueOf(players.get(currentPlayerTurn).getColor().toString());
             }
         }
     }
@@ -313,15 +324,16 @@ public class Controller implements Initializable {
             if (landSelectionMode || GameController.buyProperty()) {
                 zeroOne.setBackground(
                         new Background(
-                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(),zeroOne));
+                        players.get(currentPlayerTurn).getColor(), zeroOne));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[0][1] = true;
+                coloredMap[0][1] = valueOf(players.get(currentPlayerTurn).getColor().toString());
             }
         }
     }
@@ -331,15 +343,16 @@ public class Controller implements Initializable {
             if (landSelectionMode || GameController.buyProperty()) {
                 zeroThree.setBackground(
                         new Background(
-                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(),zeroThree));
+                        players.get(currentPlayerTurn).getColor(), zeroThree));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[0][3] = true;
+                coloredMap[0][3] = valueOf(players.get(currentPlayerTurn).getColor().toString());
             }
         }
     }
@@ -349,15 +362,16 @@ public class Controller implements Initializable {
             if (landSelectionMode || GameController.buyProperty()) {
                 zeroFour.setBackground(
                         new Background(
-                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("River", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(),zeroFour));
+                        players.get(currentPlayerTurn).getColor(), zeroFour));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[0][4] = true;
+                coloredMap[0][4] = valueOf(players.get(currentPlayerTurn).getColor().toString());
             }
         }
     }
@@ -367,15 +381,16 @@ public class Controller implements Initializable {
             if (landSelectionMode || GameController.buyProperty()) {
                 zeroFive.setBackground(
                         new Background(
-                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(),zeroFive));
+                        players.get(currentPlayerTurn).getColor(), zeroFive));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[0][5] = true;
+                coloredMap[0][5] = valueOf(players.get(currentPlayerTurn).getColor().toString());
             }
         }
     }
@@ -385,15 +400,16 @@ public class Controller implements Initializable {
             if (landSelectionMode || GameController.buyProperty()) {
                 zeroSix.setBackground(
                         new Background(
-                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("3 Mountain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(),zeroZero));
+                        players.get(currentPlayerTurn).getColor(), zeroZero));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[0][6] = true;
+                coloredMap[0][6] = valueOf(players.get(currentPlayerTurn).getColor().toString());
             }
         }
     }
@@ -403,15 +419,16 @@ public class Controller implements Initializable {
             if (landSelectionMode || GameController.buyProperty()) {
                 zeroEight.setBackground(
                         new Background(
-                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(),zeroEight));
+                        players.get(currentPlayerTurn).getColor(), zeroEight));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[0][8] = true;
+                coloredMap[0][8] = valueOf(players.get(currentPlayerTurn).getColor().toString());
             }
         }
     }
@@ -421,15 +438,16 @@ public class Controller implements Initializable {
             if (landSelectionMode || GameController.buyProperty()) {
                 zeroSeven.setBackground(
                         new Background(
-                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(),zeroSeven));
+                        players.get(currentPlayerTurn).getColor(), zeroSeven));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[0][7] = true;
+                coloredMap[0][7] = valueOf(players.get(currentPlayerTurn).getColor().toString());
             }
         }
     }
@@ -441,15 +459,16 @@ public class Controller implements Initializable {
             if (landSelectionMode || GameController.buyProperty()) {
                 oneZero.setBackground(
                         new Background(
-                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(),oneZero));
+                        players.get(currentPlayerTurn).getColor(), oneZero));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[1][0] = true;
+                coloredMap[1][0] = valueOf(players.get(currentPlayerTurn).getColor().toString());
             }
         }
     }
@@ -459,15 +478,16 @@ public class Controller implements Initializable {
             if (landSelectionMode || GameController.buyProperty()) {
                 oneTwo.setBackground(
                         new Background(
-                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(),oneTwo));
+                        players.get(currentPlayerTurn).getColor(), oneTwo));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[1][2] = true;
+                coloredMap[1][2] = valueOf(players.get(currentPlayerTurn).getColor().toString());
             }
         }
     }
@@ -477,15 +497,17 @@ public class Controller implements Initializable {
             if (landSelectionMode || GameController.buyProperty()) {
                 oneOne.setBackground(
                         new Background(
-                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("1 Mountain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(),zeroZero));
+                        players.get(currentPlayerTurn).getColor(), zeroZero));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[1][1] = true;
+                coloredMap[1][1] = valueOf(players.get(currentPlayerTurn).getColor().toString());
+
             }
         }
     }
@@ -495,15 +517,16 @@ public class Controller implements Initializable {
             if (landSelectionMode || GameController.buyProperty()) {
                 oneThree.setBackground(
                         new Background(
-                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(),oneThree));
+                        players.get(currentPlayerTurn).getColor(), oneThree));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[1][3] = true;
+                coloredMap[1][3] = valueOf(players.get(currentPlayerTurn).getColor().toString());
             }
         }
     }
@@ -513,15 +536,16 @@ public class Controller implements Initializable {
             if (landSelectionMode || GameController.buyProperty()) {
                 oneFour.setBackground(
                         new Background(
-                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("River", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(),oneFour));
+                        players.get(currentPlayerTurn).getColor(), oneFour));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[1][4] = true;
+                coloredMap[1][4] = valueOf(players.get(currentPlayerTurn).getColor().toString());
             }
         }
     }
@@ -531,15 +555,16 @@ public class Controller implements Initializable {
             if (landSelectionMode || GameController.buyProperty()) {
                 oneFive.setBackground(
                         new Background(
-                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(),oneFive));
+                        players.get(currentPlayerTurn).getColor(), oneFive));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[1][5] = true;
+                coloredMap[1][5] = valueOf(players.get(currentPlayerTurn).getColor().toString());
             }
         }
     }
@@ -549,15 +574,16 @@ public class Controller implements Initializable {
             if (landSelectionMode || GameController.buyProperty()) {
                 oneSix.setBackground(
                         new Background(
-                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(),oneSix));
+                        players.get(currentPlayerTurn).getColor(), oneSix));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[1][6] = true;
+                coloredMap[1][6] = valueOf(players.get(currentPlayerTurn).getColor().toString());
             }
         }
     }
@@ -567,15 +593,16 @@ public class Controller implements Initializable {
             if (landSelectionMode || GameController.buyProperty()) {
                 oneEight.setBackground(
                         new Background(
-                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("3 Mountain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(),oneEight));
+                        players.get(currentPlayerTurn).getColor(), oneEight));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[1][8] = true;
+                coloredMap[1][8] = valueOf(players.get(currentPlayerTurn).getColor().toString());
             }
         }
     }
@@ -585,15 +612,16 @@ public class Controller implements Initializable {
             if (landSelectionMode || GameController.buyProperty()) {
                 oneSeven.setBackground(
                         new Background(
-                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(),oneSeven));
+                        players.get(currentPlayerTurn).getColor(), oneSeven));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[1][7] = true;
+                coloredMap[1][7] = valueOf(players.get(currentPlayerTurn).getColor().toString());
             }
         }
     }
@@ -604,15 +632,16 @@ public class Controller implements Initializable {
             if (landSelectionMode || GameController.buyProperty()) {
                 twoZero.setBackground(
                         new Background(
-                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("3 Mountain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(),twoZero));
+                        players.get(currentPlayerTurn).getColor(), twoZero));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[2][0] = true;
+                coloredMap[2][0] = valueOf(players.get(currentPlayerTurn).getColor().toString());
             }
         }
     }
@@ -622,15 +651,16 @@ public class Controller implements Initializable {
             if (landSelectionMode || GameController.buyProperty()) {
                 twoTwo.setBackground(
                         new Background(
-                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(),twoTwo));
+                        players.get(currentPlayerTurn).getColor(), twoTwo));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[2][2] = true;
+                coloredMap[2][2] = valueOf(players.get(currentPlayerTurn).getColor().toString());
             }
         }
     }
@@ -640,15 +670,16 @@ public class Controller implements Initializable {
             if (landSelectionMode || GameController.buyProperty()) {
                 twoOne.setBackground(
                         new Background(
-                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(),twoOne));
+                        players.get(currentPlayerTurn).getColor(), twoOne));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[2][1] = true;
+                coloredMap[2][1] = valueOf(players.get(currentPlayerTurn).getColor().toString());
             }
         }
     }
@@ -658,15 +689,16 @@ public class Controller implements Initializable {
             if (landSelectionMode || GameController.buyProperty()) {
                 twoThree.setBackground(
                         new Background(
-                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(),twoThree));
+                        players.get(currentPlayerTurn).getColor(), twoThree));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[2][3] = true;
+                coloredMap[2][3] = valueOf(players.get(currentPlayerTurn).getColor().toString());
             }
         }
     }
@@ -676,15 +708,16 @@ public class Controller implements Initializable {
             if (landSelectionMode || GameController.buyProperty()) {
                 twoFive.setBackground(
                         new Background(
-                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(),twoFive));
+                        players.get(currentPlayerTurn).getColor(), twoFive));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[2][5] = true;
+                coloredMap[2][5] = valueOf(players.get(currentPlayerTurn).getColor().toString());
             }
         }
     }
@@ -694,15 +727,16 @@ public class Controller implements Initializable {
             if (landSelectionMode || GameController.buyProperty()) {
                 twoSix.setBackground(
                         new Background(
-                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(),twoSix));
+                        players.get(currentPlayerTurn).getColor(), twoSix));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[2][6] = true;
+                coloredMap[2][6] = Paint.valueOf(players.get(currentPlayerTurn).getColor().toString());
             }
         }
     }
@@ -712,15 +746,16 @@ public class Controller implements Initializable {
             if (landSelectionMode || GameController.buyProperty()) {
                 twoEight.setBackground(
                         new Background(
-                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("1 Mountain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(),twoEight));
+                        players.get(currentPlayerTurn).getColor(), twoEight));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[2][8] = true;
+                coloredMap[2][8] = Paint.valueOf(players.get(currentPlayerTurn).getColor().toString());
             }
         }
     }
@@ -730,15 +765,16 @@ public class Controller implements Initializable {
             if (landSelectionMode || GameController.buyProperty()) {
                 twoSeven.setBackground(
                         new Background(
-                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(),twoSeven));
+                        players.get(currentPlayerTurn).getColor(), twoSeven));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[2][7] = true;
+                coloredMap[2][7] = Paint.valueOf(players.get(currentPlayerTurn).getColor().toString());
             }
         }
     }
@@ -750,15 +786,16 @@ public class Controller implements Initializable {
             if (landSelectionMode || GameController.buyProperty()) {
                 threeZero.setBackground(
                         new Background(
-                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(),threeZero));
+                        players.get(currentPlayerTurn).getColor(), threeZero));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[3][0] = true;
+                coloredMap[3][0] = Paint.valueOf(players.get(currentPlayerTurn).getColor().toString());
             }
         }
     }
@@ -768,15 +805,16 @@ public class Controller implements Initializable {
             if (landSelectionMode || GameController.buyProperty()) {
                 threeTwo.setBackground(
                         new Background(
-                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("Plains", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(),threeTwo));
+                        players.get(currentPlayerTurn).getColor(), threeTwo));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[3][2] = true;
+                coloredMap[3][2] = Paint.valueOf(players.get(currentPlayerTurn).getColor().toString());
             }
         }
     }
@@ -786,15 +824,16 @@ public class Controller implements Initializable {
             if (landSelectionMode || GameController.buyProperty()) {
                 threeOne.setBackground(
                         new Background(
-                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("2 Mountains", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(),zeroZero));
+                        players.get(currentPlayerTurn).getColor(), zeroZero));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[3][1] = true;
+                coloredMap[3][1] = Paint.valueOf(players.get(currentPlayerTurn).getColor().toString());
             }
         }
     }
@@ -804,15 +843,16 @@ public class Controller implements Initializable {
             if (landSelectionMode || GameController.buyProperty()) {
                 threeThree.setBackground(
                         new Background(
-                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(),threeThree));
+                        players.get(currentPlayerTurn).getColor(), threeThree));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[3][3] = true;
+                coloredMap[3][3] = Paint.valueOf(players.get(currentPlayerTurn).getColor().toString());
             }
         }
     }
@@ -822,15 +862,16 @@ public class Controller implements Initializable {
             if (landSelectionMode || GameController.buyProperty()) {
                 threeFour.setBackground(
                         new Background(
-                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("River", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(),threeFour));
+                        players.get(currentPlayerTurn).getColor(), threeFour));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[3][4] = true;
+                coloredMap[3][4] = Paint.valueOf(players.get(currentPlayerTurn).getColor().toString());
             }
         }
     }
@@ -840,15 +881,16 @@ public class Controller implements Initializable {
             if (landSelectionMode || GameController.buyProperty()) {
                 threeFive.setBackground(
                         new Background(
-                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(),threeFive));
+                        players.get(currentPlayerTurn).getColor(), threeFive));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[3][5] = true;
+                coloredMap[3][5] = Paint.valueOf(players.get(currentPlayerTurn).getColor().toString());
             }
         }
     }
@@ -858,15 +900,16 @@ public class Controller implements Initializable {
             if (landSelectionMode || GameController.buyProperty()) {
                 threeSix.setBackground(
                         new Background(
-                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("2 Mountains", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(),threeSix));
+                        players.get(currentPlayerTurn).getColor(), threeSix));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[3][6] = true;
+                coloredMap[3][6] = Paint.valueOf(players.get(currentPlayerTurn).getColor().toString());
             }
         }
     }
@@ -876,15 +919,16 @@ public class Controller implements Initializable {
             if (landSelectionMode || GameController.buyProperty()) {
                 threeEight.setBackground(
                         new Background(
-                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(),threeEight));
+                        players.get(currentPlayerTurn).getColor(), threeEight));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[3][8] = true;
+                coloredMap[3][8] = Paint.valueOf(players.get(currentPlayerTurn).getColor().toString());
             }
         }
     }
@@ -894,15 +938,16 @@ public class Controller implements Initializable {
             if (landSelectionMode || GameController.buyProperty()) {
                 threeSeven.setBackground(
                         new Background(
-                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(),threeSeven));
+                        players.get(currentPlayerTurn).getColor(), threeSeven));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[3][7] = true;
+                coloredMap[3][7] = Paint.valueOf(players.get(currentPlayerTurn).getColor().toString());
             }
         }
     }
@@ -914,15 +959,16 @@ public class Controller implements Initializable {
             if (landSelectionMode || GameController.buyProperty()) {
                 fourZero.setBackground(
                         new Background(
-                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(),fourZero));
+                        players.get(currentPlayerTurn).getColor(), fourZero));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[4][0] = true;
+                coloredMap[4][0] = Paint.valueOf(players.get(currentPlayerTurn).getColor().toString());
             }
         }
     }
@@ -932,15 +978,16 @@ public class Controller implements Initializable {
             if (landSelectionMode || GameController.buyProperty()) {
                 fourTwo.setBackground(
                         new Background(
-                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("2 Mountain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(),fourTwo));
+                        players.get(currentPlayerTurn).getColor(), fourTwo));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[4][2] = true;
+                coloredMap[4][2] = Paint.valueOf(players.get(currentPlayerTurn).getColor().toString());
             }
         }
     }
@@ -950,15 +997,16 @@ public class Controller implements Initializable {
             if (landSelectionMode || GameController.buyProperty()) {
                 fourOne.setBackground(
                         new Background(
-                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(),fourOne));
+                        players.get(currentPlayerTurn).getColor(), fourOne));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[4][1] = true;
+                coloredMap[4][1] = Paint.valueOf(players.get(currentPlayerTurn).getColor().toString());
             }
         }
     }
@@ -968,15 +1016,16 @@ public class Controller implements Initializable {
             if (landSelectionMode || GameController.buyProperty()) {
                 fourThree.setBackground(
                         new Background(
-                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(),fourThree));
+                        players.get(currentPlayerTurn).getColor(), fourThree));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[4][3] = true;
+                coloredMap[4][3] = Paint.valueOf(players.get(currentPlayerTurn).getColor().toString());
             }
         }
     }
@@ -986,15 +1035,16 @@ public class Controller implements Initializable {
             if (landSelectionMode || GameController.buyProperty()) {
                 fourFour.setBackground(
                         new Background(
-                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("River", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(),fourFour));
+                        players.get(currentPlayerTurn).getColor(), fourFour));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[4][4] = true;
+                coloredMap[4][4] = Paint.valueOf(players.get(currentPlayerTurn).getColor().toString());
             }
         }
     }
@@ -1004,15 +1054,16 @@ public class Controller implements Initializable {
             if (landSelectionMode || GameController.buyProperty()) {
                 fourFive.setBackground(
                         new Background(
-                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(),fourFive));
+                        players.get(currentPlayerTurn).getColor(), fourFive));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[4][5] = true;
+                coloredMap[4][5] = Paint.valueOf(players.get(currentPlayerTurn).getColor().toString());
             }
         }
     }
@@ -1022,15 +1073,16 @@ public class Controller implements Initializable {
             if (landSelectionMode || GameController.buyProperty()) {
                 fourSix.setBackground(
                         new Background(
-                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(),fourSix));
+                        players.get(currentPlayerTurn).getColor(), fourSix));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[4][6] = true;
+                coloredMap[4][6] = Paint.valueOf(players.get(currentPlayerTurn).getColor().toString());
             }
         }
     }
@@ -1040,15 +1092,16 @@ public class Controller implements Initializable {
             if (landSelectionMode || GameController.buyProperty()) {
                 fourEight.setBackground(
                         new Background(
-                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("2 Mountain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(),fourEight));
+                        players.get(currentPlayerTurn).getColor(), fourEight));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[4][8] = true;
+                coloredMap[4][8] = Paint.valueOf(players.get(currentPlayerTurn).getColor().toString());
             }
         }
     }
@@ -1058,15 +1111,16 @@ public class Controller implements Initializable {
             if (landSelectionMode || GameController.buyProperty()) {
                 fourSeven.setBackground(
                         new Background(
-                                new BackgroundFill(Paint.valueOf(players.get(currentPlayerTurn).getColor().toString()),
+                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(),fourSeven));
+                        players.get(currentPlayerTurn).getColor(), fourSeven));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[4][7] = true;
+                coloredMap[4][7] = Paint.valueOf(players.get(currentPlayerTurn).getColor().toString());
             }
         }
     }
@@ -1088,79 +1142,22 @@ public class Controller implements Initializable {
     }
 
     @FXML
-    public void gamble(Event event) throws IOException{
+    public void gamble(Event event) throws IOException {
         Duration timeToGamble = timer.stopTimer();
-        Pub pubFun = new Pub(roundNum, timeToGamble);
+        System.out.println("Timer stopped at: " + timeToGamble);
+        Pub pubFun = new Pub(timeToGamble);
         int earnings = pubFun.gamble();
         System.out.println(players.get(currentPlayerTurn).getName() + " just won $" + earnings + "\n");
         //Try to get a visual to pop up later
         players.get(currentPlayerTurn).addMoney(earnings);
+        returnToMap();
         GameController.nextTurn();
     }
 
+    public void returnToMap() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("playScreen.fxml"));
+        Scene scene = new Scene(root);
+        Main.primary.setScene(scene);
+    }
 
-//    @FXML
-//    public void addNewPlayer(Event event) throws IOException {
-//        Player newPlayer = new Player(namePicker.getText(),"", colorChooser.getValue().toString());
-//        Main.players.add(newPlayer);
-//        listPlayers.setText(listPlayers.getText() + Main.players.get(0).getName() + "\n");
-//    }
-
-
-//    //updated land selection
-//    public void landSelection () {
-//        boolean landBought  = false;
-//        switch (howMany) {
-//            case TWO;
-//                while (playerTurn < 3) {
-//                    if (turnRound < 3) {
-//                        //land is free!
-//                        //set color of land
-//                        //place land in inventory
-//                    } else {
-//                        //land cost $300
-//                        if (CLICK LAND) {
-//                            this.subtractMoney(300); // subtract money from user, "this" should be player
-//                            landBought = true;
-//                        }
-//                    }
-//
-//                    playerTurn++;
-//                }
-//                break;
-//            case THREE:
-//                while (playerTurn < 4) {
-//                    if (turnRound < 3) {
-//                        //land is free!
-//                    } else {
-//                        //land cost $300
-//                        if (CLICK LAND) {
-//                            this.subtractMoney(300); // subtract money from user
-//                            landBought = true;
-//                        }
-//                    }
-//                    playerTurn++;
-//                }
-//                break;
-//            case FOUR:
-//                while (playerTurn < 5) {
-//                    if (turnRound < 3) {
-//                        //land is free!
-//                    } else {
-//                        //land cost $300
-//                        if (CLICK LAND) {
-//                            this.subtractMoney(300); // subtract money from user
-//                            landBought = true;
-//                        }
-//                    }
-//                    playerTurn++; //go to next player's turn
-//                }
-//                break;
-//        }
-//        turnRound++; //increase turn round
-//        //Land selection ends when every player choose to not buy land in a round
-//        if (landBought == true) {
-//            landSelection();
-//        }
-//    }
 }
