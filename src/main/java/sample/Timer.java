@@ -3,40 +3,37 @@ import javafx.animation.*;
 import javafx.beans.value.ObservableValue;
 import javafx.util.Duration;
 /**
- * Created by AlexandraLink on 9/30/15.
- * Perfected by Mani on 9/30/15
+ * Created by Alexandra Link on 9/30/15.
+ * Barely edited by Mani on 9/30/15
  */
 public class Timer {
 
     Timeline timeline;
-    Duration timeBegan;
-    Duration timeRemaining;
-    Duration turnTime;
+    Duration startTime;
+    Duration stopTime;
 
     public Timer() {
 
     }
 
     public void setTimeline(Duration turnTime) {
-        timeRemaining = turnTime;
+        startTime = turnTime;
         timeline = new Timeline(new KeyFrame(turnTime, ae -> GameController.endTurn()));
 
     }
 
-
     public void startTimer() {
         timeline.play();
-        timeBegan = timeline.getCurrentTime();
     }
 
     public Duration stopTimer() {
-        turnTime = timeline.getCurrentTime();
+        stopTime = timeline.getCurrentTime();
         timeline.stop();
-        System.out.println(timeRemaining.subtract(turnTime));
-        return timeRemaining.subtract(timeBegan);
+        System.out.println("Timer stopped at " + startTime.subtract(stopTime).toSeconds());
+        return startTime.subtract(stopTime);
     }
 
     public Duration getTimeRemaining() {
-        return timeRemaining.subtract(turnTime);
+        return startTime.subtract(stopTime);
     }
 }
