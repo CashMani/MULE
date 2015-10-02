@@ -1,6 +1,7 @@
 package sample;
 
 import javafx.scene.paint.Color;
+import java.util.ArrayList;
 /**
  * Created by mani on 9/10/15.
  */
@@ -9,12 +10,16 @@ public class Player implements InventoryInterface {
     private Main.Race race;
     private Color color;
     private Inventory inventory;
+    private ArrayList<LandPlot> landOwned;
+    private int landCount;
 
     public Player(String name, Main.Race race, Color color) {
         this.name = name;
         this.race = race;
         this.color = color;
         this.inventory = new Inventory();
+        landOwned = new ArrayList<LandPlot>();
+        landCount = 0;
     }
 
     public String toString() {
@@ -34,6 +39,17 @@ public class Player implements InventoryInterface {
     public int getFood() {return this.inventory.food; }
 
     public int getOre() {return this.inventory.ore; }
+
+    public void addLand(LandPlot land) {
+        landOwned.add(land);
+        landCount++;
+    }
+
+    public void removeLand(LandPlot land) {
+        landOwned.remove(land);
+        landCount--;
+    }
+
 
     /**
      * Adds money to a player's money stash in their inventory
