@@ -12,13 +12,17 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fitHeight="400.0" fitWidth="363.0" layoutX="108.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="406.0" fitWidth="789.0" layoutX="-105.0" layoutY="-2.0" pickOnBounds="true">
          <image>
-            <Image url="@../../resources/storeInside.jpg" />
+            <Image url="@../../resources/store-mule%20screen.jpg" />
          </image>
       </ImageView>
+      <Button fx:id="backToStore" mnemonicParsing="false" onMouseClicked="#backToStore" opacity="0.05" prefHeight="5.0" prefWidth="89.0" ></Button>
+      <Button fx:id="buyOreMule" layoutX="433.0" layoutY="100.0" mnemonicParsing="false" onMouseClicked="#buyOreMule" opacity="0.05" prefHeight="33.0" prefWidth="132.0" text="Ore" />
+      <Button fx:id="buyFoodMule" layoutX="380.0" layoutY="133.0" mnemonicParsing="false" onMouseClicked="#buyFoodMule" opacity="0.05" prefHeight="33.0" prefWidth="132.0" text="Food" />
+      <Button fx:id="buyEnergyMule" layoutX="392.0" layoutY="190.0" mnemonicParsing="false" onMouseClicked="#buyEnergyMule" opacity="0.05" prefHeight="26.0" prefWidth="132.0" text="Energy" />
+      <Button fx:id="sellMule" layoutX="372.0" layoutY="50.0" mnemonicParsing="false" onMouseClicked="#sellMule" opacity="0.05" prefHeight="37.0" prefWidth="138.0" text="Sell Mule" />
    </children>
 </Pane>
