@@ -311,6 +311,7 @@ public class Controller implements Initializable {
             Main.primary.setScene(scene);
 
             System.out.println("Welcome Players!");
+            //GameController.startGame();
             GameController.landSelectionPhase();
         }
     }
