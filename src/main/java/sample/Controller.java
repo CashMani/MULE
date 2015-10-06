@@ -311,7 +311,7 @@ public class Controller implements Initializable {
             Main.primary.setScene(scene);
 
             System.out.println("Welcome Players!");
-            GameController.startGame();
+            //GameController.startGame();
             GameController.landSelectionPhase();
         }
     }
@@ -1278,71 +1278,5 @@ public class Controller implements Initializable {
         repaintMap();
         Main.primary.setScene(scene);
     }
-
-    public void backToStore(Event event) {
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("mainStore.fxml"));
-        Scene scene = new Scene(root);
-
-        Main.primary.setScene(scene);
-    }
-    /**
-
-    @FXML
-    public void buyOreMule(Event event) throws IOException {
-        GameController.store.buyMule(Mule.Configuration.ORE);
-    }
-
-    @FXML
-    public void buyFoodMule(Event event) throws IOException {
-        GameController.store.buyMule(Mule.Configuration.FOOD);
-    }
-
-    @FXML
-    public void buyEnergyMule(Event event) throws IOException {
-        GameController.store.buyMule(Mule.Configuration.ENERGY);
-    }
-
-    @FXML
-    public void sellMule(Event event) throws IOException {
-        GameController.store.sellMule();
-    }
-
-    @FXML
-    public void buyFood(Event event) throws IOException {
-        GameController.store.buyFood(1);
-    }
-
-    @FXML
-    public void buyEnergy(Event event) throws IOException {
-        GameController.store.buyEnergy(1);
-    }
-
-    @FXML
-    public void buyOre(Event event) throws IOException {
-        GameController.store.buyOre(1);
-    }
-
-    @FXML
-    public void sellFood(Event event) throws IOException {
-        GameController.store.sellFood(1);
-    }
-
-    @FXML
-    public void sellEnergy(Event event) throws IOException {
-        GameController.store.sellEnergy(1);
-    }
-
-    @FXML
-    public void sellOre(Event event) throws IOException {
-        GameController.store.sellOre(1);
-    }
-
-    @FXML
-    public void goToMuleShop(Event event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("store.fxml"));
-        Scene scene = new Scene(root);
-
-        Main.primary.setScene(scene);
-    }*/
 
 }
