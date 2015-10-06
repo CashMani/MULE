@@ -10,6 +10,7 @@ import java.util.Comparator;
 
     public class GameController {
 
+        public static Store store;
 
     //***************************** Land Selection ********************************************************************
     public static void nextTurn() {
@@ -68,6 +69,9 @@ import java.util.Comparator;
 
     //********************************** Main Game Controls *********************************************
 
+    public static void startGame() {
+        store = new Store();
+    }
     public static void startTurn() {
         Player cur = Controller.players.get(Controller.currentPlayerTurn);
         System.out.println(cur.getName() + ", your turn starts now!\n");

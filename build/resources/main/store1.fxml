@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="CENTER" hgap="10.0" vgap="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <children>
+    <Pane prefHeight="750.0" prefWidth="900.0">
+         <children>
+            <ImageView fitHeight="755.0" fitWidth="900.0" pickOnBounds="true">
+               <image>
+                  <Image url="@Store1.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="exitStore" mnemonicParsing="false" onMouseClicked="#exitStore" opacity="0.05" prefHeight="41.0" prefWidth="125.0" text="Exit" />
+            <Button fx:id="toMuleShop" layoutX="117.0" layoutY="346.0" mnemonicParsing="false" onMouseClicked="#toMuleSales" opacity="0.05" prefHeight="83.0" prefWidth="370.0" text="Mule Sale" />
+            <Button fx:id="buyFood" layoutX="686.0" layoutY="130.0" mnemonicParsing="false" onMouseClicked="#buyFood" text="Buy" />
+            <Button fx:id="buyEnergy" layoutX="787.0" layoutY="212.0" mnemonicParsing="false" onMouseClicked="#buyEnergy" text="Buy" />
+            <Button fx:id="buyOre" layoutX="706.0" layoutY="376.0" mnemonicParsing="false" onMouseClicked="#buyOre" text="Buy" />
+            <Button fx:id="sellFood" layoutX="732.0" layoutY="130.0" mnemonicParsing="false" onMouseClicked="#sellFood" text="Sell" />
+            <Button fx:id="sellEnergy" layoutX="831.0" layoutY="212.0" mnemonicParsing="false" onMouseClicked="#sellEnergy" text="Sell" />
+            <Button fx:id="sellOre" layoutX="760.0" layoutY="376.0" mnemonicParsing="false" onMouseClicked="#sellOre" text="Sell" />
+         </children>
+    </Pane>
+  </children>
+  <columnConstraints>
+    <ColumnConstraints hgrow="ALWAYS" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints />
+  </rowConstraints>
+</GridPane>

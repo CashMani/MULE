@@ -19,7 +19,7 @@ public class Pub {
 
     public int gamble() {
         System.out.println("Pub Math Breakdown:");
-        int moneyBonus = Round.getRoundBonus() * (risk());
+        int moneyBonus = (Round.getRoundBonus() * (risk())) / 100;
         System.out.println("Round money bonus comes out to $" + moneyBonus + ".\n");
         if (moneyBonus > 250) {
             return 250;
