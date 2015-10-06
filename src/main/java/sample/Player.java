@@ -51,6 +51,8 @@ public class Player implements InventoryInterface {
 
     public int getLandCount() { return this.landCount; }
 
+    public Mule getMule() { return this.inventory.muleOnPerson; }
+
     public void addLand(LandPlot land) {
         landOwned.add(land);
         landCount++;
@@ -120,7 +122,7 @@ public class Player implements InventoryInterface {
 
     public void addOre(int oreAdded) {
         if (oreAdded < 0) {
-            System.out.println("Attempt to add negative ore");
+            System.out.println("Attempt to add negative ore.");
         } else {
             inventory.ore += oreAdded;
         }
@@ -128,16 +130,47 @@ public class Player implements InventoryInterface {
 
     public void subtractOre(int oreSubtract) {
         if (oreSubtract < 0) {
-            System.out.println("Attempt to subtract negative ore");
+            System.out.println("Attempt to subtract negative ore.");
         } else {
             inventory.ore -= oreSubtract;
         }
     }
 
+    public void addCrystite(int crystiteAdded) {
+        if (crystiteAdded < 0) {
+            System.out.println("Attempt to add negative crystite.");
+        } else {
+            inventory.crystite += crystiteAdded;
+        }
+    }
+
+    public void addMule(Mule newMule) {
+        if (newMule == null || inventory.muleOnPerson != null) {
+            System.out.println("Attempted to add null mule");
+        } else {
+            inventory.muleOnPerson = newMule;
+        }
+    }
+
+    public void sellMule() {
+        if (inventory.muleOnPerson != null) {
+            inventory.muleOnPerson = null;
+        } else {
+            System.out.println("Error- No mule to sell.");
+        }
+    }
+
     public String inventoryToString() {
-        String inventoryList = (this.name + "'s Inventory: \n Money: " + inventory.moneyStash + "\n Energy: "
-            + inventory.energy + "\n Food: " + inventory.food + "\n Ore: " + inventory.ore);
-            // + "\n Mules: " + mules.toString();
+        String inventoryList;
+        if (inventory.muleOnPerson == null) {
+            inventoryList = (this.name + "'s Inventory: \n Money: " + inventory.moneyStash + "\n Energy: "
+                + inventory.energy + "\n Food: " + inventory.food + "\n Ore: " + inventory.ore + "\n Crystite: " +
+                    inventory.crystite + "\n No mule on person.");
+        } else {
+            inventoryList = (this.name + "'s Inventory: \n Money: " + inventory.moneyStash + "\n Energy: "
+                    + inventory.energy + "\n Food: " + inventory.food + "\n Ore: " + inventory.ore + "\n Crystite: " +
+                    inventory.crystite + "\n Mule on person.");
+        }
         return inventoryList;
     }
 
@@ -149,17 +182,19 @@ public class Player implements InventoryInterface {
      */
     private class Inventory {
         private int moneyStash;
-        //private Mule[] mules;
         private int energy;
         private int food;
         private int ore;
+        private int crystite;
+        private Mule muleOnPerson;
 
         private Inventory() {
             this.moneyStash = 1000;
-            //mules = new Mule();
             this.energy = 4;
             this.food = 8;
             this.ore = 0;
+            this.crystite = 0;
+            muleOnPerson = null;
         }
 
     }

@@ -7,7 +7,9 @@ import java.util.Comparator;
 /**
  * Created by mani on 9/24/15.
  */
-public class GameController {
+
+    public class GameController {
+
 
     //***************************** Land Selection ********************************************************************
     public static void nextTurn() {
@@ -65,6 +67,7 @@ public class GameController {
     }
 
     //********************************** Main Game Controls *********************************************
+
     public static void startTurn() {
         Player cur = Controller.players.get(Controller.currentPlayerTurn);
         System.out.println(cur.getName() + ", your turn starts now!\n");
