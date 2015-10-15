@@ -51,7 +51,7 @@ public class Store {
 
     public void buyOre(int numWanted) {
         if (verifyAvailability(2, numWanted) && verifyFunds(2, numWanted)) {
-            (Controller.players.get(Controller.currentPlayerTurn)).addEnergy(numWanted);
+            (Controller.players.get(Controller.currentPlayerTurn)).addOre(numWanted);
             (Controller.players.get(Controller.currentPlayerTurn)).subtractMoney(50 * numWanted);
             stock[2] = stock[2] - numWanted;
             System.out.println("Successful purchase of ore.");

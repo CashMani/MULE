@@ -19,7 +19,7 @@ public class Player implements InventoryInterface {
         this.race = race;
         this.color = color;
         this.inventory = new Inventory();
-        landOwned = new ArrayList<LandPlot>();
+        landOwned = new ArrayList<>();
         landCount = 0;
     }
 
