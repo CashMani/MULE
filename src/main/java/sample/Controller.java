@@ -398,7 +398,7 @@ public class Controller implements Initializable {
 
     // Row Zero
     public void zeroZeroClicked(Event event) {
-        if (!landTaken[0][0]) {
+        if (!landTaken[0][0] || mulePlacementMode) {
             if (mulePlacementMode) {
                 if (players.get(currentPlayerTurn).ownsLand(zeroZero)) {
                     LandPlot land = players.get(currentPlayerTurn).getLand(zeroZero);
@@ -437,7 +437,7 @@ public class Controller implements Initializable {
     }
 
     public void zeroTwoClicked(Event event) {
-        if (!landTaken[0][2]) {
+        if (!landTaken[0][2] || mulePlacementMode) {
             if (mulePlacementMode) {
                 if (players.get(currentPlayerTurn).ownsLand(zeroTwo)) {
                     LandPlot land = players.get(currentPlayerTurn).getLand(zeroTwo);
@@ -477,7 +477,7 @@ public class Controller implements Initializable {
     }
 
     public void zeroOneClicked(Event event) {
-        if (!landTaken[0][1]) {
+        if (!landTaken[0][1] || mulePlacementMode) {
             if (mulePlacementMode) {
                 if (players.get(currentPlayerTurn).ownsLand(zeroOne)) {
                     LandPlot land = players.get(currentPlayerTurn).getLand(zeroOne);
@@ -516,7 +516,7 @@ public class Controller implements Initializable {
     }
 
     public void zeroThreeClicked(Event event) {
-        if (!landTaken[0][3]) {
+        if (!landTaken[0][3] || mulePlacementMode) {
             if (mulePlacementMode) {
                 if (players.get(currentPlayerTurn).ownsLand(zeroThree)) {
                     LandPlot land = players.get(currentPlayerTurn).getLand(zeroThree);
@@ -555,7 +555,7 @@ public class Controller implements Initializable {
     }
 
     public void zeroFourClicked(Event event) {
-        if (!landTaken[0][4]) {
+        if (!landTaken[0][4] || mulePlacementMode) {
             if (mulePlacementMode) {
                 if (players.get(currentPlayerTurn).ownsLand(zeroFour)) {
                     LandPlot land = players.get(currentPlayerTurn).getLand(zeroFour);
@@ -594,7 +594,7 @@ public class Controller implements Initializable {
     }
 
     public void zeroFiveClicked(Event event) {
-        if (!landTaken[0][5]) {
+        if (!landTaken[0][5] || mulePlacementMode) {
             if (mulePlacementMode) {
                 if (players.get(currentPlayerTurn).ownsLand(zeroFive)) {
                     LandPlot land = players.get(currentPlayerTurn).getLand(zeroFive);
@@ -634,7 +634,7 @@ public class Controller implements Initializable {
     }
 
     public void zeroSixClicked(Event event) {
-        if (!landTaken[0][6]) {
+        if (!landTaken[0][6] || mulePlacementMode) {
             if (mulePlacementMode) {
                 if (players.get(currentPlayerTurn).ownsLand(zeroSix)) {
                     LandPlot land = players.get(currentPlayerTurn).getLand(zeroSix);
@@ -673,7 +673,7 @@ public class Controller implements Initializable {
     }
 
     public void zeroEightClicked(Event event) {
-        if (!landTaken[0][8]) {
+        if (!landTaken[0][8] || mulePlacementMode) {
             if (mulePlacementMode) {
                 if (players.get(currentPlayerTurn).ownsLand(zeroEight)) {
                     LandPlot land = players.get(currentPlayerTurn).getLand(zeroEight);
@@ -712,7 +712,7 @@ public class Controller implements Initializable {
     }
 
     public void zeroSevenClicked(Event event) {
-        if (!landTaken[0][7]) {
+        if (!landTaken[0][7] || mulePlacementMode) {
             if (mulePlacementMode) {
                 if (players.get(currentPlayerTurn).ownsLand(zeroSeven)) {
                     LandPlot land = players.get(currentPlayerTurn).getLand(zeroSeven);
@@ -754,7 +754,7 @@ public class Controller implements Initializable {
     //Row One
 
     public void oneZeroClicked(Event event) {
-        if (!landTaken[1][0]) {
+        if (!landTaken[1][0] || mulePlacementMode) {
             if (mulePlacementMode) {
                 if (players.get(currentPlayerTurn).ownsLand(oneZero)) {
                     LandPlot land = players.get(currentPlayerTurn).getLand(oneZero);
@@ -793,12 +793,13 @@ public class Controller implements Initializable {
     }
 
     public void oneTwoClicked(Event event) {
-        if (!landTaken[1][2]) {
+        if (!landTaken[1][2] || mulePlacementMode) {
             if (mulePlacementMode) {
                 if (players.get(currentPlayerTurn).ownsLand(oneTwo)) {
                     LandPlot land = players.get(currentPlayerTurn).getLand(oneTwo);
                     if (!land.hasMule()) {
                         land.setMule(muleToAdd);
+
                         muleToAdd = null;
                     } else {
                         System.out.println("There is already a MULE there.");
@@ -832,7 +833,7 @@ public class Controller implements Initializable {
     }
 
     public void oneOneClicked(Event event) {
-        if (!landTaken[1][1]) {
+        if (!landTaken[1][1] || mulePlacementMode) {
             if (mulePlacementMode) {
                 if (players.get(currentPlayerTurn).ownsLand(oneOne)) {
                     LandPlot land = players.get(currentPlayerTurn).getLand(oneOne);
@@ -871,7 +872,7 @@ public class Controller implements Initializable {
     }
 
     public void oneThreeClicked(Event event) {
-        if (!landTaken[1][3]) {
+        if (!landTaken[1][3] || mulePlacementMode) {
             if (mulePlacementMode) {
                 if (players.get(currentPlayerTurn).ownsLand(oneThree)) {
                     LandPlot land = players.get(currentPlayerTurn).getLand(oneThree);
@@ -910,7 +911,7 @@ public class Controller implements Initializable {
     }
 
     public void oneFourClicked(Event event) {
-        if (!landTaken[1][4]) {
+        if (!landTaken[1][4] || mulePlacementMode) {
             if (mulePlacementMode) {
                 if (players.get(currentPlayerTurn).ownsLand(oneFour)) {
                     LandPlot land = players.get(currentPlayerTurn).getLand(oneFour);
@@ -949,7 +950,7 @@ public class Controller implements Initializable {
     }
 
     public void oneFiveClicked(Event event) {
-        if (!landTaken[1][5]) {
+        if (!landTaken[1][5] || mulePlacementMode) {
             if (mulePlacementMode) {
                 if (players.get(currentPlayerTurn).ownsLand(oneFive)) {
                     LandPlot land = players.get(currentPlayerTurn).getLand(oneFive);
@@ -989,28 +990,8 @@ public class Controller implements Initializable {
     }
 
     public void oneSixClicked(Event event) {
-        if (!landTaken[1][6]) {
+        if (!landTaken[1][6] || mulePlacementMode) {
             if (mulePlacementMode) {
-                if (players.get(currentPlayerTurn).ownsLand(oneSix)) {
-                    LandPlot land = players.get(currentPlayerTurn).getLand(oneSix);
-                    if (!land.hasMule()) {
-                        land.setMule(muleToAdd);
-                        muleToAdd = null;
-                    } else {
-                        System.out.println("There is already a MULE there.");
-                        System.out.println("Your MULE ran away.");
-                        muleToAdd = null;
-                    }
-                } else {
-                    System.out.println("You do not own that land!!");
-                    System.out.println("Your MULE ran away.");
-                    muleToAdd = null;
-                }
-                mulePlacementMode = false;
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-            }
-            else if (mulePlacementMode) {
                 if (players.get(currentPlayerTurn).ownsLand(oneSix)) {
                     LandPlot land = players.get(currentPlayerTurn).getLand(oneSix);
                     if (!land.hasMule()) {
@@ -1049,7 +1030,7 @@ public class Controller implements Initializable {
     }
 
     public void oneEightClicked(Event event) {
-        if (!landTaken[1][8]) {
+        if (!landTaken[1][8] || mulePlacementMode) {
             if (mulePlacementMode) {
                 if (players.get(currentPlayerTurn).ownsLand(oneEight)) {
                     LandPlot land = players.get(currentPlayerTurn).getLand(oneEight);
@@ -1088,7 +1069,7 @@ public class Controller implements Initializable {
     }
 
     public void oneSevenClicked(Event event) {
-        if (!landTaken[1][7]) {
+        if (!landTaken[1][7] || mulePlacementMode) {
             if (mulePlacementMode) {
                 if (players.get(currentPlayerTurn).ownsLand(oneSeven)) {
                     LandPlot land = players.get(currentPlayerTurn).getLand(oneSeven);
@@ -1128,7 +1109,7 @@ public class Controller implements Initializable {
 
     //Row Two
     public void twoZeroClicked(Event event) {
-        if (!landTaken[2][0]) {
+        if (!landTaken[2][0] || mulePlacementMode) {
             if (mulePlacementMode) {
                 if (players.get(currentPlayerTurn).ownsLand(twoZero)) {
                     LandPlot land = players.get(currentPlayerTurn).getLand(twoZero);
@@ -1167,7 +1148,7 @@ public class Controller implements Initializable {
     }
 
     public void twoTwoClicked(Event event) {
-        if (!landTaken[2][2]) {
+        if (!landTaken[2][2] || mulePlacementMode) {
             if (mulePlacementMode) {
                 if (players.get(currentPlayerTurn).ownsLand(twoTwo)) {
                     LandPlot land = players.get(currentPlayerTurn).getLand(twoTwo);
@@ -1206,7 +1187,7 @@ public class Controller implements Initializable {
     }
 
     public void twoOneClicked(Event event) {
-        if (!landTaken[2][1]) {
+        if (!landTaken[2][1] || mulePlacementMode) {
             if (mulePlacementMode) {
                 if (players.get(currentPlayerTurn).ownsLand(twoOne)) {
                     LandPlot land = players.get(currentPlayerTurn).getLand(twoOne);
@@ -1245,7 +1226,7 @@ public class Controller implements Initializable {
     }
 
     public void twoThreeClicked(Event event) {
-        if (!landTaken[2][3]) {
+        if (!landTaken[2][3] || mulePlacementMode) {
             if (mulePlacementMode) {
                 if (players.get(currentPlayerTurn).ownsLand(twoThree)) {
                     LandPlot land = players.get(currentPlayerTurn).getLand(twoThree);
@@ -1285,7 +1266,7 @@ public class Controller implements Initializable {
     }
 
     public void twoFiveClicked(Event event) {
-        if (!landTaken[2][5]) {
+        if (!landTaken[2][5] || mulePlacementMode) {
             if (mulePlacementMode) {
                 if (players.get(currentPlayerTurn).ownsLand(twoFive)) {
                     LandPlot land = players.get(currentPlayerTurn).getLand(twoFive);
@@ -1324,7 +1305,7 @@ public class Controller implements Initializable {
     }
 
     public void twoSixClicked(Event event) {
-        if (!landTaken[2][6]) {
+        if (!landTaken[2][6] || mulePlacementMode) {
             if (mulePlacementMode) {
                 if (players.get(currentPlayerTurn).ownsLand(twoSix)) {
                     LandPlot land = players.get(currentPlayerTurn).getLand(twoSix);
@@ -1363,7 +1344,7 @@ public class Controller implements Initializable {
     }
 
     public void twoEightClicked(Event event) {
-        if (!landTaken[2][8]) {
+        if (!landTaken[2][8] || mulePlacementMode) {
             if (mulePlacementMode) {
                 if (players.get(currentPlayerTurn).ownsLand(twoEight)) {
                     LandPlot land = players.get(currentPlayerTurn).getLand(twoEight);
@@ -1402,7 +1383,7 @@ public class Controller implements Initializable {
     }
 
     public void twoSevenClicked(Event event) {
-        if (!landTaken[2][7]) {
+        if (!landTaken[2][7] || mulePlacementMode) {
             if (mulePlacementMode) {
                 if (players.get(currentPlayerTurn).ownsLand(twoSeven)) {
                     LandPlot land = players.get(currentPlayerTurn).getLand(twoSeven);
@@ -1443,7 +1424,7 @@ public class Controller implements Initializable {
     //Row Three
 
     public void threeZeroClicked(Event event) {
-        if (!landTaken[3][0]) {
+        if (!landTaken[3][0] || mulePlacementMode) {
             if (landSelectionMode || GameController.buyProperty()) {
                 if (mulePlacementMode) {
                     if (players.get(currentPlayerTurn).ownsLand(threeZero)) {
@@ -1482,7 +1463,7 @@ public class Controller implements Initializable {
     }
 
     public void threeTwoClicked(Event event) {
-        if (!landTaken[3][2]) {
+        if (!landTaken[3][2] || mulePlacementMode) {
             if (mulePlacementMode) {
                 if (players.get(currentPlayerTurn).ownsLand(threeTwo)) {
                     LandPlot land = players.get(currentPlayerTurn).getLand(threeTwo);
@@ -1521,7 +1502,7 @@ public class Controller implements Initializable {
     }
 
     public void threeOneClicked(Event event) {
-        if (!landTaken[3][1]) {
+        if (!landTaken[3][1] || mulePlacementMode) {
             if (mulePlacementMode) {
                 if (players.get(currentPlayerTurn).ownsLand(threeOne)) {
                     LandPlot land = players.get(currentPlayerTurn).getLand(threeOne);
@@ -1560,28 +1541,28 @@ public class Controller implements Initializable {
     }
 
     public void threeThreeClicked(Event event) {
-        if (mulePlacementMode) {
-            if (players.get(currentPlayerTurn).ownsLand(threeThree)) {
-                LandPlot land = players.get(currentPlayerTurn).getLand(threeThree);
-                if (!land.hasMule()) {
-                    land.setMule(muleToAdd);
-                    muleToAdd = null;
+        if (!landTaken[3][3] || mulePlacementMode) {
+            if (mulePlacementMode) {
+                if (players.get(currentPlayerTurn).ownsLand(threeThree)) {
+                    LandPlot land = players.get(currentPlayerTurn).getLand(threeThree);
+                    if (!land.hasMule()) {
+                        land.setMule(muleToAdd);
+                        muleToAdd = null;
+                    } else {
+                        System.out.println("There is already a MULE there.");
+                        System.out.println("Your MULE ran away.");
+                        muleToAdd = null;
+                    }
                 } else {
-                    System.out.println("There is already a MULE there.");
+                    System.out.println("You do not own that land!!");
                     System.out.println("Your MULE ran away.");
                     muleToAdd = null;
                 }
-            } else {
-                System.out.println("You do not own that land!!");
-                System.out.println("Your MULE ran away.");
-                muleToAdd = null;
+                mulePlacementMode = false;
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
             }
-            mulePlacementMode = false;
-            GameController.nextTurn();
-            if (landSelectionMode) GameController.landSelectionPhase();
-        }
-        else if (!landTaken[3][3]) {
-            if (landSelectionMode || GameController.buyProperty()) {
+            else if (landSelectionMode || GameController.buyProperty()) {
                 threeThree.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
@@ -1599,7 +1580,7 @@ public class Controller implements Initializable {
     }
 
     public void threeFourClicked(Event event) {
-        if (!landTaken[3][4]) {
+        if (!landTaken[3][4] || mulePlacementMode) {
             if (mulePlacementMode) {
                 if (players.get(currentPlayerTurn).ownsLand(threeFour)) {
                     LandPlot land = players.get(currentPlayerTurn).getLand(threeFour);
@@ -1638,7 +1619,7 @@ public class Controller implements Initializable {
     }
 
     public void threeFiveClicked(Event event) {
-        if (!landTaken[3][5]) {
+        if (!landTaken[3][5] || mulePlacementMode) {
             if (mulePlacementMode) {
                 if (players.get(currentPlayerTurn).ownsLand(threeFive)) {
                     LandPlot land = players.get(currentPlayerTurn).getLand(threeFive);
@@ -1677,7 +1658,7 @@ public class Controller implements Initializable {
     }
 
     public void threeSixClicked(Event event) {
-        if (!landTaken[3][6]) {
+        if (!landTaken[3][6] || mulePlacementMode) {
             if (mulePlacementMode) {
                 if (players.get(currentPlayerTurn).ownsLand(threeSix)) {
                     LandPlot land = players.get(currentPlayerTurn).getLand(threeSix);
@@ -1716,7 +1697,7 @@ public class Controller implements Initializable {
     }
 
     public void threeEightClicked(Event event) {
-        if (!landTaken[3][8]) {
+        if (!landTaken[3][8] || mulePlacementMode) {
             if (mulePlacementMode) {
                 if (players.get(currentPlayerTurn).ownsLand(threeEight)) {
                     LandPlot land = players.get(currentPlayerTurn).getLand(threeEight);
@@ -1755,7 +1736,7 @@ public class Controller implements Initializable {
     }
 
     public void threeSevenClicked(Event event) {
-        if (!landTaken[3][7]) {
+        if (!landTaken[3][7] || mulePlacementMode) {
             if (mulePlacementMode) {
                 if (players.get(currentPlayerTurn).ownsLand(threeSeven)) {
                     LandPlot land = players.get(currentPlayerTurn).getLand(threeSeven);
@@ -1796,7 +1777,7 @@ public class Controller implements Initializable {
     //Row Four
 
     public void fourZeroClicked(Event event) {
-        if (!landTaken[4][0]) {
+        if (!landTaken[4][0] || mulePlacementMode) {
             if (mulePlacementMode) {
                 if (players.get(currentPlayerTurn).ownsLand(fourZero)) {
                     LandPlot land = players.get(currentPlayerTurn).getLand(fourZero);
@@ -1835,7 +1816,7 @@ public class Controller implements Initializable {
     }
 
     public void fourTwoClicked(Event event) {
-        if (!landTaken[4][2]) {
+        if (!landTaken[4][2] || mulePlacementMode) {
             if (mulePlacementMode) {
                 if (players.get(currentPlayerTurn).ownsLand(fourTwo)) {
                     LandPlot land = players.get(currentPlayerTurn).getLand(fourTwo);
@@ -1874,7 +1855,7 @@ public class Controller implements Initializable {
     }
 
     public void fourOneClicked(Event event) {
-        if (!landTaken[4][1]) {
+        if (!landTaken[4][1] || mulePlacementMode) {
             if (mulePlacementMode) {
                 if (players.get(currentPlayerTurn).ownsLand(fourOne)) {
                     LandPlot land = players.get(currentPlayerTurn).getLand(fourOne);
@@ -1913,7 +1894,7 @@ public class Controller implements Initializable {
     }
 
     public void fourThreeClicked(Event event) {
-        if (!landTaken[4][3]) {
+        if (!landTaken[4][3] || mulePlacementMode) {
             if (mulePlacementMode) {
                 if (players.get(currentPlayerTurn).ownsLand(fourThree)) {
                     LandPlot land = players.get(currentPlayerTurn).getLand(fourThree);
@@ -1952,7 +1933,7 @@ public class Controller implements Initializable {
     }
 
     public void fourFourClicked(Event event) {
-        if (!landTaken[4][4]) {
+        if (!landTaken[4][4] || mulePlacementMode) {
             if (mulePlacementMode) {
                 if (players.get(currentPlayerTurn).ownsLand(fourFour)) {
                     LandPlot land = players.get(currentPlayerTurn).getLand(fourFour);
@@ -1991,7 +1972,7 @@ public class Controller implements Initializable {
     }
 
     public void fourFiveClicked(Event event) {
-        if (!landTaken[4][5]) {
+        if (!landTaken[4][5] || mulePlacementMode) {
             if (mulePlacementMode) {
                 if (players.get(currentPlayerTurn).ownsLand(fourFive)) {
                     LandPlot land = players.get(currentPlayerTurn).getLand(fourFive);
@@ -2030,7 +2011,7 @@ public class Controller implements Initializable {
     }
 
     public void fourSixClicked(Event event) {
-        if (!landTaken[4][6]) {
+        if (!landTaken[4][6] || mulePlacementMode) {
             if (mulePlacementMode) {
                 if (players.get(currentPlayerTurn).ownsLand(fourSix)) {
                     LandPlot land = players.get(currentPlayerTurn).getLand(fourSix);
@@ -2069,7 +2050,7 @@ public class Controller implements Initializable {
     }
 
     public void fourEightClicked(Event event) {
-        if (!landTaken[4][8]) {
+        if (!landTaken[4][8] || mulePlacementMode) {
             if (mulePlacementMode) {
                 if (players.get(currentPlayerTurn).ownsLand(fourEight)) {
                     LandPlot land = players.get(currentPlayerTurn).getLand(fourEight);
@@ -2108,7 +2089,7 @@ public class Controller implements Initializable {
     }
 
     public void fourSevenClicked(Event event) {
-        if (!landTaken[4][7]) {
+        if (!landTaken[4][7] || mulePlacementMode) {
             if (mulePlacementMode) {
                 if (players.get(currentPlayerTurn).ownsLand(fourSeven)) {
                     LandPlot land = players.get(currentPlayerTurn).getLand(fourSeven);
@@ -2257,10 +2238,10 @@ public class Controller implements Initializable {
             muleToAdd = cur.getMule();
             mulePlacementMode = true;
             System.out.println("\nPlease select a land plot you wish to add your MULE to: ");
-            System.out.println("NOTE: You must add it to one of your own land plots else your MULE will be lost");
+            System.out.println("NOTE: You must add it to one of your own land plots or else your MULE will be lost");
             System.out.println("If you attempt to add a MULE to a land plot that already has a MULE, your new MULE will be lost as well.\n");
         } else {
-            System.out.println("Silly" + cur.getName() + " - You don't have a MULE in your inventory.");
+            System.out.println("Silly " + cur.getName() + " - You don't have a MULE in your inventory.");
         }
     }
 }

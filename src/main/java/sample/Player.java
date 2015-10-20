@@ -52,6 +52,10 @@ public class Player implements InventoryInterface {
 
     public int getLandCount() { return this.landCount; }
 
+    public ArrayList<LandPlot> getLandOwned() {
+        return this.landOwned;
+    }
+
     public boolean ownsLand(Button p) {
         boolean isOwner = false;
         for (LandPlot l : landOwned) {

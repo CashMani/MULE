@@ -43,8 +43,25 @@ public class LandPlot {
         return muleOnProp != null;
     }
 
+    public Mule getMuleOnProp() {
+        return this.muleOnProp;
+    }
+
+    public int getEnergyProd() {
+        return energyProd;
+    }
+
+    public int getOreProd() {
+        return oreProd;
+    }
+
+    public int getFoodProd() {
+        return foodProd;
+    }
+
     public void setMule(Mule m) {
         this.muleOnProp = m;
+        System.out.println("Mule of type \"" + m.getType() + "\" successfully planted on property of type \"" + this.type + "\" by " + owner.getName() + ".");
     }
 
     public Button getButton() {
