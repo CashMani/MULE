@@ -14,6 +14,7 @@ import java.util.Comparator;
 
     //***************************** Land Selection ********************************************************************
     public static void nextTurn() {
+        Controller.mulePlacementMode = false;
         if (Controller.currentPlayerTurn == 0 && Controller.roundNum == 0) {
             Player cur = Controller.players.get(Controller.currentPlayerTurn);
             System.out.println(cur.getName() + "'s turn is over.\n");

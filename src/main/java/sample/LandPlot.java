@@ -39,6 +39,18 @@ public class LandPlot {
         }
     }
 
+    public boolean hasMule() {
+        return muleOnProp != null;
+    }
+
+    public void setMule(Mule m) {
+        this.muleOnProp = m;
+    }
+
+    public Button getButton() {
+        return this.location;
+    }
+
     public void setProductionRates() {
         if (type.equalsIgnoreCase("River")) {
             energyProd = 2;

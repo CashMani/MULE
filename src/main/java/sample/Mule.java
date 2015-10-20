@@ -22,6 +22,4 @@ public class Mule {
     public Configuration getType() {
         return type;
     }
-
-
 }
