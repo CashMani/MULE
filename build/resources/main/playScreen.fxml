@@ -97,7 +97,6 @@
             </GridPane>
             <Label layoutX="22.0" layoutY="17.0" text="Time Remaining:" />
             <Label fx:id="timeLeftDisp" layoutX="141.0" layoutY="18.0" text="TimeLeft" />
-            <Button fx:id="placeMuleBut" layoutX="14.0" layoutY="639.0" mnemonicParsing="false" onMouseClicked="#placeMule" text="Place Mule" />
          </children>
       </Pane>
    </children>
