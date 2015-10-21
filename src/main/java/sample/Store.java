@@ -21,13 +21,20 @@ public class Store {
 
     //********************************************** BUY FROM STORE ****************************************************
 
+    public String toString() {
+        String stockString = "Store Stock: \n Food: " + stock[0] + "\n Energy: " + stock[1] + "\n Ore: " + stock[2]
+                + "\n Mules: " + stock[4] + "\n";
+        return stockString;
+    }
+
     public void buyFood(int numWanted) {
         if (verifyAvailability(0, numWanted) && verifyFunds(0, numWanted)) {
             (Controller.players.get(Controller.currentPlayerTurn)).addFood(numWanted);
             (Controller.players.get(Controller.currentPlayerTurn)).subtractMoney(30 * numWanted);
             stock[0] = stock[0] - numWanted;
+            System.out.println("Successful purchase of food.");
         } else {
-            System.out.println("Error purchasing food.");
+            System.out.println("Insufficient funds or out of stock");
         }
     }
 
@@ -36,18 +43,20 @@ public class Store {
             (Controller.players.get(Controller.currentPlayerTurn)).addEnergy(numWanted);
             (Controller.players.get(Controller.currentPlayerTurn)).subtractMoney(25 * numWanted);
             stock[1] = stock[1] - numWanted;
+            System.out.println("Successful purchase of energy.");
         } else {
-            System.out.println("Error purchasing energy.");
+            System.out.println("Insufficient funds or out of stock.");
         }
     }
 
     public void buyOre(int numWanted) {
         if (verifyAvailability(2, numWanted) && verifyFunds(2, numWanted)) {
-            (Controller.players.get(Controller.currentPlayerTurn)).addEnergy(numWanted);
+            (Controller.players.get(Controller.currentPlayerTurn)).addOre(numWanted);
             (Controller.players.get(Controller.currentPlayerTurn)).subtractMoney(50 * numWanted);
             stock[2] = stock[2] - numWanted;
+            System.out.println("Successful purchase of ore.");
         } else {
-            System.out.println("Error purchasing ore.");
+            System.out.println("Insufficient funds or out of stock.");
         }
     }
 
@@ -56,8 +65,9 @@ public class Store {
             (Controller.players.get(Controller.currentPlayerTurn)).addCrystite(numWanted);
             (Controller.players.get(Controller.currentPlayerTurn)).subtractMoney(50 * numWanted);
             stock[3] = stock[3] - numWanted;
+            System.out.println("Successful purchase of crystite.");
         } else {
-            System.out.println("Error purchasing ore.");
+            System.out.println("Insufficient funds or out of stock.");
         }
     }
 
@@ -95,6 +105,7 @@ public class Store {
             stock[0] = stock[0] + numSold;
             Controller.players.get(Controller.currentPlayerTurn).addMoney(30 * numSold);
             Controller.players.get(Controller.currentPlayerTurn).subtractFood(numSold);
+            System.out.println("Successful sale of food. \n $30 credited to your account.");
         } else {
             System.out.println("You do not have that much food to sell.");
         }
@@ -105,6 +116,7 @@ public class Store {
             stock[1] = stock[1] + numSold;
             Controller.players.get(Controller.currentPlayerTurn).addMoney(25 * numSold);
             Controller.players.get(Controller.currentPlayerTurn).subtractEnergy(numSold);
+            System.out.println("Successful sale of energy. \n $25 credited to your account.");
         } else {
             System.out.println("You do not have that much energy to sell.");
         }
@@ -115,6 +127,7 @@ public class Store {
             stock[2] = stock[2] + numSold;
             Controller.players.get(Controller.currentPlayerTurn).addMoney(50 * numSold);
             Controller.players.get(Controller.currentPlayerTurn).subtractOre(numSold);
+            System.out.println("Successful sale of ore. \n $50 credited to your account.");
         } else {
             System.out.println("You do not have that much ore to sell.");
         }
@@ -125,6 +138,7 @@ public class Store {
             stock[3] = stock[3] + numSold;
             Controller.players.get(Controller.currentPlayerTurn).addMoney(100 * numSold);
             Controller.players.get(Controller.currentPlayerTurn).subtractOre(numSold);
+            System.out.println("Successful sale of crystite. \n $100 credited to your account.");
         } else {
             System.out.println("You do not have that much crystite to sell.");
         }
@@ -146,6 +160,7 @@ public class Store {
             }
             curr.addMoney(sellback);
             curr.sellMule();
+            System.out.println("Successful sale of mule. \n $" + sellback + " credited to your account.");
             stock[4]++;
         } else {
             System.out.println("You don't have a mule to sell.");

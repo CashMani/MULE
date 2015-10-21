@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <list default="true" id="263a2456-7145-415f-b620-cab273f3a152" name="Default" comment="">
 =======
     <list default="true" id="417151d5-b762-4db3-a38f-3db05effaa73" name="Default" comment="">
@@ -10,12 +11,11 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/sample/store.fxml" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/build/resources/main/Store Interior.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/Store Interior.jpg" afterPath="" />
+=======
+    <list default="true" id="ff0172de-eee3-418b-a1e2-3b7dbda5f065" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="" />
+>>>>>>> master
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/sample/Controller.class" afterPath="$PROJECT_DIR$/build/classes/main/sample/Controller.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/sample/GameController$1.class" afterPath="$PROJECT_DIR$/build/classes/main/sample/GameController$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/sample/GameController.class" afterPath="$PROJECT_DIR$/build/classes/main/sample/GameController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/sample/LandPlot.class" afterPath="$PROJECT_DIR$/build/classes/main/sample/LandPlot.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/sample/Player$Inventory.class" afterPath="$PROJECT_DIR$/build/classes/main/sample/Player$Inventory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/sample/Player.class" afterPath="$PROJECT_DIR$/build/classes/main/sample/Player.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sample/Controller.java" afterPath="$PROJECT_DIR$/src/main/java/sample/Controller.java" />
 <<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sample/Player.java" afterPath="$PROJECT_DIR$/src/main/java/sample/Player.java" />
@@ -33,6 +33,10 @@
 =======
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sample/LandPlot.java" afterPath="$PROJECT_DIR$/src/main/java/sample/LandPlot.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sample/Player.java" afterPath="$PROJECT_DIR$/src/main/java/sample/Player.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/resources/main/playScreen.fxml" afterPath="$PROJECT_DIR$/build/resources/main/playScreen.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/playScreen.fxml" afterPath="$PROJECT_DIR$/src/main/resources/playScreen.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
 >>>>>>> master
     </list>
@@ -58,6 +62,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/sample/Main.java">
@@ -96,6 +101,13 @@
             <state vertical-scroll-proportion="-6.6666665">
               <caret line="1261" column="9" selection-start-line="1261" selection-start-column="9" selection-end-line="1261" selection-end-column="9" />
 >>>>>>> master
+=======
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sample/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+>>>>>>> master
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -104,12 +116,36 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="store.fxml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sample/store.fxml">
+      <file leaf-file-name="store1.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/store1.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
           <provider editor-type-id="JavaFX-Scene-Builder">
             <state />
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="playScreen.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/playScreen.fxml">
           <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-17.62069">
+              <caret line="82" column="126" selection-start-line="82" selection-start-column="126" selection-end-line="82" selection-end-column="126" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sample/Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             <state vertical-scroll-proportion="-0.0">
@@ -123,25 +159,40 @@
             <state vertical-scroll-proportion="0.63380283">
               <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
 >>>>>>> master
+=======
+            <state vertical-scroll-proportion="0.0">
+              <caret line="2190" column="37" selection-start-line="2190" selection-start-column="37" selection-end-line="2190" selection-end-column="37" />
+>>>>>>> master
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GameController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/sample/GameController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="89" column="5" selection-start-line="89" selection-start-column="5" selection-end-line="89" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.5373832">
+              <caret line="60" column="24" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Store.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sample/Store.java">
+      <file leaf-file-name="InventoryInterface.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sample/InventoryInterface.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LandPlot.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sample/LandPlot.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -168,20 +219,29 @@
               <folding />
 =======
               <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+=======
+              <caret line="77" column="25" selection-start-line="77" selection-start-column="25" selection-end-line="77" selection-end-column="25" />
+>>>>>>> master
               <folding>
-                <element signature="e#6369#6370#0" expanded="true" />
-                <element signature="e#6427#6428#0" expanded="true" />
+                <element signature="e#1177#1178#0" expanded="true" />
+                <element signature="e#1215#1216#0" expanded="true" />
+                <element signature="e#1249#1250#0" expanded="true" />
+                <element signature="e#1282#1283#0" expanded="true" />
+                <element signature="e#1313#1314#0" expanded="true" />
+                <element signature="e#1343#1344#0" expanded="true" />
+                <element signature="e#1375#1376#0" expanded="true" />
+                <element signature="e#1406#1407#0" expanded="true" />
               </folding>
 >>>>>>> master
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Pub.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sample/Pub.java">
+      <file leaf-file-name="Mule.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sample/Mule.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -191,6 +251,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/sample/Player.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -205,10 +266,18 @@
               <caret line="172" column="9" selection-start-line="172" selection-start-column="9" selection-end-line="172" selection-end-column="9" />
 >>>>>>> master
               <folding />
+=======
+              <caret line="131" column="9" selection-start-line="131" selection-start-column="9" selection-end-line="131" selection-end-column="9" />
+              <folding>
+                <element signature="e#1524#1525#0" expanded="true" />
+                <element signature="e#1561#1562#0" expanded="true" />
+              </folding>
+>>>>>>> master
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <file leaf-file-name="townScreen.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/townScreen.fxml">
@@ -254,18 +323,22 @@
                 <element signature="e#406#407#0" expanded="true" />
               </folding>
 >>>>>>> master
+=======
+      <file leaf-file-name="sample.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sample/sample.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-19.655172">
+              <caret line="38" column="11" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
+              <folding />
+>>>>>>> master
             </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
           </provider>
         </entry>
       </file>
     </leaf>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -428,7 +501,10 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="1443122306000" />
+        <entry key="$USER_HOME$/Downloads/MULE-035741da7d130b609ffe2aa5504aa7f494f2d926" value="1444154212000" />
+        <entry key="$USER_HOME$/Downloads/MULE-3a427bbc89907dda7c908b203cc6d046b705216a" value="1443747198000" />
+        <entry key="$USER_HOME$/Downloads/MULE-cb12f1d0848da04506f870682e2b8a326a88f790" value="1444864314000" />
+        <entry key="$PROJECT_DIR$" value="1443145515000" />
         <entry key="$PROJECT_DIR$/../../MULE" value="1442001247000" />
       </map>
     </option>
@@ -456,63 +532,119 @@
               <option name="name" value="MULE" />
               <option name="projectBuildClasspath">
                 <list>
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/ant-1.9.3.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/ant-launcher-1.9.3.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/gradle-base-services-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/gradle-base-services-groovy-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/gradle-cli-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/gradle-core-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/gradle-docs-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/gradle-launcher-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/gradle-messaging-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/gradle-model-core-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/gradle-model-groovy-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/gradle-native-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/gradle-open-api-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/gradle-resources-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/gradle-tooling-api-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/gradle-ui-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/gradle-wrapper-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/groovy-all-2.3.10.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-announce-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-antlr-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-build-comparison-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-build-init-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-code-quality-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-dependency-management-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-diagnostics-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-ear-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-ide-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-ide-native-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-ivy-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-jacoco-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-javascript-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-jetty-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-language-groovy-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-language-java-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-language-jvm-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-language-native-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-language-scala-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-maven-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-osgi-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-platform-base-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-platform-jvm-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-platform-native-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-platform-play-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-plugin-development-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-plugin-use-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-plugins-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-publish-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-reporting-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-resources-http-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-resources-s3-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-resources-sftp-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-scala-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-signing-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-sonar-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-testing-native-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/gradle-tooling-api-builders-2.6.jar" />
-                  <option value="$PROJECT_DIR$/../../gradle-2.6/lib/plugins/ivy-2.2.0.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/announce" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/antlr" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/base-services" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/base-services-groovy" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/build-comparison" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/build-init" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/cli" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/code-quality" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/core" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/dependency-management" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/diagnostics" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/ear" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/ide" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/ide-native" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/internal-integ-testing" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/internal-testing" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/ivy" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/jacoco" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/javascript" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/jetty" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/language-groovy" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/language-java" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/language-jvm" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/language-native" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/language-scala" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/launcher" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/maven" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/messaging" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/model-core" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/model-groovy" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/native" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/open-api" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/osgi" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/platform-base" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/platform-jvm" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/platform-native" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/platform-play" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/plugin-development" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/plugin-use" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/plugins" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/publish" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/reporting" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/resources" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/resources-http" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/resources-s3" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/resources-sftp" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/scala" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/signing" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/sonar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/test-kit" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/testing-native" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/tooling-api" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/tooling-api-builders" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/ui" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/src/wrapper" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/ant-1.9.3.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/ant-launcher-1.9.3.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/gradle-base-services-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/gradle-base-services-groovy-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/gradle-cli-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/gradle-core-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/gradle-docs-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/gradle-launcher-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/gradle-messaging-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/gradle-model-core-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/gradle-model-groovy-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/gradle-native-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/gradle-open-api-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/gradle-resources-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/gradle-tooling-api-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/gradle-ui-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/gradle-wrapper-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/groovy-all-2.3.10.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/plugins/gradle-announce-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/plugins/gradle-antlr-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/plugins/gradle-build-comparison-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/plugins/gradle-build-init-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/plugins/gradle-code-quality-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/plugins/gradle-dependency-management-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/plugins/gradle-diagnostics-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/plugins/gradle-ear-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/plugins/gradle-ide-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/plugins/gradle-ide-native-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/plugins/gradle-ivy-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/plugins/gradle-jacoco-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/plugins/gradle-javascript-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/plugins/gradle-jetty-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/plugins/gradle-language-groovy-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/plugins/gradle-language-java-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/plugins/gradle-language-jvm-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/plugins/gradle-language-native-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/plugins/gradle-language-scala-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/plugins/gradle-maven-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/plugins/gradle-osgi-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/plugins/gradle-platform-base-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/plugins/gradle-platform-jvm-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/plugins/gradle-platform-native-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/plugins/gradle-platform-play-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/plugins/gradle-plugin-development-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/plugins/gradle-plugin-use-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/plugins/gradle-plugins-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/plugins/gradle-publish-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/plugins/gradle-reporting-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/plugins/gradle-resources-http-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/plugins/gradle-resources-s3-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/plugins/gradle-resources-sftp-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/plugins/gradle-scala-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/plugins/gradle-signing-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/plugins/gradle-sonar-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/plugins/gradle-test-kit-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/plugins/gradle-testing-native-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/plugins/gradle-tooling-api-builders-2.7.jar" />
+                  <option value="$PROJECT_DIR$/../../gradle-2.7/lib/plugins/ivy-2.2.0.jar" />
                   <option value="$PROJECT_DIR$/buildSrc/src/main/java" />
                   <option value="$PROJECT_DIR$/buildSrc/src/main/groovy" />
                 </list>
@@ -529,6 +661,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/main/java/sample/Inventory.java" />
         <option value="$PROJECT_DIR$/src/main/java/sample/Verifier.java" />
         <option value="$PROJECT_DIR$/src/main/resources/townScreen.fxml" />
@@ -562,14 +695,13 @@
         <option value="$PROJECT_DIR$/src/main/resources/gameConfig.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/sample.fxml" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+=======
+>>>>>>> master
         <option value="$PROJECT_DIR$/src/main/java/sample/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/GameController.java" />
         <option value="$PROJECT_DIR$/src/main/java/sample/Controller.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/Mule.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/LandPlot.java" />
         <option value="$PROJECT_DIR$/src/main/java/sample/Player.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/Store.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/store.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/LandPlot.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/GameController.java" />
       </list>
     </option>
   </component>
@@ -582,9 +714,10 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1280" />
-    <option name="height" value="709" />
+    <option name="x" value="1440" />
+    <option name="y" value="-157" />
+    <option name="width" value="1920" />
+    <option name="height" value="1057" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -611,6 +744,7 @@
     <panes>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <pane id="Scratches" />
 <<<<<<< HEAD
 =======
@@ -623,6 +757,9 @@
 >>>>>>> master
       <pane id="Scope" />
       <pane id="PackagesPane" />
+>>>>>>> master
+=======
+      <pane id="Scope" />
 >>>>>>> master
       <pane id="ProjectPane">
         <subPane>
@@ -695,6 +832,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <pane id="Scope" />
       <pane id="PackagesPane" />
 =======
@@ -704,26 +842,21 @@
 >>>>>>> master
 =======
 >>>>>>> master
+=======
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+>>>>>>> master
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/FXGraphics" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../git/RepositoryCS2340" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="dynamic.classpath" value="false" />
     <property name="FullScreen" value="false" />
-    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/src/main/java/sample/aboutTeam.fxml" />
-    <property name="ToolWindowFind.ShowToolbar" value="false" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/sample" />
-      <recent name="$PROJECT_DIR$/src/main/resources" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="sample" />
-    </key>
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -1010,32 +1143,20 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="417151d5-b762-4db3-a38f-3db05effaa73" name="Default" comment="" />
-      <created>1443122387070</created>
+      <changelist id="ff0172de-eee3-418b-a1e2-3b7dbda5f065" name="Default" comment="" />
+      <created>1445313716026</created>
       <option name="number" value="Default" />
-      <updated>1443122387070</updated>
-      <workItem from="1443122388757" duration="7060000" />
-      <workItem from="1443145534521" duration="7253000" />
-      <workItem from="1443153946642" duration="1188000" />
-      <workItem from="1443662939978" duration="1625000" />
-      <workItem from="1443669402994" duration="2576000" />
-      <workItem from="1443716752710" duration="285000" />
-      <workItem from="1443717236862" duration="3680000" />
-      <workItem from="1443726516731" duration="1429000" />
-      <workItem from="1443728636510" duration="170000" />
-      <workItem from="1443728961543" duration="2514000" />
-      <workItem from="1443733644428" duration="786000" />
-      <workItem from="1443734979236" duration="92000" />
-      <workItem from="1443805905641" duration="2369000" />
-      <workItem from="1444083375556" duration="208000" />
-      <workItem from="1444084384615" duration="10715000" />
+      <updated>1445313716026</updated>
+      <workItem from="1445313717553" duration="392000" />
+      <workItem from="1445314147873" duration="3960000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41950000" />
+    <option name="totallyTimeSpent" value="4352000" />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1049,34 +1170,37 @@
 =======
     <frame x="0" y="23" width="1280" height="709" extended-state="0" />
 >>>>>>> master
+=======
+    <frame x="1440" y="-157" width="1920" height="1057" extended-state="6" />
+>>>>>>> master
     <editor active="true" />
 >>>>>>> master
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0234375" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2359375" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296875" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39975247" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39975247" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299595" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32186234" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33782384" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1091,9 +1215,7 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="1" />
-    </breakpoint-manager>
+    <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1101,6 +1223,7 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1272,16 +1395,22 @@
 =======
           <caret line="55" column="48" selection-start-line="55" selection-start-column="48" selection-end-line="55" selection-end-column="48" />
 >>>>>>> master
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="43" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+>>>>>>> master
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/Player.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="29" />
+          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1289,6 +1418,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/sample/GameController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+<<<<<<< HEAD
 <<<<<<< HEAD
           <caret line="15" column="90" selection-start-line="15" selection-start-column="90" selection-end-line="15" selection-end-column="90" />
 >>>>>>> master
@@ -1349,10 +1479,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+>>>>>>> master
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/sample/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1390,11 +1524,18 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="56" column="101" selection-start-line="46" selection-start-column="83" selection-end-line="46" selection-end-column="97" />
 >>>>>>> master
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/InventoryInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+>>>>>>> master
           <folding />
         </state>
       </provider>
 <<<<<<< HEAD
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/sample/playScreen.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
@@ -1441,15 +1582,26 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sample/Controller.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/LandPlot.java">
+>>>>>>> master
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="210" column="47" selection-start-line="210" selection-start-column="47" selection-end-line="210" selection-end-column="47" />
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1177#1178#0" expanded="true" />
+            <element signature="e#1215#1216#0" expanded="true" />
+            <element signature="e#1249#1250#0" expanded="true" />
+            <element signature="e#1282#1283#0" expanded="true" />
+            <element signature="e#1313#1314#0" expanded="true" />
+            <element signature="e#1343#1344#0" expanded="true" />
+            <element signature="e#1375#1376#0" expanded="true" />
+            <element signature="e#1406#1407#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1464,35 +1616,44 @@
           </folding>
 =======
           <caret line="42" column="54" selection-start-line="42" selection-start-column="54" selection-end-line="42" selection-end-column="54" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/Mule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+>>>>>>> master
           <folding />
 >>>>>>> master
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/GameController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/Player.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="90" selection-start-line="15" selection-start-column="90" selection-end-line="15" selection-end-column="90" />
-          <folding />
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="e#1524#1525#0" expanded="true" />
+            <element signature="e#1561#1562#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/gameConfig.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/sample.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+<<<<<<< HEAD
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
 >>>>>>> master
+=======
+          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+>>>>>>> master
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/townScreen.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
+<<<<<<< HEAD
 <<<<<<< HEAD
     </entry>
 <<<<<<< HEAD
@@ -1510,11 +1671,10 @@
           <folding />
         </state>
       </provider>
+=======
+>>>>>>> master
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/aboutTeam.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/Timer.java">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
         <state vertical-scroll-proportion="0.65912116">
@@ -1522,38 +1682,101 @@
 >>>>>>> master
 =======
         <state vertical-scroll-proportion="0.0">
+<<<<<<< HEAD
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> master
+=======
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
 >>>>>>> master
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/playScreen.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/Verifier.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="56" column="101" selection-start-line="46" selection-start-column="83" selection-end-line="46" selection-end-column="97" />
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/sample.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.413794">
+          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/playScreen.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/Pub.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/addPlayers.fxml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/Round.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/Store.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/Timer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/Verifier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/sample.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.655172">
+          <caret line="38" column="11" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/InventoryInterface.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -1561,178 +1784,23 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/sample/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/Verifier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="86" selection-start-line="31" selection-start-column="86" selection-end-line="31" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/MULE/sample/gameConfigAdvanced.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65912116">
-          <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/Timer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/Pub.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="142" selection-start-line="25" selection-start-column="142" selection-end-line="25" selection-end-column="142" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/townScreen.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="89" selection-start-line="24" selection-start-column="82" selection-end-line="24" selection-end-column="89" />
+          <caret line="2190" column="37" selection-start-line="2190" selection-start-column="37" selection-end-line="2190" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/playScreen.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="50" column="26" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
+        <state vertical-scroll-proportion="-17.62069">
+          <caret line="82" column="126" selection-start-line="82" selection-start-column="126" selection-end-line="82" selection-end-column="126" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/playScreen.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/aboutTeam.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.758621">
-          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/addPlayers.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.6792452">
-          <caret line="143" column="0" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/addPlayers.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10291595">
-          <caret line="6" column="9" selection-start-line="0" selection-start-column="0" selection-end-line="142" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/aboutTeam.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1320754">
-          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/sample.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.551723">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/sample.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44235924">
-          <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/gameConfig.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.948542">
-          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/gameConfig.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6140652">
-          <caret line="44" column="34" selection-start-line="0" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/store1.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
 <<<<<<< HEAD
@@ -1753,55 +1821,33 @@
 >>>>>>> master
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/storeInside.jpg">
-      <provider selected="true" editor-type-id="images">
+      <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/Verifier.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0447761">
-          <caret line="31" column="86" selection-start-line="31" selection-start-column="86" selection-end-line="31" selection-end-column="86" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sample/LandPlot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46078432">
-          <caret line="21" column="83" selection-start-line="21" selection-start-column="83" selection-end-line="21" selection-end-column="83" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/Round.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19607843">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5147059">
-          <caret line="26" column="15" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/Mule.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <caret line="77" column="25" selection-start-line="77" selection-start-column="25" selection-end-line="77" selection-end-column="25" />
           <folding>
-            <element signature="e#230#231#0" expanded="true" />
-            <element signature="e#262#263#0" expanded="true" />
-            <element signature="e#309#310#0" expanded="true" />
-            <element signature="e#341#342#0" expanded="true" />
-            <element signature="e#379#380#0" expanded="true" />
-            <element signature="e#406#407#0" expanded="true" />
+            <element signature="e#1177#1178#0" expanded="true" />
+            <element signature="e#1215#1216#0" expanded="true" />
+            <element signature="e#1249#1250#0" expanded="true" />
+            <element signature="e#1282#1283#0" expanded="true" />
+            <element signature="e#1313#1314#0" expanded="true" />
+            <element signature="e#1343#1344#0" expanded="true" />
+            <element signature="e#1375#1376#0" expanded="true" />
+            <element signature="e#1406#1407#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1809,21 +1855,25 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/sample/Player.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="172" column="9" selection-start-line="172" selection-start-column="9" selection-end-line="172" selection-end-column="9" />
-          <folding />
+          <caret line="131" column="9" selection-start-line="131" selection-start-column="9" selection-end-line="131" selection-end-column="9" />
+          <folding>
+            <element signature="e#1524#1525#0" expanded="true" />
+            <element signature="e#1561#1562#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/Pub.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/Mule.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sample/GameController.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         <state vertical-scroll-proportion="0.47470817">
@@ -1868,6 +1918,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.63380283">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+>>>>>>> master
+=======
+        <state vertical-scroll-proportion="0.5373832">
+          <caret line="60" column="24" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
 >>>>>>> master
           <folding />
         </state>

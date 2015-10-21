@@ -2,6 +2,7 @@ package sample;
 
 import javafx.scene.paint.Color;
 import java.util.ArrayList;
+import javafx.scene.control.Button;
 /**
  * Created by mani on 9/10/15.
  */
@@ -19,7 +20,7 @@ public class Player implements InventoryInterface {
         this.race = race;
         this.color = color;
         this.inventory = new Inventory();
-        landOwned = new ArrayList<LandPlot>();
+        landOwned = new ArrayList<>();
         landCount = 0;
     }
 
@@ -51,7 +52,34 @@ public class Player implements InventoryInterface {
 
     public int getLandCount() { return this.landCount; }
 
-    public Mule getMule() { return this.inventory.muleOnPerson; }
+    public ArrayList<LandPlot> getLandOwned() {
+        return this.landOwned;
+    }
+
+    public boolean ownsLand(Button p) {
+        boolean isOwner = false;
+        for (LandPlot l : landOwned) {
+            if (l.getButton().equals(p)) isOwner = true;
+        }
+
+        return isOwner;
+    }
+
+    public LandPlot getLand(Button p) {
+        LandPlot land = null;
+        for (LandPlot l : landOwned) {
+            if (l.getButton().equals(p)) land = l;
+        }
+
+        return land;
+    }
+
+    public Mule getMule() {
+        Mule temp = this.inventory.muleOnPerson;
+        this.inventory.muleOnPerson = null;
+        return temp;
+    }
+    public boolean hasMule() { return this.inventory.muleOnPerson != null; }
 
     public void addLand(LandPlot land) {
         landOwned.add(land);

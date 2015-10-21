@@ -124,6 +124,9 @@ public class Controller implements Initializable {
     public static boolean landSelectionMode = true;
     public static int roundNum = 0;
 
+    public static boolean mulePlacementMode = false;
+    public static Mule muleToAdd;
+
     public Stage addPlayerStage = new Stage();
     public Label listPlayers = new Label();
 
@@ -311,7 +314,7 @@ public class Controller implements Initializable {
             Main.primary.setScene(scene);
 
             System.out.println("Welcome Players!");
-            //GameController.startGame();
+            GameController.startGame();
             GameController.landSelectionPhase();
         }
     }
@@ -395,8 +398,28 @@ public class Controller implements Initializable {
 
     // Row Zero
     public void zeroZeroClicked(Event event) {
-        if (!landTaken[0][0]) {
-            if (landSelectionMode || GameController.buyProperty()) {
+        if (!landTaken[0][0] || mulePlacementMode) {
+            if (mulePlacementMode) {
+                if (players.get(currentPlayerTurn).ownsLand(zeroZero)) {
+                    LandPlot land = players.get(currentPlayerTurn).getLand(zeroZero);
+                    if (!land.hasMule()) {
+                        land.setMule(muleToAdd);
+                        muleToAdd = null;
+                    } else {
+                        System.out.println("There is already a MULE there.");
+                        System.out.println("Your MULE ran away.");
+                        muleToAdd = null;
+                    }
+                } else {
+                    System.out.println("You do not own that land!!");
+                    System.out.println("Your MULE ran away.");
+                    muleToAdd = null;
+                }
+                mulePlacementMode = false;
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+            }
+            else if (landSelectionMode || GameController.buyProperty()) {
                 zeroZero.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
@@ -414,8 +437,28 @@ public class Controller implements Initializable {
     }
 
     public void zeroTwoClicked(Event event) {
-        if (!landTaken[0][2]) {
-            if (landSelectionMode || GameController.buyProperty()) {
+        if (!landTaken[0][2] || mulePlacementMode) {
+            if (mulePlacementMode) {
+                if (players.get(currentPlayerTurn).ownsLand(zeroTwo)) {
+                    LandPlot land = players.get(currentPlayerTurn).getLand(zeroTwo);
+                    if (!land.hasMule()) {
+                        land.setMule(muleToAdd);
+                        muleToAdd = null;
+                    } else {
+                        System.out.println("There is already a MULE there.");
+                        System.out.println("Your MULE ran away.");
+                        muleToAdd = null;
+                    }
+                } else {
+                    System.out.println("You do not own that land!!");
+                    System.out.println("Your MULE ran away.");
+                    muleToAdd = null;
+                }
+                mulePlacementMode = false;
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+            }
+            else if (landSelectionMode || GameController.buyProperty()) {
                 zeroTwo.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
@@ -434,8 +477,28 @@ public class Controller implements Initializable {
     }
 
     public void zeroOneClicked(Event event) {
-        if (!landTaken[0][1]) {
-            if (landSelectionMode || GameController.buyProperty()) {
+        if (!landTaken[0][1] || mulePlacementMode) {
+            if (mulePlacementMode) {
+                if (players.get(currentPlayerTurn).ownsLand(zeroOne)) {
+                    LandPlot land = players.get(currentPlayerTurn).getLand(zeroOne);
+                    if (!land.hasMule()) {
+                        land.setMule(muleToAdd);
+                        muleToAdd = null;
+                    } else {
+                        System.out.println("There is already a MULE there.");
+                        System.out.println("Your MULE ran away.");
+                        muleToAdd = null;
+                    }
+                } else {
+                    System.out.println("You do not own that land!!");
+                    System.out.println("Your MULE ran away.");
+                    muleToAdd = null;
+                }
+                mulePlacementMode = false;
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+            }
+            else if (landSelectionMode || GameController.buyProperty()) {
                 zeroOne.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
@@ -453,8 +516,28 @@ public class Controller implements Initializable {
     }
 
     public void zeroThreeClicked(Event event) {
-        if (!landTaken[0][3]) {
-            if (landSelectionMode || GameController.buyProperty()) {
+        if (!landTaken[0][3] || mulePlacementMode) {
+            if (mulePlacementMode) {
+                if (players.get(currentPlayerTurn).ownsLand(zeroThree)) {
+                    LandPlot land = players.get(currentPlayerTurn).getLand(zeroThree);
+                    if (!land.hasMule()) {
+                        land.setMule(muleToAdd);
+                        muleToAdd = null;
+                    } else {
+                        System.out.println("There is already a MULE there.");
+                        System.out.println("Your MULE ran away.");
+                        muleToAdd = null;
+                    }
+                } else {
+                    System.out.println("You do not own that land!!");
+                    System.out.println("Your MULE ran away.");
+                    muleToAdd = null;
+                }
+                mulePlacementMode = false;
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+            }
+            else if (landSelectionMode || GameController.buyProperty()) {
                 zeroThree.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
@@ -472,8 +555,28 @@ public class Controller implements Initializable {
     }
 
     public void zeroFourClicked(Event event) {
-        if (!landTaken[0][4]) {
-            if (landSelectionMode || GameController.buyProperty()) {
+        if (!landTaken[0][4] || mulePlacementMode) {
+            if (mulePlacementMode) {
+                if (players.get(currentPlayerTurn).ownsLand(zeroFour)) {
+                    LandPlot land = players.get(currentPlayerTurn).getLand(zeroFour);
+                    if (!land.hasMule()) {
+                        land.setMule(muleToAdd);
+                        muleToAdd = null;
+                    } else {
+                        System.out.println("There is already a MULE there.");
+                        System.out.println("Your MULE ran away.");
+                        muleToAdd = null;
+                    }
+                } else {
+                    System.out.println("You do not own that land!!");
+                    System.out.println("Your MULE ran away.");
+                    muleToAdd = null;
+                }
+                mulePlacementMode = false;
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+            }
+            else if (landSelectionMode || GameController.buyProperty()) {
                 zeroFour.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
@@ -491,8 +594,28 @@ public class Controller implements Initializable {
     }
 
     public void zeroFiveClicked(Event event) {
-        if (!landTaken[0][5]) {
-            if (landSelectionMode || GameController.buyProperty()) {
+        if (!landTaken[0][5] || mulePlacementMode) {
+            if (mulePlacementMode) {
+                if (players.get(currentPlayerTurn).ownsLand(zeroFive)) {
+                    LandPlot land = players.get(currentPlayerTurn).getLand(zeroFive);
+                    if (!land.hasMule()) {
+                        land.setMule(muleToAdd);
+                        muleToAdd = null;
+                    } else {
+                        System.out.println("There is already a MULE there.");
+                        System.out.println("Your MULE ran away.");
+                        muleToAdd = null;
+                    }
+                } else {
+                    System.out.println("You do not own that land!!");
+                    System.out.println("Your MULE ran away.");
+                    muleToAdd = null;
+                }
+                mulePlacementMode = false;
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+            }
+            else if (landSelectionMode || GameController.buyProperty()) {
                 zeroFive.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
@@ -511,8 +634,28 @@ public class Controller implements Initializable {
     }
 
     public void zeroSixClicked(Event event) {
-        if (!landTaken[0][6]) {
-            if (landSelectionMode || GameController.buyProperty()) {
+        if (!landTaken[0][6] || mulePlacementMode) {
+            if (mulePlacementMode) {
+                if (players.get(currentPlayerTurn).ownsLand(zeroSix)) {
+                    LandPlot land = players.get(currentPlayerTurn).getLand(zeroSix);
+                    if (!land.hasMule()) {
+                        land.setMule(muleToAdd);
+                        muleToAdd = null;
+                    } else {
+                        System.out.println("There is already a MULE there.");
+                        System.out.println("Your MULE ran away.");
+                        muleToAdd = null;
+                    }
+                } else {
+                    System.out.println("You do not own that land!!");
+                    System.out.println("Your MULE ran away.");
+                    muleToAdd = null;
+                }
+                mulePlacementMode = false;
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+            }
+            else if (landSelectionMode || GameController.buyProperty()) {
                 zeroSix.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
@@ -530,8 +673,28 @@ public class Controller implements Initializable {
     }
 
     public void zeroEightClicked(Event event) {
-        if (!landTaken[0][8]) {
-            if (landSelectionMode || GameController.buyProperty()) {
+        if (!landTaken[0][8] || mulePlacementMode) {
+            if (mulePlacementMode) {
+                if (players.get(currentPlayerTurn).ownsLand(zeroEight)) {
+                    LandPlot land = players.get(currentPlayerTurn).getLand(zeroEight);
+                    if (!land.hasMule()) {
+                        land.setMule(muleToAdd);
+                        muleToAdd = null;
+                    } else {
+                        System.out.println("There is already a MULE there.");
+                        System.out.println("Your MULE ran away.");
+                        muleToAdd = null;
+                    }
+                } else {
+                    System.out.println("You do not own that land!!");
+                    System.out.println("Your MULE ran away.");
+                    muleToAdd = null;
+                }
+                mulePlacementMode = false;
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+            }
+            else if (landSelectionMode || GameController.buyProperty()) {
                 zeroEight.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
@@ -549,8 +712,28 @@ public class Controller implements Initializable {
     }
 
     public void zeroSevenClicked(Event event) {
-        if (!landTaken[0][7]) {
-            if (landSelectionMode || GameController.buyProperty()) {
+        if (!landTaken[0][7] || mulePlacementMode) {
+            if (mulePlacementMode) {
+                if (players.get(currentPlayerTurn).ownsLand(zeroSeven)) {
+                    LandPlot land = players.get(currentPlayerTurn).getLand(zeroSeven);
+                    if (!land.hasMule()) {
+                        land.setMule(muleToAdd);
+                        muleToAdd = null;
+                    } else {
+                        System.out.println("There is already a MULE there.");
+                        System.out.println("Your MULE ran away.");
+                        muleToAdd = null;
+                    }
+                } else {
+                    System.out.println("You do not own that land!!");
+                    System.out.println("Your MULE ran away.");
+                    muleToAdd = null;
+                }
+                mulePlacementMode = false;
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+            }
+            else if (landSelectionMode || GameController.buyProperty()) {
                 zeroSeven.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
@@ -571,8 +754,28 @@ public class Controller implements Initializable {
     //Row One
 
     public void oneZeroClicked(Event event) {
-        if (!landTaken[1][0]) {
-            if (landSelectionMode || GameController.buyProperty()) {
+        if (!landTaken[1][0] || mulePlacementMode) {
+            if (mulePlacementMode) {
+                if (players.get(currentPlayerTurn).ownsLand(oneZero)) {
+                    LandPlot land = players.get(currentPlayerTurn).getLand(oneZero);
+                    if (!land.hasMule()) {
+                        land.setMule(muleToAdd);
+                        muleToAdd = null;
+                    } else {
+                        System.out.println("There is already a MULE there.");
+                        System.out.println("Your MULE ran away.");
+                        muleToAdd = null;
+                    }
+                } else {
+                    System.out.println("You do not own that land!!");
+                    System.out.println("Your MULE ran away.");
+                    muleToAdd = null;
+                }
+                mulePlacementMode = false;
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+            }
+            else if (landSelectionMode || GameController.buyProperty()) {
                 oneZero.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
@@ -590,8 +793,29 @@ public class Controller implements Initializable {
     }
 
     public void oneTwoClicked(Event event) {
-        if (!landTaken[1][2]) {
-            if (landSelectionMode || GameController.buyProperty()) {
+        if (!landTaken[1][2] || mulePlacementMode) {
+            if (mulePlacementMode) {
+                if (players.get(currentPlayerTurn).ownsLand(oneTwo)) {
+                    LandPlot land = players.get(currentPlayerTurn).getLand(oneTwo);
+                    if (!land.hasMule()) {
+                        land.setMule(muleToAdd);
+
+                        muleToAdd = null;
+                    } else {
+                        System.out.println("There is already a MULE there.");
+                        System.out.println("Your MULE ran away.");
+                        muleToAdd = null;
+                    }
+                } else {
+                    System.out.println("You do not own that land!!");
+                    System.out.println("Your MULE ran away.");
+                    muleToAdd = null;
+                }
+                mulePlacementMode = false;
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+            }
+            else if (landSelectionMode || GameController.buyProperty()) {
                 oneTwo.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
@@ -609,8 +833,28 @@ public class Controller implements Initializable {
     }
 
     public void oneOneClicked(Event event) {
-        if (!landTaken[1][1]) {
-            if (landSelectionMode || GameController.buyProperty()) {
+        if (!landTaken[1][1] || mulePlacementMode) {
+            if (mulePlacementMode) {
+                if (players.get(currentPlayerTurn).ownsLand(oneOne)) {
+                    LandPlot land = players.get(currentPlayerTurn).getLand(oneOne);
+                    if (!land.hasMule()) {
+                        land.setMule(muleToAdd);
+                        muleToAdd = null;
+                    } else {
+                        System.out.println("There is already a MULE there.");
+                        System.out.println("Your MULE ran away.");
+                        muleToAdd = null;
+                    }
+                } else {
+                    System.out.println("You do not own that land!!");
+                    System.out.println("Your MULE ran away.");
+                    muleToAdd = null;
+                }
+                mulePlacementMode = false;
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+            }
+            else if (landSelectionMode || GameController.buyProperty()) {
                 oneOne.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
@@ -628,8 +872,28 @@ public class Controller implements Initializable {
     }
 
     public void oneThreeClicked(Event event) {
-        if (!landTaken[1][3]) {
-            if (landSelectionMode || GameController.buyProperty()) {
+        if (!landTaken[1][3] || mulePlacementMode) {
+            if (mulePlacementMode) {
+                if (players.get(currentPlayerTurn).ownsLand(oneThree)) {
+                    LandPlot land = players.get(currentPlayerTurn).getLand(oneThree);
+                    if (!land.hasMule()) {
+                        land.setMule(muleToAdd);
+                        muleToAdd = null;
+                    } else {
+                        System.out.println("There is already a MULE there.");
+                        System.out.println("Your MULE ran away.");
+                        muleToAdd = null;
+                    }
+                } else {
+                    System.out.println("You do not own that land!!");
+                    System.out.println("Your MULE ran away.");
+                    muleToAdd = null;
+                }
+                mulePlacementMode = false;
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+            }
+            else if (landSelectionMode || GameController.buyProperty()) {
                 oneThree.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
@@ -647,8 +911,28 @@ public class Controller implements Initializable {
     }
 
     public void oneFourClicked(Event event) {
-        if (!landTaken[1][4]) {
-            if (landSelectionMode || GameController.buyProperty()) {
+        if (!landTaken[1][4] || mulePlacementMode) {
+            if (mulePlacementMode) {
+                if (players.get(currentPlayerTurn).ownsLand(oneFour)) {
+                    LandPlot land = players.get(currentPlayerTurn).getLand(oneFour);
+                    if (!land.hasMule()) {
+                        land.setMule(muleToAdd);
+                        muleToAdd = null;
+                    } else {
+                        System.out.println("There is already a MULE there.");
+                        System.out.println("Your MULE ran away.");
+                        muleToAdd = null;
+                    }
+                } else {
+                    System.out.println("You do not own that land!!");
+                    System.out.println("Your MULE ran away.");
+                    muleToAdd = null;
+                }
+                mulePlacementMode = false;
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+            }
+            else if (landSelectionMode || GameController.buyProperty()) {
                 oneFour.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
@@ -666,8 +950,28 @@ public class Controller implements Initializable {
     }
 
     public void oneFiveClicked(Event event) {
-        if (!landTaken[1][5]) {
-            if (landSelectionMode || GameController.buyProperty()) {
+        if (!landTaken[1][5] || mulePlacementMode) {
+            if (mulePlacementMode) {
+                if (players.get(currentPlayerTurn).ownsLand(oneFive)) {
+                    LandPlot land = players.get(currentPlayerTurn).getLand(oneFive);
+                    if (!land.hasMule()) {
+                        land.setMule(muleToAdd);
+                        muleToAdd = null;
+                    } else {
+                        System.out.println("There is already a MULE there.");
+                        System.out.println("Your MULE ran away.");
+                        muleToAdd = null;
+                    }
+                } else {
+                    System.out.println("You do not own that land!!");
+                    System.out.println("Your MULE ran away.");
+                    muleToAdd = null;
+                }
+                mulePlacementMode = false;
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+            }
+            else if (landSelectionMode || GameController.buyProperty()) {
                 oneFive.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
@@ -686,8 +990,28 @@ public class Controller implements Initializable {
     }
 
     public void oneSixClicked(Event event) {
-        if (!landTaken[1][6]) {
-            if (landSelectionMode || GameController.buyProperty()) {
+        if (!landTaken[1][6] || mulePlacementMode) {
+            if (mulePlacementMode) {
+                if (players.get(currentPlayerTurn).ownsLand(oneSix)) {
+                    LandPlot land = players.get(currentPlayerTurn).getLand(oneSix);
+                    if (!land.hasMule()) {
+                        land.setMule(muleToAdd);
+                        muleToAdd = null;
+                    } else {
+                        System.out.println("There is already a MULE there.");
+                        System.out.println("Your MULE ran away.");
+                        muleToAdd = null;
+                    }
+                } else {
+                    System.out.println("You do not own that land!!");
+                    System.out.println("Your MULE ran away.");
+                    muleToAdd = null;
+                }
+                mulePlacementMode = false;
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+            }
+            else if (landSelectionMode || GameController.buyProperty()) {
                 oneSix.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
@@ -706,8 +1030,28 @@ public class Controller implements Initializable {
     }
 
     public void oneEightClicked(Event event) {
-        if (!landTaken[1][8]) {
-            if (landSelectionMode || GameController.buyProperty()) {
+        if (!landTaken[1][8] || mulePlacementMode) {
+            if (mulePlacementMode) {
+                if (players.get(currentPlayerTurn).ownsLand(oneEight)) {
+                    LandPlot land = players.get(currentPlayerTurn).getLand(oneEight);
+                    if (!land.hasMule()) {
+                        land.setMule(muleToAdd);
+                        muleToAdd = null;
+                    } else {
+                        System.out.println("There is already a MULE there.");
+                        System.out.println("Your MULE ran away.");
+                        muleToAdd = null;
+                    }
+                } else {
+                    System.out.println("You do not own that land!!");
+                    System.out.println("Your MULE ran away.");
+                    muleToAdd = null;
+                }
+                mulePlacementMode = false;
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+            }
+            else if (landSelectionMode || GameController.buyProperty()) {
                 oneEight.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
@@ -725,8 +1069,28 @@ public class Controller implements Initializable {
     }
 
     public void oneSevenClicked(Event event) {
-        if (!landTaken[1][7]) {
-            if (landSelectionMode || GameController.buyProperty()) {
+        if (!landTaken[1][7] || mulePlacementMode) {
+            if (mulePlacementMode) {
+                if (players.get(currentPlayerTurn).ownsLand(oneSeven)) {
+                    LandPlot land = players.get(currentPlayerTurn).getLand(oneSeven);
+                    if (!land.hasMule()) {
+                        land.setMule(muleToAdd);
+                        muleToAdd = null;
+                    } else {
+                        System.out.println("There is already a MULE there.");
+                        System.out.println("Your MULE ran away.");
+                        muleToAdd = null;
+                    }
+                } else {
+                    System.out.println("You do not own that land!!");
+                    System.out.println("Your MULE ran away.");
+                    muleToAdd = null;
+                }
+                mulePlacementMode = false;
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+            }
+            else if (landSelectionMode || GameController.buyProperty()) {
                 oneSeven.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
@@ -745,8 +1109,28 @@ public class Controller implements Initializable {
 
     //Row Two
     public void twoZeroClicked(Event event) {
-        if (!landTaken[2][0]) {
-            if (landSelectionMode || GameController.buyProperty()) {
+        if (!landTaken[2][0] || mulePlacementMode) {
+            if (mulePlacementMode) {
+                if (players.get(currentPlayerTurn).ownsLand(twoZero)) {
+                    LandPlot land = players.get(currentPlayerTurn).getLand(twoZero);
+                    if (!land.hasMule()) {
+                        land.setMule(muleToAdd);
+                        muleToAdd = null;
+                    } else {
+                        System.out.println("There is already a MULE there.");
+                        System.out.println("Your MULE ran away.");
+                        muleToAdd = null;
+                    }
+                } else {
+                    System.out.println("You do not own that land!!");
+                    System.out.println("Your MULE ran away.");
+                    muleToAdd = null;
+                }
+                mulePlacementMode = false;
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+            }
+            else if (landSelectionMode || GameController.buyProperty()) {
                 twoZero.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
@@ -764,8 +1148,28 @@ public class Controller implements Initializable {
     }
 
     public void twoTwoClicked(Event event) {
-        if (!landTaken[2][2]) {
-            if (landSelectionMode || GameController.buyProperty()) {
+        if (!landTaken[2][2] || mulePlacementMode) {
+            if (mulePlacementMode) {
+                if (players.get(currentPlayerTurn).ownsLand(twoTwo)) {
+                    LandPlot land = players.get(currentPlayerTurn).getLand(twoTwo);
+                    if (!land.hasMule()) {
+                        land.setMule(muleToAdd);
+                        muleToAdd = null;
+                    } else {
+                        System.out.println("There is already a MULE there.");
+                        System.out.println("Your MULE ran away.");
+                        muleToAdd = null;
+                    }
+                } else {
+                    System.out.println("You do not own that land!!");
+                    System.out.println("Your MULE ran away.");
+                    muleToAdd = null;
+                }
+                mulePlacementMode = false;
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+            }
+            else if (landSelectionMode || GameController.buyProperty()) {
                 twoTwo.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
@@ -783,8 +1187,28 @@ public class Controller implements Initializable {
     }
 
     public void twoOneClicked(Event event) {
-        if (!landTaken[2][1]) {
-            if (landSelectionMode || GameController.buyProperty()) {
+        if (!landTaken[2][1] || mulePlacementMode) {
+            if (mulePlacementMode) {
+                if (players.get(currentPlayerTurn).ownsLand(twoOne)) {
+                    LandPlot land = players.get(currentPlayerTurn).getLand(twoOne);
+                    if (!land.hasMule()) {
+                        land.setMule(muleToAdd);
+                        muleToAdd = null;
+                    } else {
+                        System.out.println("There is already a MULE there.");
+                        System.out.println("Your MULE ran away.");
+                        muleToAdd = null;
+                    }
+                } else {
+                    System.out.println("You do not own that land!!");
+                    System.out.println("Your MULE ran away.");
+                    muleToAdd = null;
+                }
+                mulePlacementMode = false;
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+            }
+            else if (landSelectionMode || GameController.buyProperty()) {
                 twoOne.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
@@ -802,8 +1226,28 @@ public class Controller implements Initializable {
     }
 
     public void twoThreeClicked(Event event) {
-        if (!landTaken[2][3]) {
-            if (landSelectionMode || GameController.buyProperty()) {
+        if (!landTaken[2][3] || mulePlacementMode) {
+            if (mulePlacementMode) {
+                if (players.get(currentPlayerTurn).ownsLand(twoThree)) {
+                    LandPlot land = players.get(currentPlayerTurn).getLand(twoThree);
+                    if (!land.hasMule()) {
+                        land.setMule(muleToAdd);
+                        muleToAdd = null;
+                    } else {
+                        System.out.println("There is already a MULE there.");
+                        System.out.println("Your MULE ran away.");
+                        muleToAdd = null;
+                    }
+                } else {
+                    System.out.println("You do not own that land!!");
+                    System.out.println("Your MULE ran away.");
+                    muleToAdd = null;
+                }
+                mulePlacementMode = false;
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+            }
+            else if (landSelectionMode || GameController.buyProperty()) {
                 twoThree.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
@@ -822,8 +1266,28 @@ public class Controller implements Initializable {
     }
 
     public void twoFiveClicked(Event event) {
-        if (!landTaken[2][5]) {
-            if (landSelectionMode || GameController.buyProperty()) {
+        if (!landTaken[2][5] || mulePlacementMode) {
+            if (mulePlacementMode) {
+                if (players.get(currentPlayerTurn).ownsLand(twoFive)) {
+                    LandPlot land = players.get(currentPlayerTurn).getLand(twoFive);
+                    if (!land.hasMule()) {
+                        land.setMule(muleToAdd);
+                        muleToAdd = null;
+                    } else {
+                        System.out.println("There is already a MULE there.");
+                        System.out.println("Your MULE ran away.");
+                        muleToAdd = null;
+                    }
+                } else {
+                    System.out.println("You do not own that land!!");
+                    System.out.println("Your MULE ran away.");
+                    muleToAdd = null;
+                }
+                mulePlacementMode = false;
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+            }
+            else if (landSelectionMode || GameController.buyProperty()) {
                 twoFive.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
@@ -841,8 +1305,28 @@ public class Controller implements Initializable {
     }
 
     public void twoSixClicked(Event event) {
-        if (!landTaken[2][6]) {
-            if (landSelectionMode || GameController.buyProperty()) {
+        if (!landTaken[2][6] || mulePlacementMode) {
+            if (mulePlacementMode) {
+                if (players.get(currentPlayerTurn).ownsLand(twoSix)) {
+                    LandPlot land = players.get(currentPlayerTurn).getLand(twoSix);
+                    if (!land.hasMule()) {
+                        land.setMule(muleToAdd);
+                        muleToAdd = null;
+                    } else {
+                        System.out.println("There is already a MULE there.");
+                        System.out.println("Your MULE ran away.");
+                        muleToAdd = null;
+                    }
+                } else {
+                    System.out.println("You do not own that land!!");
+                    System.out.println("Your MULE ran away.");
+                    muleToAdd = null;
+                }
+                mulePlacementMode = false;
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+            }
+            else if (landSelectionMode || GameController.buyProperty()) {
                 twoSix.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
@@ -860,8 +1344,28 @@ public class Controller implements Initializable {
     }
 
     public void twoEightClicked(Event event) {
-        if (!landTaken[2][8]) {
-            if (landSelectionMode || GameController.buyProperty()) {
+        if (!landTaken[2][8] || mulePlacementMode) {
+            if (mulePlacementMode) {
+                if (players.get(currentPlayerTurn).ownsLand(twoEight)) {
+                    LandPlot land = players.get(currentPlayerTurn).getLand(twoEight);
+                    if (!land.hasMule()) {
+                        land.setMule(muleToAdd);
+                        muleToAdd = null;
+                    } else {
+                        System.out.println("There is already a MULE there.");
+                        System.out.println("Your MULE ran away.");
+                        muleToAdd = null;
+                    }
+                } else {
+                    System.out.println("You do not own that land!!");
+                    System.out.println("Your MULE ran away.");
+                    muleToAdd = null;
+                }
+                mulePlacementMode = false;
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+            }
+            else if (landSelectionMode || GameController.buyProperty()) {
                 twoEight.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
@@ -879,8 +1383,28 @@ public class Controller implements Initializable {
     }
 
     public void twoSevenClicked(Event event) {
-        if (!landTaken[2][7]) {
-            if (landSelectionMode || GameController.buyProperty()) {
+        if (!landTaken[2][7] || mulePlacementMode) {
+            if (mulePlacementMode) {
+                if (players.get(currentPlayerTurn).ownsLand(twoSeven)) {
+                    LandPlot land = players.get(currentPlayerTurn).getLand(twoSeven);
+                    if (!land.hasMule()) {
+                        land.setMule(muleToAdd);
+                        muleToAdd = null;
+                    } else {
+                        System.out.println("There is already a MULE there.");
+                        System.out.println("Your MULE ran away.");
+                        muleToAdd = null;
+                    }
+                } else {
+                    System.out.println("You do not own that land!!");
+                    System.out.println("Your MULE ran away.");
+                    muleToAdd = null;
+                }
+                mulePlacementMode = false;
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+            }
+            else if (landSelectionMode || GameController.buyProperty()) {
                 twoSeven.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
@@ -900,9 +1424,29 @@ public class Controller implements Initializable {
     //Row Three
 
     public void threeZeroClicked(Event event) {
-        if (!landTaken[3][0]) {
+        if (!landTaken[3][0] || mulePlacementMode) {
             if (landSelectionMode || GameController.buyProperty()) {
-                threeZero.setBackground(
+                if (mulePlacementMode) {
+                    if (players.get(currentPlayerTurn).ownsLand(threeZero)) {
+                        LandPlot land = players.get(currentPlayerTurn).getLand(threeZero);
+                        if (!land.hasMule()) {
+                            land.setMule(muleToAdd);
+                            muleToAdd = null;
+                        } else {
+                            System.out.println("There is already a MULE there.");
+                            System.out.println("Your MULE ran away.");
+                            muleToAdd = null;
+                        }
+                    } else {
+                        System.out.println("You do not own that land!!");
+                        System.out.println("Your MULE ran away.");
+                        muleToAdd = null;
+                    }
+                    mulePlacementMode = false;
+                    GameController.nextTurn();
+                    if (landSelectionMode) GameController.landSelectionPhase();
+                }
+                else threeZero.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
@@ -919,8 +1463,28 @@ public class Controller implements Initializable {
     }
 
     public void threeTwoClicked(Event event) {
-        if (!landTaken[3][2]) {
-            if (landSelectionMode || GameController.buyProperty()) {
+        if (!landTaken[3][2] || mulePlacementMode) {
+            if (mulePlacementMode) {
+                if (players.get(currentPlayerTurn).ownsLand(threeTwo)) {
+                    LandPlot land = players.get(currentPlayerTurn).getLand(threeTwo);
+                    if (!land.hasMule()) {
+                        land.setMule(muleToAdd);
+                        muleToAdd = null;
+                    } else {
+                        System.out.println("There is already a MULE there.");
+                        System.out.println("Your MULE ran away.");
+                        muleToAdd = null;
+                    }
+                } else {
+                    System.out.println("You do not own that land!!");
+                    System.out.println("Your MULE ran away.");
+                    muleToAdd = null;
+                }
+                mulePlacementMode = false;
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+            }
+            else if (landSelectionMode || GameController.buyProperty()) {
                 threeTwo.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
@@ -938,8 +1502,28 @@ public class Controller implements Initializable {
     }
 
     public void threeOneClicked(Event event) {
-        if (!landTaken[3][1]) {
-            if (landSelectionMode || GameController.buyProperty()) {
+        if (!landTaken[3][1] || mulePlacementMode) {
+            if (mulePlacementMode) {
+                if (players.get(currentPlayerTurn).ownsLand(threeOne)) {
+                    LandPlot land = players.get(currentPlayerTurn).getLand(threeOne);
+                    if (!land.hasMule()) {
+                        land.setMule(muleToAdd);
+                        muleToAdd = null;
+                    } else {
+                        System.out.println("There is already a MULE there.");
+                        System.out.println("Your MULE ran away.");
+                        muleToAdd = null;
+                    }
+                } else {
+                    System.out.println("You do not own that land!!");
+                    System.out.println("Your MULE ran away.");
+                    muleToAdd = null;
+                }
+                mulePlacementMode = false;
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+            }
+            else if (landSelectionMode || GameController.buyProperty()) {
                 threeOne.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
@@ -957,8 +1541,28 @@ public class Controller implements Initializable {
     }
 
     public void threeThreeClicked(Event event) {
-        if (!landTaken[3][3]) {
-            if (landSelectionMode || GameController.buyProperty()) {
+        if (!landTaken[3][3] || mulePlacementMode) {
+            if (mulePlacementMode) {
+                if (players.get(currentPlayerTurn).ownsLand(threeThree)) {
+                    LandPlot land = players.get(currentPlayerTurn).getLand(threeThree);
+                    if (!land.hasMule()) {
+                        land.setMule(muleToAdd);
+                        muleToAdd = null;
+                    } else {
+                        System.out.println("There is already a MULE there.");
+                        System.out.println("Your MULE ran away.");
+                        muleToAdd = null;
+                    }
+                } else {
+                    System.out.println("You do not own that land!!");
+                    System.out.println("Your MULE ran away.");
+                    muleToAdd = null;
+                }
+                mulePlacementMode = false;
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+            }
+            else if (landSelectionMode || GameController.buyProperty()) {
                 threeThree.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
@@ -976,8 +1580,28 @@ public class Controller implements Initializable {
     }
 
     public void threeFourClicked(Event event) {
-        if (!landTaken[3][4]) {
-            if (landSelectionMode || GameController.buyProperty()) {
+        if (!landTaken[3][4] || mulePlacementMode) {
+            if (mulePlacementMode) {
+                if (players.get(currentPlayerTurn).ownsLand(threeFour)) {
+                    LandPlot land = players.get(currentPlayerTurn).getLand(threeFour);
+                    if (!land.hasMule()) {
+                        land.setMule(muleToAdd);
+                        muleToAdd = null;
+                    } else {
+                        System.out.println("There is already a MULE there.");
+                        System.out.println("Your MULE ran away.");
+                        muleToAdd = null;
+                    }
+                } else {
+                    System.out.println("You do not own that land!!");
+                    System.out.println("Your MULE ran away.");
+                    muleToAdd = null;
+                }
+                mulePlacementMode = false;
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+            }
+            else if (landSelectionMode || GameController.buyProperty()) {
                 threeFour.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
@@ -995,8 +1619,28 @@ public class Controller implements Initializable {
     }
 
     public void threeFiveClicked(Event event) {
-        if (!landTaken[3][5]) {
-            if (landSelectionMode || GameController.buyProperty()) {
+        if (!landTaken[3][5] || mulePlacementMode) {
+            if (mulePlacementMode) {
+                if (players.get(currentPlayerTurn).ownsLand(threeFive)) {
+                    LandPlot land = players.get(currentPlayerTurn).getLand(threeFive);
+                    if (!land.hasMule()) {
+                        land.setMule(muleToAdd);
+                        muleToAdd = null;
+                    } else {
+                        System.out.println("There is already a MULE there.");
+                        System.out.println("Your MULE ran away.");
+                        muleToAdd = null;
+                    }
+                } else {
+                    System.out.println("You do not own that land!!");
+                    System.out.println("Your MULE ran away.");
+                    muleToAdd = null;
+                }
+                mulePlacementMode = false;
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+            }
+            else if (landSelectionMode || GameController.buyProperty()) {
                 threeFive.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
@@ -1014,8 +1658,28 @@ public class Controller implements Initializable {
     }
 
     public void threeSixClicked(Event event) {
-        if (!landTaken[3][6]) {
-            if (landSelectionMode || GameController.buyProperty()) {
+        if (!landTaken[3][6] || mulePlacementMode) {
+            if (mulePlacementMode) {
+                if (players.get(currentPlayerTurn).ownsLand(threeSix)) {
+                    LandPlot land = players.get(currentPlayerTurn).getLand(threeSix);
+                    if (!land.hasMule()) {
+                        land.setMule(muleToAdd);
+                        muleToAdd = null;
+                    } else {
+                        System.out.println("There is already a MULE there.");
+                        System.out.println("Your MULE ran away.");
+                        muleToAdd = null;
+                    }
+                } else {
+                    System.out.println("You do not own that land!!");
+                    System.out.println("Your MULE ran away.");
+                    muleToAdd = null;
+                }
+                mulePlacementMode = false;
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+            }
+            else if (landSelectionMode || GameController.buyProperty()) {
                 threeSix.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
@@ -1033,8 +1697,28 @@ public class Controller implements Initializable {
     }
 
     public void threeEightClicked(Event event) {
-        if (!landTaken[3][8]) {
-            if (landSelectionMode || GameController.buyProperty()) {
+        if (!landTaken[3][8] || mulePlacementMode) {
+            if (mulePlacementMode) {
+                if (players.get(currentPlayerTurn).ownsLand(threeEight)) {
+                    LandPlot land = players.get(currentPlayerTurn).getLand(threeEight);
+                    if (!land.hasMule()) {
+                        land.setMule(muleToAdd);
+                        muleToAdd = null;
+                    } else {
+                        System.out.println("There is already a MULE there.");
+                        System.out.println("Your MULE ran away.");
+                        muleToAdd = null;
+                    }
+                } else {
+                    System.out.println("You do not own that land!!");
+                    System.out.println("Your MULE ran away.");
+                    muleToAdd = null;
+                }
+                mulePlacementMode = false;
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+            }
+            else if (landSelectionMode || GameController.buyProperty()) {
                 threeEight.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
@@ -1052,8 +1736,28 @@ public class Controller implements Initializable {
     }
 
     public void threeSevenClicked(Event event) {
-        if (!landTaken[3][7]) {
-            if (landSelectionMode || GameController.buyProperty()) {
+        if (!landTaken[3][7] || mulePlacementMode) {
+            if (mulePlacementMode) {
+                if (players.get(currentPlayerTurn).ownsLand(threeSeven)) {
+                    LandPlot land = players.get(currentPlayerTurn).getLand(threeSeven);
+                    if (!land.hasMule()) {
+                        land.setMule(muleToAdd);
+                        muleToAdd = null;
+                    } else {
+                        System.out.println("There is already a MULE there.");
+                        System.out.println("Your MULE ran away.");
+                        muleToAdd = null;
+                    }
+                } else {
+                    System.out.println("You do not own that land!!");
+                    System.out.println("Your MULE ran away.");
+                    muleToAdd = null;
+                }
+                mulePlacementMode = false;
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+            }
+            else if (landSelectionMode || GameController.buyProperty()) {
                 threeSeven.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
@@ -1073,8 +1777,28 @@ public class Controller implements Initializable {
     //Row Four
 
     public void fourZeroClicked(Event event) {
-        if (!landTaken[4][0]) {
-            if (landSelectionMode || GameController.buyProperty()) {
+        if (!landTaken[4][0] || mulePlacementMode) {
+            if (mulePlacementMode) {
+                if (players.get(currentPlayerTurn).ownsLand(fourZero)) {
+                    LandPlot land = players.get(currentPlayerTurn).getLand(fourZero);
+                    if (!land.hasMule()) {
+                        land.setMule(muleToAdd);
+                        muleToAdd = null;
+                    } else {
+                        System.out.println("There is already a MULE there.");
+                        System.out.println("Your MULE ran away.");
+                        muleToAdd = null;
+                    }
+                } else {
+                    System.out.println("You do not own that land!!");
+                    System.out.println("Your MULE ran away.");
+                    muleToAdd = null;
+                }
+                mulePlacementMode = false;
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+            }
+            else if (landSelectionMode || GameController.buyProperty()) {
                 fourZero.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
@@ -1092,8 +1816,28 @@ public class Controller implements Initializable {
     }
 
     public void fourTwoClicked(Event event) {
-        if (!landTaken[4][2]) {
-            if (landSelectionMode || GameController.buyProperty()) {
+        if (!landTaken[4][2] || mulePlacementMode) {
+            if (mulePlacementMode) {
+                if (players.get(currentPlayerTurn).ownsLand(fourTwo)) {
+                    LandPlot land = players.get(currentPlayerTurn).getLand(fourTwo);
+                    if (!land.hasMule()) {
+                        land.setMule(muleToAdd);
+                        muleToAdd = null;
+                    } else {
+                        System.out.println("There is already a MULE there.");
+                        System.out.println("Your MULE ran away.");
+                        muleToAdd = null;
+                    }
+                } else {
+                    System.out.println("You do not own that land!!");
+                    System.out.println("Your MULE ran away.");
+                    muleToAdd = null;
+                }
+                mulePlacementMode = false;
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+            }
+            else if (landSelectionMode || GameController.buyProperty()) {
                 fourTwo.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
@@ -1111,8 +1855,28 @@ public class Controller implements Initializable {
     }
 
     public void fourOneClicked(Event event) {
-        if (!landTaken[4][1]) {
-            if (landSelectionMode || GameController.buyProperty()) {
+        if (!landTaken[4][1] || mulePlacementMode) {
+            if (mulePlacementMode) {
+                if (players.get(currentPlayerTurn).ownsLand(fourOne)) {
+                    LandPlot land = players.get(currentPlayerTurn).getLand(fourOne);
+                    if (!land.hasMule()) {
+                        land.setMule(muleToAdd);
+                        muleToAdd = null;
+                    } else {
+                        System.out.println("There is already a MULE there.");
+                        System.out.println("Your MULE ran away.");
+                        muleToAdd = null;
+                    }
+                } else {
+                    System.out.println("You do not own that land!!");
+                    System.out.println("Your MULE ran away.");
+                    muleToAdd = null;
+                }
+                mulePlacementMode = false;
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+            }
+            else if (landSelectionMode || GameController.buyProperty()) {
                 fourOne.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
@@ -1130,8 +1894,28 @@ public class Controller implements Initializable {
     }
 
     public void fourThreeClicked(Event event) {
-        if (!landTaken[4][3]) {
-            if (landSelectionMode || GameController.buyProperty()) {
+        if (!landTaken[4][3] || mulePlacementMode) {
+            if (mulePlacementMode) {
+                if (players.get(currentPlayerTurn).ownsLand(fourThree)) {
+                    LandPlot land = players.get(currentPlayerTurn).getLand(fourThree);
+                    if (!land.hasMule()) {
+                        land.setMule(muleToAdd);
+                        muleToAdd = null;
+                    } else {
+                        System.out.println("There is already a MULE there.");
+                        System.out.println("Your MULE ran away.");
+                        muleToAdd = null;
+                    }
+                } else {
+                    System.out.println("You do not own that land!!");
+                    System.out.println("Your MULE ran away.");
+                    muleToAdd = null;
+                }
+                mulePlacementMode = false;
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+            }
+            else if (landSelectionMode || GameController.buyProperty()) {
                 fourThree.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
@@ -1149,8 +1933,28 @@ public class Controller implements Initializable {
     }
 
     public void fourFourClicked(Event event) {
-        if (!landTaken[4][4]) {
-            if (landSelectionMode || GameController.buyProperty()) {
+        if (!landTaken[4][4] || mulePlacementMode) {
+            if (mulePlacementMode) {
+                if (players.get(currentPlayerTurn).ownsLand(fourFour)) {
+                    LandPlot land = players.get(currentPlayerTurn).getLand(fourFour);
+                    if (!land.hasMule()) {
+                        land.setMule(muleToAdd);
+                        muleToAdd = null;
+                    } else {
+                        System.out.println("There is already a MULE there.");
+                        System.out.println("Your MULE ran away.");
+                        muleToAdd = null;
+                    }
+                } else {
+                    System.out.println("You do not own that land!!");
+                    System.out.println("Your MULE ran away.");
+                    muleToAdd = null;
+                }
+                mulePlacementMode = false;
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+            }
+            else if (landSelectionMode || GameController.buyProperty()) {
                 fourFour.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
@@ -1168,8 +1972,28 @@ public class Controller implements Initializable {
     }
 
     public void fourFiveClicked(Event event) {
-        if (!landTaken[4][5]) {
-            if (landSelectionMode || GameController.buyProperty()) {
+        if (!landTaken[4][5] || mulePlacementMode) {
+            if (mulePlacementMode) {
+                if (players.get(currentPlayerTurn).ownsLand(fourFive)) {
+                    LandPlot land = players.get(currentPlayerTurn).getLand(fourFive);
+                    if (!land.hasMule()) {
+                        land.setMule(muleToAdd);
+                        muleToAdd = null;
+                    } else {
+                        System.out.println("There is already a MULE there.");
+                        System.out.println("Your MULE ran away.");
+                        muleToAdd = null;
+                    }
+                } else {
+                    System.out.println("You do not own that land!!");
+                    System.out.println("Your MULE ran away.");
+                    muleToAdd = null;
+                }
+                mulePlacementMode = false;
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+            }
+            else if (landSelectionMode || GameController.buyProperty()) {
                 fourFive.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
@@ -1187,8 +2011,28 @@ public class Controller implements Initializable {
     }
 
     public void fourSixClicked(Event event) {
-        if (!landTaken[4][6]) {
-            if (landSelectionMode || GameController.buyProperty()) {
+        if (!landTaken[4][6] || mulePlacementMode) {
+            if (mulePlacementMode) {
+                if (players.get(currentPlayerTurn).ownsLand(fourSix)) {
+                    LandPlot land = players.get(currentPlayerTurn).getLand(fourSix);
+                    if (!land.hasMule()) {
+                        land.setMule(muleToAdd);
+                        muleToAdd = null;
+                    } else {
+                        System.out.println("There is already a MULE there.");
+                        System.out.println("Your MULE ran away.");
+                        muleToAdd = null;
+                    }
+                } else {
+                    System.out.println("You do not own that land!!");
+                    System.out.println("Your MULE ran away.");
+                    muleToAdd = null;
+                }
+                mulePlacementMode = false;
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+            }
+            else if (landSelectionMode || GameController.buyProperty()) {
                 fourSix.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
@@ -1206,8 +2050,28 @@ public class Controller implements Initializable {
     }
 
     public void fourEightClicked(Event event) {
-        if (!landTaken[4][8]) {
-            if (landSelectionMode || GameController.buyProperty()) {
+        if (!landTaken[4][8] || mulePlacementMode) {
+            if (mulePlacementMode) {
+                if (players.get(currentPlayerTurn).ownsLand(fourEight)) {
+                    LandPlot land = players.get(currentPlayerTurn).getLand(fourEight);
+                    if (!land.hasMule()) {
+                        land.setMule(muleToAdd);
+                        muleToAdd = null;
+                    } else {
+                        System.out.println("There is already a MULE there.");
+                        System.out.println("Your MULE ran away.");
+                        muleToAdd = null;
+                    }
+                } else {
+                    System.out.println("You do not own that land!!");
+                    System.out.println("Your MULE ran away.");
+                    muleToAdd = null;
+                }
+                mulePlacementMode = false;
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+            }
+            else if (landSelectionMode || GameController.buyProperty()) {
                 fourEight.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
@@ -1225,8 +2089,28 @@ public class Controller implements Initializable {
     }
 
     public void fourSevenClicked(Event event) {
-        if (!landTaken[4][7]) {
-            if (landSelectionMode || GameController.buyProperty()) {
+        if (!landTaken[4][7] || mulePlacementMode) {
+            if (mulePlacementMode) {
+                if (players.get(currentPlayerTurn).ownsLand(fourSeven)) {
+                    LandPlot land = players.get(currentPlayerTurn).getLand(fourSeven);
+                    if (!land.hasMule()) {
+                        land.setMule(muleToAdd);
+                        muleToAdd = null;
+                    } else {
+                        System.out.println("There is already a MULE there.");
+                        System.out.println("Your MULE ran away.");
+                        muleToAdd = null;
+                    }
+                } else {
+                    System.out.println("You do not own that land!!");
+                    System.out.println("Your MULE ran away.");
+                    muleToAdd = null;
+                }
+                mulePlacementMode = false;
+                GameController.nextTurn();
+                if (landSelectionMode) GameController.landSelectionPhase();
+            }
+            else if (landSelectionMode || GameController.buyProperty()) {
                 fourSeven.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
@@ -1279,4 +2163,85 @@ public class Controller implements Initializable {
         Main.primary.setScene(scene);
     }
 
+    public void enterStore(Event event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("store1.fxml"));
+        Scene scene = new Scene(root);
+        System.out.println(GameController.store.toString());
+        Main.primary.setScene(scene);
+    }
+
+    public void exitStore(Event event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("townScreen.fxml"));
+        Scene scene = new Scene(root);
+
+        Main.primary.setScene(scene);
+    }
+
+    public void toMuleSales(Event event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("muleStore.fxml"));
+        Scene scene = new Scene(root);
+
+        Main.primary.setScene(scene);
+    }
+
+    public void exitMuleStore(Event event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("store1.fxml"));
+        Scene scene = new Scene(root);
+
+        Main.primary.setScene(scene);
+    }
+
+    public void buyFood(Event event) throws IOException {
+        GameController.store.buyFood(1);
+    }
+
+    public void buyEnergy(Event event) throws IOException {
+        GameController.store.buyEnergy(1);
+    }
+
+    public void buyOre(Event event) throws IOException {
+        GameController.store.buyOre(1);
+    }
+
+    public void sellFood(Event event) throws IOException {
+        GameController.store.sellFood(1);
+    }
+
+    public void sellEnergy(Event event) throws IOException {
+        GameController.store.sellEnergy(1);
+    }
+
+    public void sellOre(Event event) throws IOException {
+        GameController.store.sellOre(1);
+    }
+
+    public void sellMule(Event event) throws IOException {
+        GameController.store.sellMule();
+    }
+
+    public void buyOreMule(Event event) throws IOException {
+        GameController.store.buyMule(Mule.Configuration.ORE);
+    }
+
+    public void buyFoodMule(Event event) throws IOException {
+        GameController.store.buyMule(Mule.Configuration.FOOD);
+    }
+
+    public void buyEnergyMule(Event event) throws IOException {
+        GameController.store.buyMule(Mule.Configuration.ENERGY);
+    }
+
+    @FXML
+    public void placeMule(Event event) {
+        Player cur = Controller.players.get(currentPlayerTurn);
+        if (cur.hasMule()) {
+            muleToAdd = cur.getMule();
+            mulePlacementMode = true;
+            System.out.println("\nPlease select a land plot you wish to add your MULE to: ");
+            System.out.println("NOTE: You must add it to one of your own land plots or else your MULE will be lost");
+            System.out.println("If you attempt to add a MULE to a land plot that already has a MULE, your new MULE will be lost as well.\n");
+        } else {
+            System.out.println("Silly " + cur.getName() + " - You don't have a MULE in your inventory.");
+        }
+    }
 }

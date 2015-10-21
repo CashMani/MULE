@@ -13,6 +13,8 @@ public class Mule {
         this.type = type;
     }
 
+    public Mule() { this.type = Configuration.ENERGY; }
+
     public void setType(Configuration type) {
         this.type = type;
     }
@@ -20,6 +22,4 @@ public class Mule {
     public Configuration getType() {
         return type;
     }
-
-
 }

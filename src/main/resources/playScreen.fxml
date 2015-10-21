@@ -64,7 +64,7 @@
                   <Button fx:id="twoThree" mnemonicParsing="false" onMouseClicked="#twoThreeClicked" opacity="0.1" prefHeight="100.0" prefWidth="174.0" text="Plain" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
                   <Button fx:id="twoEight" mnemonicParsing="false" onMouseClicked="#twoEightClicked" opacity="0.1" prefHeight="100.0" prefWidth="215.0" text="1 Mountain" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
                   <Button fx:id="threeFour" mnemonicParsing="false" onMouseClicked="#threeFourClicked" opacity="0.1" prefHeight="100.0" prefWidth="179.0" text="River" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-                  <Button fx:id="oneOne" mnemonicParsing="false" onMouseClicked="#oneOneClicked" opacity="0.1" prefHeight="100.0" prefWidth="207.0"  text="1 Mountain" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Button fx:id="oneOne" mnemonicParsing="false" onMouseClicked="#oneOneClicked" opacity="0.1" prefHeight="100.0" prefWidth="207.0" text="1 Mountain" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                   <Button fx:id="oneFour" mnemonicParsing="false" onMouseClicked="#oneFourClicked" opacity="0.1" prefHeight="100.0" prefWidth="173.0" text="River" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                   <Button fx:id="zeroFive" mnemonicParsing="false" onMouseClicked="#zeroFiveClicked" opacity="0.1" prefHeight="100.0" prefWidth="161.0" text="Plain" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                   <Button fx:id="twoFive" mnemonicParsing="false" onMouseClicked="#twoFiveClicked" opacity="0.1" prefHeight="100.0" prefWidth="210.0" text="Plain" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
@@ -97,6 +97,7 @@
             </GridPane>
             <Label layoutX="22.0" layoutY="17.0" text="Time Remaining:" />
             <Label fx:id="timeLeftDisp" layoutX="141.0" layoutY="18.0" text="TimeLeft" />
+            <Button fx:id="plantMuleBut" layoutX="14.0" layoutY="701.0" mnemonicParsing="false" onMouseClicked="#placeMule" text="Plant MULE" />
          </children>
       </Pane>
    </children>
