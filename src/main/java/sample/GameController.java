@@ -11,6 +11,7 @@ import java.util.Comparator;
     public class GameController {
 
         public static Store store;
+        public static RandomEvents randEvents;
 
     //***************************** Land Selection ********************************************************************
     public static void nextTurn() {
@@ -71,10 +72,13 @@ import java.util.Comparator;
 
     public static void startGame() {
         store = new Store();
+        randEvents = new RandomEvents();
     }
     public static void startTurn() {
         Player cur = Controller.players.get(Controller.currentPlayerTurn);
         System.out.println(cur.getName() + ", your turn starts now!\n");
+
+        //TURN TIME CALCULATION CODE
         int timeInSec;
         if (Round.getFoodReq() <= cur.getFood()) timeInSec = 50;
         else if (Round.getFoodReq() > cur.getFood() && cur.getFood() > 0) timeInSec = 30;
@@ -82,6 +86,20 @@ import java.util.Comparator;
         System.out.println(cur.getName() + " has " + timeInSec + " seconds to play.");
         Duration turnTime = new Duration(timeInSec * 1000);
 
+        //RANDOM EVENTS CODE
+        if (randEvents.calcRandChance()) {
+            if ((Controller.players.get(Controller.currentPlayerTurn)).equals(Controller.players.getFirst())) {
+                System.out.println("Lowest score, so only postive random event should occur:\n");
+                randEvents.randEventOccurs(3);
+            } else {
+                System.out.println("Random event could be good or bad!\n");
+                randEvents.randEventOccurs(6);
+            }
+        } else {
+            System.out.println("No random events occur for you.\n");
+        }
+
+        //TIMER CODE
         Controller.timer.setTimeline(turnTime);
         Controller.timer.startTimer();
     }
