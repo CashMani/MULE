@@ -28,11 +28,16 @@
                </image>
             </ImageView>
             <Button id="aboutTeamBut" fx:id="aboutTeamBut" layoutX="373.0" layoutY="460.0" mnemonicParsing="false" onMouseClicked="#aboutTeamClicked" text="About the Team" />
-            <Button id="gameConfigBut" fx:id="gameConfigBut" layoutX="193.0" layoutY="309.0" mnemonicParsing="false" onMouseClicked="#gameConfigClicked" style="-fx-background-color: #000000;" text="PLAY!" textFill="#d0cfcf">
+            <Button id="gameConfigBut" fx:id="gameConfigBut" layoutX="193.0" layoutY="380.0" mnemonicParsing="false" onMouseClicked="#gameConfigClicked" style="-fx-background-color: #000000;" text="PLAY!" textFill="#d0cfcf">
                <font>
                   <Font name="System Bold" size="34.0" />
                </font></Button>
             <Button fx:id="exitBut" layoutX="14.0" layoutY="460.0" mnemonicParsing="false" onMouseClicked="#exitGame" text="Exit" />
+            <Button id="gameConfigBut" fx:id="loadGameBut" layoutX="150.0" layoutY="293.0" mnemonicParsing="false" onMouseClicked="#loadGame" style="-fx-background-color: #000000;" text="Load Game" textFill="#d0cfcf">
+               <font>
+                  <Font name="System Bold" size="34.0" />
+               </font>
+            </Button>
          </children>
       </Pane>
    </children>
