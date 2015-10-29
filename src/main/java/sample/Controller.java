@@ -2244,4 +2244,14 @@ public class Controller implements Initializable {
             System.out.println("Silly " + cur.getName() + " - You don't have a MULE in your inventory.");
         }
     }
+
+    @FXML
+    public void saveGame(Event event) {
+
+    }
+
+    @FXML
+    public void loadGame(Event event) {
+
+    }
 }
