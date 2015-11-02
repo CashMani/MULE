@@ -1,16 +1,18 @@
 package sample;
 import javafx.scene.paint.Color;
 import javafx.scene.control.Button;
+import java.awt.Point;
+import java.io.Serializable;
 
 /**
  * Created by AlexandraLink on 10/1/15.
  */
-public class LandPlot {
+public class LandPlot implements Serializable {
 
     private final String type;
     private Player owner;
-    private Color color;
-    private final Button location;
+    private transient Color color; // transient means not serializable
+    private transient Button location;
     private Mule muleOnProp;
     private int energyProd;
     private int foodProd;
@@ -95,6 +97,15 @@ public class LandPlot {
             oreProd = 0;
             System.out.println("Error in decided land type for production rates.");
         }
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
+    }
+
+    // used for loading the game
+    public void setLocation(Button location) {
+        this.location = location;
     }
 
 

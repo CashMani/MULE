@@ -1,15 +1,17 @@
 package sample;
 
 import javafx.scene.paint.Color;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import javafx.scene.control.Button;
 /**
  * Created by mani on 9/10/15.
  */
-public class Player implements InventoryInterface {
+public class Player implements InventoryInterface, Serializable {
     private String name;
     private Main.Race race;
-    private Color color;
+    private transient Color color; // transient means it is not serializable
     private Inventory inventory;
     private ArrayList<LandPlot> landOwned;
     private int landCount;
@@ -188,6 +190,11 @@ public class Player implements InventoryInterface {
         }
     }
 
+    public void setColor(Color color) {
+        this.color = color;
+    }
+
+
     public String inventoryToString() {
         String inventoryList;
         if (inventory.muleOnPerson == null) {
@@ -208,7 +215,7 @@ public class Player implements InventoryInterface {
     /**
      * Keeps track of all the player's belongings
      */
-    private class Inventory {
+    private class Inventory implements Serializable {
         private int moneyStash;
         private int energy;
         private int food;

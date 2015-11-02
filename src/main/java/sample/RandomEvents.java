@@ -1,10 +1,11 @@
 package sample;
+import java.io.Serializable;
 import java.util.Random;
 
 /**
  * Created by Alexandra Link on 10/21/15.
  */
-public class RandomEvents {
+public class RandomEvents implements Serializable {
     Random rand;
 
     public RandomEvents() {

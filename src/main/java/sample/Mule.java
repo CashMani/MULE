@@ -1,9 +1,11 @@
 package sample;
 
+import java.io.Serializable;
+
 /**
  * Created by AlexandraLink on 10/5/15.
  */
-public class Mule {
+public class Mule implements Serializable {
 
     public enum Configuration {ENERGY, FOOD, ORE};
 

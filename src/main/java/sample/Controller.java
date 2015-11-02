@@ -18,8 +18,10 @@ import javafx.scene.layout.BackgroundFill;
 import javafx.stage.Stage;
 import javafx.scene.paint.Paint;
 import javafx.util.Duration;
+import javafx.scene.paint.Color;
 
 import java.awt.*;
+import java.io.*;
 import java.net.URL;
 import java.util.ArrayList;
 
@@ -28,7 +30,6 @@ import sun.util.resources.cldr.sr.TimeZoneNames_sr_Latn;
 
 
 import java.awt.event.ActionEvent;
-import java.io.IOException;
 import java.util.LinkedList;
 import java.util.ResourceBundle;
 
@@ -260,54 +261,8 @@ public class Controller implements Initializable {
         }
 
         if (validNames) {
-            map[0][0] = zeroZero;
-            map[0][1] = zeroOne;
-            map[0][2] = zeroTwo;
-            map[0][3] = zeroThree;
-            map[0][4] = zeroFour;
-            map[0][5] = zeroFive;
-            map[0][6] = zeroSix;
-            map[0][7] = zeroSeven;
-            map[0][8] = zeroEight;
+            setMapButtons();
 
-            map[1][0] = oneZero;
-            map[1][1] = oneOne;
-            map[1][2] = oneTwo;
-            map[1][3] = oneThree;
-            map[1][4] = oneFour;
-            map[1][5] = oneFive;
-            map[1][6] = oneSix;
-            map[1][7] = oneSeven;
-            map[1][8] = oneEight;
-
-            map[2][0] = twoZero;
-            map[2][1] = twoOne;
-            map[2][2] = twoTwo;
-            map[2][3] = twoThree;
-            map[2][5] = twoFive;
-            map[2][6] = twoSix;
-            map[2][7] = twoSeven;
-            map[2][8] = twoEight;
-
-            map[3][0] = threeZero;
-            map[3][1] = threeOne;
-            map[3][2] = threeTwo;
-            map[3][3] = threeThree;
-            map[3][4] = threeFour;
-            map[3][5] = threeFive;
-            map[3][6] = threeSix;
-            map[3][7] = threeSeven;
-            map[3][8] = threeEight;
-
-            map[4][0] = fourZero;
-            map[4][1] = fourOne;
-            map[4][2] = fourTwo;
-            map[4][3] = fourThree;
-            map[4][4] = fourFour;
-            map[4][5] = fourFive;
-            map[4][6] = fourSix;
-            map[4][7] = fourSeven;
-            map[4][8] = fourEight;
             Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("playScreen.fxml"));
             Scene scene = new Scene(root);
 
@@ -2247,11 +2202,206 @@ public class Controller implements Initializable {
 
     @FXML
     public void saveGame(Event event) {
+        try {
+            FileOutputStream saveDataOut = new FileOutputStream("savedata.ser");
+            ObjectOutputStream out = new ObjectOutputStream(saveDataOut);
 
+            // save global data
+            out.writeObject(Main.difficulty);
+            out.writeObject(Main.mapType);
+            out.writeObject(Main.numPlayers);
+            out.writeObject(GameController.store);
+            out.writeObject(GameController.randEvents);
+            out.writeObject(players);
+            out.writeObject(currentPlayerTurn);
+            out.writeObject(landSelectionMode);
+            out.writeObject(mulePlacementMode);
+            out.writeObject(roundNum);
+            out.writeObject(muleToAdd);
+            out.writeObject(howMany);
+            out.writeObject(turnRound);
+            out.writeObject(playerTurn);
+            out.writeObject(landTaken);
+
+            // save remaining time in current player's turn
+            out.writeObject(timer.stopTimer());
+
+
+            // saves players' colors
+            int numPlayers = 2;
+            numPlayers = (howMany == Main.NumPlayers.THREE) ? 3 : numPlayers;
+            numPlayers = (howMany == Main.NumPlayers.FOUR) ? 4 : numPlayers;
+            out.writeObject(numPlayers);
+            for (int i = 0; i < numPlayers; i++) {
+                out.writeObject(players.get(i).getColor().toString());
+            }
+
+            // save each land plot's button location
+            for (int i = 0; i < numPlayers; i++) {
+                for (int j = 0; j < players.get(i).getLandCount(); j++) {
+                    for (int y = 0; y < 5; y++) {
+                        for (int x = 0; x < 9; x++) {
+                            Button btnLandPlot = players.get(i).getLandOwned().get(j).getButton();
+                            if (btnLandPlot.equals(map[y][x])) {
+                                out.writeObject(new Point(x, y));
+                            }
+                        }
+                    }
+                }
+            }
+
+            // saves a String of the player's color for each land plot if the player owns that plot
+            String[][] coloredMapSaver = new String[5][9];
+            for (int y = 0; y < 5; y++)
+                for (int x = 0; x < 9; x++)
+                    for (int i = 0; i < numPlayers; i++)
+                        if (players.get(i).ownsLand(map[y][x]))
+                            coloredMapSaver[y][x] = players.get(i).getColor().toString();
+            out.writeObject(coloredMapSaver);
+
+            out.close();
+            saveDataOut.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+            return;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return;
+        }
+        System.out.println("Game saved");
     }
 
     @FXML
     public void loadGame(Event event) {
+        try {
+            FileInputStream fileIn = new FileInputStream("savedata.ser");
+            ObjectInputStream in = new ObjectInputStream(fileIn);
 
+            // load global data
+            Main.difficulty = (Main.Difficulty) in.readObject();
+            Main.mapType = (Main.MapType) in.readObject();
+            Main.numPlayers = (Main.NumPlayers) in.readObject();
+            GameController.store = (Store) in.readObject();
+            GameController.randEvents = (RandomEvents) in.readObject();
+            players = (LinkedList) in.readObject();
+            currentPlayerTurn = (Integer) in.readObject();
+            landSelectionMode = (Boolean) in.readObject();
+            mulePlacementMode = (Boolean) in.readObject();
+            roundNum = (Integer) in.readObject();
+            muleToAdd = (Mule) in.readObject();
+            howMany = (Main.NumPlayers) in.readObject();
+            turnRound = (Integer) in.readObject();
+            playerTurn = (Integer) in.readObject();
+            landTaken = (boolean[][]) in.readObject();
+
+            //load remaining time in current player's turn
+            timer = new Timer();
+            timer.setTimeline((Duration) in.readObject());
+
+            int numPlayers = (Integer) in.readObject();
+            // loads each player's color
+            for (int i = 0; i < numPlayers; i++) {
+                players.get(i).setColor(Color.web((String) in.readObject()));
+                // sets each player's owned land plots' colors to the player's color
+                for (int j = 0; j < players.get(i).getLandCount(); j++) {
+                    players.get(i).getLandOwned().get(j).setColor(players.get(i).getColor());
+                }
+            }
+
+            Object tempObj = new Object();
+            setMapButtons();
+            // load each land plot's button location
+            try {
+                for (int i = 0; i < numPlayers; i++) {
+                    for (int j = 0; j < players.get(i).getLandCount(); j++) {
+                        for (int y = 0; y < 5; y++) {
+                            for (int x = 0; x < 9; x++) {
+                                tempObj = in.readObject();
+                                if (tempObj instanceof Point) {
+                                    Point coord = (Point) tempObj;
+                                    players.get(i).getLandOwned().get(j).setLocation(map[coord.y][coord.x]);
+                                }
+                            }
+                        }
+                    }
+                }
+            } catch (EOFException e) {
+                // expected
+            }
+
+            // load coloredMap array
+            String[][] coloredMapSaver = (String[][]) tempObj;
+            for (int y = 0; y < 5; y++)
+                for (int x = 0; x < 9; x++)
+                    coloredMap[y][x] = (null != coloredMapSaver[y][x]) ? Paint.valueOf(coloredMapSaver[y][x]) : null;
+
+
+            // re set-up game
+            returnToMap();
+
+            in.close();
+            fileIn.close();
+        } catch (IOException i) {
+            i.printStackTrace();
+            return;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return;
+        }
+        System.out.println("Game Loaded");
+        timer.startTimer();
     }
+
+    private void setMapButtons() {
+        map[0][0] = zeroZero;
+        map[0][1] = zeroOne;
+        map[0][2] = zeroTwo;
+        map[0][3] = zeroThree;
+        map[0][4] = zeroFour;
+        map[0][5] = zeroFive;
+        map[0][6] = zeroSix;
+        map[0][7] = zeroSeven;
+        map[0][8] = zeroEight;
+
+        map[1][0] = oneZero;
+        map[1][1] = oneOne;
+        map[1][2] = oneTwo;
+        map[1][3] = oneThree;
+        map[1][4] = oneFour;
+        map[1][5] = oneFive;
+        map[1][6] = oneSix;
+        map[1][7] = oneSeven;
+        map[1][8] = oneEight;
+
+        map[2][0] = twoZero;
+        map[2][1] = twoOne;
+        map[2][2] = twoTwo;
+        map[2][3] = twoThree;
+        map[2][5] = twoFive;
+        map[2][6] = twoSix;
+        map[2][7] = twoSeven;
+        map[2][8] = twoEight;
+
+        map[3][0] = threeZero;
+        map[3][1] = threeOne;
+        map[3][2] = threeTwo;
+        map[3][3] = threeThree;
+        map[3][4] = threeFour;
+        map[3][5] = threeFive;
+        map[3][6] = threeSix;
+        map[3][7] = threeSeven;
+        map[3][8] = threeEight;
+
+        map[4][0] = fourZero;
+        map[4][1] = fourOne;
+        map[4][2] = fourTwo;
+        map[4][3] = fourThree;
+        map[4][4] = fourFour;
+        map[4][5] = fourFive;
+        map[4][6] = fourSix;
+        map[4][7] = fourSeven;
+        map[4][8] = fourEight;
+    }
+
+
 }
