@@ -104,26 +104,11 @@
             <Label fx:id="timeLeftDisp" layoutX="70.0" layoutY="542.0" text="TimeLeft" />
             <Button fx:id="plantMuleBut" layoutX="51.0" layoutY="571.0" mnemonicParsing="false" onMouseClicked="#placeMule" text="Plant MULE" />
             <Button fx:id="saveGameBut" layoutX="96.0" layoutY="714.0" mnemonicParsing="false" onMouseClicked="#saveGame" text="Save Game" />
-            <Label fx:id="playerOneTag" layoutX="221.0" layoutY="534.0" prefHeight="16.0" prefWidth="113.0" text="Player One" textAlignment="CENTER">
+            <TextField fx:id="playerOneTag" editable="false" layoutX="217.0" layoutY="521.0" prefHeight="26.0" prefWidth="125.0" style="-fx-background-color: #cdcdcd;">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
-            </Label>
-            <Label fx:id="playerTwoTag" layoutX="407.0" layoutY="534.0" prefHeight="16.0" prefWidth="113.0" text="Player Two" textAlignment="CENTER">
-               <font>
-                  <Font name="System Bold" size="13.0" />
-               </font>
-            </Label>
-            <Label fx:id="playerThreeTag" layoutX="583.0" layoutY="534.0" prefHeight="16.0" prefWidth="113.0" text="Player Three" textAlignment="CENTER">
-               <font>
-                  <Font name="System Bold" size="13.0" />
-               </font>
-            </Label>
-            <Label fx:id="playerFourTag" layoutX="756.0" layoutY="534.0" prefHeight="16.0" prefWidth="113.0" text="Player Four" textAlignment="CENTER">
-               <font>
-                  <Font name="System Bold" size="13.0" />
-               </font>
-            </Label>
+            </TextField>
          </children>
       </Pane>
    </children>
