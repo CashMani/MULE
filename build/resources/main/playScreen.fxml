@@ -22,13 +22,18 @@
    <children>
       <Pane prefHeight="750.0" prefWidth="900.0">
          <children>
-            <ImageView fitHeight="510.0" fitWidth="900.0" layoutY="80.0" pickOnBounds="true">
+            <ImageView fitHeight="249.0" fitWidth="900.0" layoutY="501.0" pickOnBounds="true">
+               <image>
+                  <Image url="@PlayerBase.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="510.0" fitWidth="900.0" pickOnBounds="true">
                <image>
                   <Image url="@Map%20Background.jpg" />
                </image>
             </ImageView>
-            <Button fx:id="backToMainBut" alignment="CENTER" layoutX="413.0" layoutY="701.0" mnemonicParsing="false" onMouseClicked="#backToMainMenu" text="Quit Game" textAlignment="CENTER" />
-            <GridPane layoutX="-1.0" layoutY="83.0">
+            <Button fx:id="backToMainBut" alignment="CENTER" layoutX="10.0" layoutY="714.0" mnemonicParsing="false" onMouseClicked="#backToMainMenu" text="Quit Game" textAlignment="CENTER" />
+            <GridPane prefHeight="510.0" prefWidth="900.0">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -92,13 +97,33 @@
                   <Button fx:id="threeSix" mnemonicParsing="false" onMouseClicked="#threeSixClicked" opacity="0.1" prefHeight="100.0" prefWidth="193.0" text="2 Mountain" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
                   <Button fx:id="fourFour" mnemonicParsing="false" onMouseClicked="#fourFourClicked" opacity="0.1" prefHeight="100.0" prefWidth="194.0" text="River" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
                   <Button fx:id="twoSeven" mnemonicParsing="false" onMouseClicked="#twoSevenClicked" opacity="0.1" prefHeight="100.0" prefWidth="219.0" text="Plain" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                  <Button fx:id="fourEight" mnemonicParsing="false" onMouseClicked="#fourEightClicked" opacity="0.1" prefHeight="100.0" prefWidth="153.0" text="2 Mountain" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                  <Button fx:id="fourEight" mnemonicParsing="false" onMouseClicked="#fourEightClicked" opacity="0.1" prefHeight="121.0" prefWidth="111.0" text="2 Mountain" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
                </children>
             </GridPane>
-            <Label layoutX="22.0" layoutY="17.0" text="Time Remaining:" />
-            <Label fx:id="timeLeftDisp" layoutX="141.0" layoutY="18.0" text="TimeLeft" />
-            <Button fx:id="plantMuleBut" layoutX="14.0" layoutY="701.0" mnemonicParsing="false" onMouseClicked="#placeMule" text="Plant MULE" />
-            <Button fx:id="saveGameBut" layoutX="798.0" layoutY="701.0" mnemonicParsing="false" onMouseClicked="#saveGame" text="Save Game" />
+            <Label layoutX="47.0" layoutY="526.0" text="Time Remaining:" />
+            <Label fx:id="timeLeftDisp" layoutX="70.0" layoutY="542.0" text="TimeLeft" />
+            <Button fx:id="plantMuleBut" layoutX="51.0" layoutY="571.0" mnemonicParsing="false" onMouseClicked="#placeMule" text="Plant MULE" />
+            <Button fx:id="saveGameBut" layoutX="96.0" layoutY="714.0" mnemonicParsing="false" onMouseClicked="#saveGame" text="Save Game" />
+            <Label fx:id="playerOneTag" layoutX="221.0" layoutY="534.0" prefHeight="16.0" prefWidth="113.0" text="Player One" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="playerTwoTag" layoutX="407.0" layoutY="534.0" prefHeight="16.0" prefWidth="113.0" text="Player Two" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="playerThreeTag" layoutX="583.0" layoutY="534.0" prefHeight="16.0" prefWidth="113.0" text="Player Three" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="playerFourTag" layoutX="756.0" layoutY="534.0" prefHeight="16.0" prefWidth="113.0" text="Player Four" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
    </children>
