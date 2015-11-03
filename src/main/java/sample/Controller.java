@@ -15,6 +15,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
+import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 import javafx.scene.paint.Paint;
 import javafx.util.Duration;
@@ -44,21 +45,25 @@ public class Controller implements Initializable {
     public TextField name_player1;
     public ToggleGroup race_player1;
     public ColorPicker color_player1;
+    public Label playerOneTag;
 
     //Player Two
     public TextField name_player2;
     public ToggleGroup race_player2;
     public ColorPicker color_player2;
+    public Label playerTwoTag;
 
     //Player Three
     public TextField name_player3;
     public ToggleGroup race_player3;
     public ColorPicker color_player3;
+    public Label playerThreeTag;
 
     //Player Four
     public TextField name_player4;
     public ToggleGroup race_player4;
     public ColorPicker color_player4;
+    public Label playerFourTag;
 
     public boolean[][] landTaken = new boolean[5][9];
     public Paint[][] coloredMap = new Paint[5][9];
@@ -136,6 +141,7 @@ public class Controller implements Initializable {
 
     public int playerTurn = 0; // always begins with first player
     public int turnRound = 0; // increases by one after every player goes once
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -262,7 +268,7 @@ public class Controller implements Initializable {
 
         if (validNames) {
             setMapButtons();
-
+            playerOneTag = new Label(players.get(0).getName());
             Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("playScreen.fxml"));
             Scene scene = new Scene(root);
 

@@ -28,29 +28,32 @@
                   <Image url="@Simple%20Background.jpg" />
                </image>
             </ImageView>
-            <Label layoutX="129.0" layoutY="27.0" text="Game Settings" textAlignment="CENTER">
+            <Label layoutX="129.0" layoutY="27.0" text="Game Settings" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="34.0" />
                </font>
             </Label>
-            <Button fx:id="backToMainBut" cancelButton="true" layoutX="351.0" layoutY="460.0" mnemonicParsing="false" onMouseClicked="#backToMainMenu" text="Back to Main Menu" />
-            <Label layoutX="187.0" layoutY="117.0" text="Select the Difficulty:" underline="true">
+            <Button fx:id="backToMainBut" cancelButton="true" layoutX="3.0" layoutY="468.0" mnemonicParsing="false" onMouseClicked="#backToMainMenu" text="Back to Main Menu" />
+            <Label layoutX="187.0" layoutY="117.0" text="Select the Difficulty:" textFill="WHITE" underline="true">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font></Label>
             <Slider id="difficultySlider" fx:id="difficultySlider" blockIncrement="1.0" layoutX="25.0" layoutY="158.0" majorTickUnit="1.0" max="2.0" minorTickCount="0" prefHeight="15.0" prefWidth="450.0" showTickMarks="true" snapToTicks="true" />
-            <Label layoutX="6.0" layoutY="173.0" text="Beginner" />
-            <Label layoutX="223.0" layoutY="173.0" text="Standard" />
-            <Label layoutX="424.0" layoutY="173.0" text="Tournament" />
+            <Label layoutX="6.0" layoutY="173.0" text="Beginner" textFill="WHITE" />
+            <Label layoutX="223.0" layoutY="173.0" text="Standard" textFill="WHITE" />
+            <Label layoutX="424.0" layoutY="173.0" text="Tournament" textFill="WHITE" />
             <Separator layoutX="5.0" layoutY="221.0" prefHeight="17.0" prefWidth="490.0" />
-            <Label layoutX="182.0" layoutY="264.0" text="Select the Map Type:" underline="true">
+            <Label layoutX="182.0" layoutY="264.0" text="Select the Map Type:" textFill="WHITE" underline="true">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font></Label>
-            <Button fx:id="playGame" defaultButton="true" layoutX="205.0" layoutY="379.0" mnemonicParsing="false" onMouseClicked="#gameConfigPage2" prefHeight="53.0" prefWidth="91.0" style="-fx-background-color: #DDDDDD; -fx-border-color: #000000;" text="NEXT" />
+            <Button fx:id="playGame" defaultButton="true" layoutX="395.0" layoutY="433.0" mnemonicParsing="false" onMouseClicked="#gameConfigPage2" prefHeight="53.0" prefWidth="91.0" style="-fx-background-color: #DDDDDD; -fx-border-color: #000000;" text="NEXT">
+               <font>
+                  <Font name="Charter Bold" size="20.0" />
+               </font></Button>
             <Slider id="mapTypeSlider" fx:id="mapTypeSlider" blockIncrement="1.0" layoutX="23.0" layoutY="295.0" majorTickUnit="1.0" max="2.0" min="1.0" minorTickCount="0" prefHeight="15.0" prefWidth="450.0" showTickMarks="true" snapToTicks="true" />
-            <Label layoutX="5.0" layoutY="311.0" text="Standard" />
-            <Label layoutX="435.0" layoutY="311.0" text="Random" />
+            <Label layoutX="5.0" layoutY="311.0" text="Standard" textFill="WHITE" />
+            <Label layoutX="435.0" layoutY="311.0" text="Random" textFill="WHITE" />
          </children>
       </Pane>
    </children>
