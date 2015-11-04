@@ -9,8 +9,6 @@ import java.util.ArrayList;
 
 public class Main extends Application {
 
-    public static Stage primary = null;
-
     public enum Difficulty { BEGINNER, STANDARD, TOURNAMENT};
     public enum MapType {STANDARD, RANDOM};
     public enum NumPlayers {ONE, TWO, THREE, FOUR};
@@ -22,14 +20,14 @@ public class Main extends Application {
     public static MapType mapType = MapType.STANDARD;
     public static NumPlayers numPlayers = NumPlayers.TWO;
 
+    public static Stage stage;
     @Override
-    public void start(Stage primaryStage) throws Exception{
-        init();
-        primary = primaryStage;
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample.fxml"));
-        primary.setTitle("Welcome to M.U.L.E.");
-        primary.setScene(new Scene(root, 500, 500));
-        primary.show();
+    public void start(Stage stage) throws Exception{
+        this.stage = stage;
+        screenController primary = screenController.getInstance();
+        primary.setStage(stage);
+        primary.setStartPage();
+        stage.show();
     }
 
 
