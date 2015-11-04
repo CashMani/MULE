@@ -7,6 +7,7 @@ import javafx.collections.ObservableMap;
 
 /**
  * Created by mani on 9/24/15.
+ * Edited by McKenzie Elliott on 11/4/15.
  *
  * Defines a Player object's name and race.
  */

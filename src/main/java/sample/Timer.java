@@ -7,6 +7,7 @@ import javafx.util.Duration;
 /**
  * Created by Alexandra Link on 9/30/15.
  * Barely edited by Mani on 9/30/15
+ * Edited by McKenzie Elliott on 11/4/15.
  *
  * Times each Player's turn within the MULE game.
  */

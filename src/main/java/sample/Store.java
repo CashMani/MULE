@@ -7,6 +7,7 @@ import java.io.Serializable;
 
 /**
  * Created by Alexandra Link on 10/1/15.
+ * Edited by McKenzie Elliott on 11/4/15.
  *
  * Creates the Store object that a Player may interact with
  * in order to make purchaes or sell their own inventory
