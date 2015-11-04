@@ -18,6 +18,16 @@ public class LandPlot implements Serializable {
     private int foodProd;
     private int oreProd;
 
+<<<<<<< HEAD
+=======
+    /**
+     * LandPlot constructor
+      * @param type type of land
+     * @param owner player that owns this land
+     * @param color color of land on map
+     * @param location where the land button is located
+     */
+>>>>>>> parent of 6eb2834... Fixed a bug with placing mules after loading game
     public LandPlot(String type, Player owner, Color color, Button location) {
         this.type = type;
         this.owner = owner;

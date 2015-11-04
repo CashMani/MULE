@@ -58,6 +58,15 @@ public class Player implements InventoryInterface, Serializable {
         return this.landOwned;
     }
 
+<<<<<<< HEAD
+=======
+    /**
+     * Allows player to view whether or
+     * not they own a plot of land
+     * @param p the user clicking on a plot of land
+     * @return true if Player owns land, false if not
+     */
+>>>>>>> parent of 6eb2834... Fixed a bug with placing mules after loading game
     public boolean ownsLand(Button p) {
         boolean isOwner = false;
         for (LandPlot l : landOwned) {
@@ -67,6 +76,15 @@ public class Player implements InventoryInterface, Serializable {
         return isOwner;
     }
 
+<<<<<<< HEAD
+=======
+    /**
+     * Land getter at user request
+     * @param p button action of user
+     *          requesting land ownership
+     * @return land plot owned
+     */
+>>>>>>> parent of 6eb2834... Fixed a bug with placing mules after loading game
     public LandPlot getLand(Button p) {
         LandPlot land = null;
         for (LandPlot l : landOwned) {
