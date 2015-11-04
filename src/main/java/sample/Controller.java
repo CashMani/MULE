@@ -35,6 +35,11 @@ import java.util.LinkedList;
 import java.util.ResourceBundle;
 
 import static javafx.scene.paint.Paint.*;
+/**
+*Class that controls the game functions
+* @author Alex Link, Mani Japra, Justin Thornburgh, McKenzie Elliott, Joanna Parkhurst, Sara Norris
+* @version 1.0
+*/
 
 public class Controller implements Initializable {
     @FXML
@@ -133,9 +138,11 @@ public class Controller implements Initializable {
 
     public int playerTurn = 0; // always begins with first player
     public int turnRound = 0; // increases by one after every player goes once
-
-
-
+    /**
+    *initializes the game
+    *@param location the web location
+    *@param resources the resources used by the player
+    */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
     }
@@ -143,30 +150,50 @@ public class Controller implements Initializable {
 //    public final void displayTime() {
 //        timeLeftDisp.setText(Controller.timer.getTimeRemaining().toString());
 //    }
-
+    /**
+    *takes you to the about team display screen when clicked 
+    *@param event the action of clicking the about
+    *@throws IOException when unexpected event occurs
+    */
     @FXML
     public void aboutTeamClicked(Event event) throws IOException {
         screenController sc = screenController.getInstance();
         sc.setAboutTeam();
     }
-
+    /**
+    *takes you to game configuration screen
+    *@param event the action of clicking config
+    *@throws IOException when unexpected event occurs
+    */
     @FXML
     public void gameConfigClicked(Event event) throws IOException {
         screenController sc = screenController.getInstance();
         sc.setGameConfiguration();
     }
-
+    /**
+    *action when back to main menu button is clicked
+    *@param event the event of clicking the button
+    *@throws IOException in an unexpected event
+    */
     @FXML
     public void backToMainMenu(Event event) throws IOException {
         screenController sc = screenController.getInstance();
         sc.setStartPage();
     }
+    /**
+    *action when one exits game
+    *@param event clicking the exit button
+    */
 
     @FXML
     public void exitGame(Event event) {
         Main.stage.close();
     }
-
+    /**
+    *the second game configuration page that sets difficulties
+    *@param event the on click action
+    *@throws IOException when unexpected event occurs
+    */
     @FXML
     public void gameConfigPage2(Event event) throws IOException {
         switch ((int) difficultySlider.getValue()) {
@@ -202,7 +229,11 @@ public class Controller implements Initializable {
         screenController sc = screenController.getInstance();
         sc.setPlayerInfo();
     }
-
+    /**
+    *the player starts the game
+    *@param event the on click event
+    *@throws IOException when unexpected occurence
+    */
     @FXML
     public void playGame(Event event) throws IOException {
         boolean validNames = false;
@@ -260,20 +291,31 @@ public class Controller implements Initializable {
             GameController.landSelectionPhase();
         }
     }
-
+    /**
+    *player leaves the town 
+    *@param event the on click event of player leaving town 
+    *@throws IOException in an unexpected occurence 
+    */
     @FXML
     public void leaveTown(Event event) throws IOException {
         screenController sc = screenController.getInstance();
         sc.setMainMap();
     }
-
+    /**
+    *player goes into the town 
+    *@param event the on click event
+    *@throws IOException in an unexpected occurence
+    */
     @FXML
     public void goToTown(Event event) throws IOException {
         screenController sc = screenController.getInstance();
         sc.setTown();
     }
 
-    // Row Zero
+    /**
+    *first grid space that can be clicked on map
+    *@param event the on click action
+    */
     public void zeroZeroClicked(Event event) {
         if (!landTaken[0][0] || mulePlacementMode) {
             if (mulePlacementMode) {
@@ -311,7 +353,10 @@ public class Controller implements Initializable {
             }
         }
     }
-
+    /**
+    *grid space that can be clicked on map
+    *@param event the on click action
+    */
     public void zeroTwoClicked(Event event) {
         if (!landTaken[0][2] || mulePlacementMode) {
             if (mulePlacementMode) {
@@ -350,7 +395,10 @@ public class Controller implements Initializable {
             }
         }
     }
-
+    /**
+    *grid that can be clicked on map
+    *@param event the on click action
+    */
     public void zeroOneClicked(Event event) {
         if (!landTaken[0][1] || mulePlacementMode) {
             if (mulePlacementMode) {
@@ -388,7 +436,10 @@ public class Controller implements Initializable {
             }
         }
     }
-
+    /**
+    *grid space that can be clicked on map
+    *@param event the on click action
+    */
     public void zeroThreeClicked(Event event) {
         if (!landTaken[0][3] || mulePlacementMode) {
             if (mulePlacementMode) {
@@ -426,7 +477,10 @@ public class Controller implements Initializable {
             }
         }
     }
-
+        /**
+    *grid space that can be clicked on map
+    *@param event the on click action
+    */
     public void zeroFourClicked(Event event) {
         if (!landTaken[0][4] || mulePlacementMode) {
             if (mulePlacementMode) {
@@ -464,7 +518,10 @@ public class Controller implements Initializable {
             }
         }
     }
-
+        /**
+    *grid space that can be clicked on map
+    *@param event the on click action
+    */
     public void zeroFiveClicked(Event event) {
         if (!landTaken[0][5] || mulePlacementMode) {
             if (mulePlacementMode) {
@@ -503,7 +560,10 @@ public class Controller implements Initializable {
             }
         }
     }
-
+    /**
+    *grid space that can be clicked on map
+    *@param event the on click action
+    */
     public void zeroSixClicked(Event event) {
         if (!landTaken[0][6] || mulePlacementMode) {
             if (mulePlacementMode) {
@@ -541,7 +601,10 @@ public class Controller implements Initializable {
             }
         }
     }
-
+    /**
+    *grid space that can be clicked on map
+    *@param event the on click action
+    */
     public void zeroEightClicked(Event event) {
         if (!landTaken[0][8] || mulePlacementMode) {
             if (mulePlacementMode) {
@@ -579,7 +642,10 @@ public class Controller implements Initializable {
             }
         }
     }
-
+    /**
+    *grid space that can be clicked on map
+    *@param event the on click action
+    */
     public void zeroSevenClicked(Event event) {
         if (!landTaken[0][7] || mulePlacementMode) {
             if (mulePlacementMode) {
@@ -620,7 +686,10 @@ public class Controller implements Initializable {
     }
 
     //Row One
-
+    /**
+    *grid space that can be clicked on map
+    *@param event the on click action
+    */
     public void oneZeroClicked(Event event) {
         if (!landTaken[1][0] || mulePlacementMode) {
             if (mulePlacementMode) {
@@ -658,7 +727,10 @@ public class Controller implements Initializable {
             }
         }
     }
-
+    /**
+    *grid space that can be clicked on map
+    *@param event the on click action
+    */
     public void oneTwoClicked(Event event) {
         if (!landTaken[1][2] || mulePlacementMode) {
             if (mulePlacementMode) {
@@ -697,7 +769,10 @@ public class Controller implements Initializable {
             }
         }
     }
-
+    /**
+    *grid space that can be clicked on map
+    *@param event the on click action
+    */
     public void oneOneClicked(Event event) {
         if (!landTaken[1][1] || mulePlacementMode) {
             if (mulePlacementMode) {
@@ -735,7 +810,10 @@ public class Controller implements Initializable {
             }
         }
     }
-
+    /**
+    *grid space that can be clicked on map
+    *@param event the on click action
+    */
     public void oneThreeClicked(Event event) {
         if (!landTaken[1][3] || mulePlacementMode) {
             if (mulePlacementMode) {
@@ -773,7 +851,10 @@ public class Controller implements Initializable {
             }
         }
     }
-
+    /**
+    *grid space that can be clicked on map
+    *@param event the on click action
+    */
     public void oneFourClicked(Event event) {
         if (!landTaken[1][4] || mulePlacementMode) {
             if (mulePlacementMode) {
@@ -811,7 +892,10 @@ public class Controller implements Initializable {
             }
         }
     }
-
+    /**
+    *grid space that can be clicked on map
+    *@param event the on click action
+    */
     public void oneFiveClicked(Event event) {
         if (!landTaken[1][5] || mulePlacementMode) {
             if (mulePlacementMode) {
@@ -850,7 +934,10 @@ public class Controller implements Initializable {
             }
         }
     }
-
+    /**
+    *grid space that can be clicked on map
+    *@param event the on click action
+    */
     public void oneSixClicked(Event event) {
         if (!landTaken[1][6] || mulePlacementMode) {
             if (mulePlacementMode) {
@@ -889,7 +976,10 @@ public class Controller implements Initializable {
             }
         }
     }
-
+    /**
+    *grid space that can be clicked on map
+    *@param event the on click action
+    */
     public void oneEightClicked(Event event) {
         if (!landTaken[1][8] || mulePlacementMode) {
             if (mulePlacementMode) {
@@ -927,7 +1017,10 @@ public class Controller implements Initializable {
             }
         }
     }
-
+    /**
+    *grid space that can be clicked on map
+    *@param event the on click action
+    */
     public void oneSevenClicked(Event event) {
         if (!landTaken[1][7] || mulePlacementMode) {
             if (mulePlacementMode) {
@@ -965,7 +1058,10 @@ public class Controller implements Initializable {
             }
         }
     }
-
+    /**
+    *grid space that can be clicked on map
+    *@param event the on click action
+    */
     //Row Two
     public void twoZeroClicked(Event event) {
         if (!landTaken[2][0] || mulePlacementMode) {
@@ -1004,7 +1100,10 @@ public class Controller implements Initializable {
             }
         }
     }
-
+    /**
+    *grid space that can be clicked on map
+    *@param event the on click action
+    */
     public void twoTwoClicked(Event event) {
         if (!landTaken[2][2] || mulePlacementMode) {
             if (mulePlacementMode) {
@@ -1042,7 +1141,10 @@ public class Controller implements Initializable {
             }
         }
     }
-
+    /**
+    *grid space that can be clicked on map
+    *@param event the on click action
+    */
     public void twoOneClicked(Event event) {
         if (!landTaken[2][1] || mulePlacementMode) {
             if (mulePlacementMode) {
@@ -1080,7 +1182,10 @@ public class Controller implements Initializable {
             }
         }
     }
-
+    /**
+    *grid space that can be clicked on map
+    *@param event the on click action
+    */
     public void twoThreeClicked(Event event) {
         if (!landTaken[2][3] || mulePlacementMode) {
             if (mulePlacementMode) {
@@ -1118,7 +1223,10 @@ public class Controller implements Initializable {
             }
         }
     }
-
+    /**
+    *grid space that can be clicked on map
+    *@param event the on click action
+    */
     public void twoFiveClicked(Event event) {
         if (!landTaken[2][5] || mulePlacementMode) {
             if (mulePlacementMode) {
@@ -1157,7 +1265,10 @@ public class Controller implements Initializable {
             }
         }
     }
-
+    /**
+    *grid space that can be clicked on map
+    *@param event the on click action
+    */
     public void twoSixClicked(Event event) {
         if (!landTaken[2][6] || mulePlacementMode) {
             if (mulePlacementMode) {
@@ -1195,7 +1306,10 @@ public class Controller implements Initializable {
             }
         }
     }
-
+    /**
+    *grid space that can be clicked on map
+    *@param event the on click action
+    */
     public void twoEightClicked(Event event) {
         if (!landTaken[2][8] || mulePlacementMode) {
             if (mulePlacementMode) {
@@ -1233,7 +1347,10 @@ public class Controller implements Initializable {
             }
         }
     }
-
+    /**
+    *grid space that can be clicked on map
+    *@param event the on click action
+    */
     public void twoSevenClicked(Event event) {
         if (!landTaken[2][7] || mulePlacementMode) {
             if (mulePlacementMode) {
@@ -1273,7 +1390,10 @@ public class Controller implements Initializable {
     }
 
     //Row Three
-
+    /**
+    *grid space that can be clicked on map
+    *@param event the on click action
+    */
     public void threeZeroClicked(Event event) {
         if (!landTaken[3][0] || mulePlacementMode) {
             if (landSelectionMode || GameController.buyProperty()) {
@@ -1311,7 +1431,10 @@ public class Controller implements Initializable {
             }
         }
     }
-
+    /**
+    *grid space that can be clicked on map
+    *@param event the on click action
+    */
     public void threeTwoClicked(Event event) {
         if (!landTaken[3][2] || mulePlacementMode) {
             if (mulePlacementMode) {
@@ -1349,7 +1472,10 @@ public class Controller implements Initializable {
             }
         }
     }
-
+    /**
+    *grid space that can be clicked on map
+    *@param event the on click action
+    */
     public void threeOneClicked(Event event) {
         if (!landTaken[3][1] || mulePlacementMode) {
             if (mulePlacementMode) {
@@ -1387,7 +1513,10 @@ public class Controller implements Initializable {
             }
         }
     }
-
+    /**
+    *grid space that can be clicked on map
+    *@param event the on click action
+    */
     public void threeThreeClicked(Event event) {
         if (!landTaken[3][3] || mulePlacementMode) {
             if (mulePlacementMode) {
@@ -1425,7 +1554,10 @@ public class Controller implements Initializable {
             }
         }
     }
-
+    /**
+    *grid space that can be clicked on map
+    *@param event the on click action
+    */
     public void threeFourClicked(Event event) {
         if (!landTaken[3][4] || mulePlacementMode) {
             if (mulePlacementMode) {
@@ -1463,7 +1595,10 @@ public class Controller implements Initializable {
             }
         }
     }
-
+    /**
+    *grid space that can be clicked on map
+    *@param event the on click action
+    */
     public void threeFiveClicked(Event event) {
         if (!landTaken[3][5] || mulePlacementMode) {
             if (mulePlacementMode) {
@@ -1501,7 +1636,10 @@ public class Controller implements Initializable {
             }
         }
     }
-
+    /**
+    *grid space that can be clicked on map
+    *@param event the on click action
+    */
     public void threeSixClicked(Event event) {
         if (!landTaken[3][6] || mulePlacementMode) {
             if (mulePlacementMode) {
@@ -1539,7 +1677,10 @@ public class Controller implements Initializable {
             }
         }
     }
-
+    /**
+    *grid space that can be clicked on map
+    *@param event the on click action
+    */
     public void threeEightClicked(Event event) {
         if (!landTaken[3][8] || mulePlacementMode) {
             if (mulePlacementMode) {
@@ -1577,7 +1718,10 @@ public class Controller implements Initializable {
             }
         }
     }
-
+    /**
+    *grid space that can be clicked on map
+    *@param event the on click action
+    */
     public void threeSevenClicked(Event event) {
         if (!landTaken[3][7] || mulePlacementMode) {
             if (mulePlacementMode) {
@@ -1617,7 +1761,10 @@ public class Controller implements Initializable {
     }
 
     //Row Four
-
+    /**
+    *grid space that can be clicked on map
+    *@param event the on click action
+    */
     public void fourZeroClicked(Event event) {
         if (!landTaken[4][0] || mulePlacementMode) {
             if (mulePlacementMode) {
@@ -1655,7 +1802,10 @@ public class Controller implements Initializable {
             }
         }
     }
-
+    /**
+    *grid space that can be clicked on map
+    *@param event the on click action
+    */
     public void fourTwoClicked(Event event) {
         if (!landTaken[4][2] || mulePlacementMode) {
             if (mulePlacementMode) {
@@ -1693,7 +1843,10 @@ public class Controller implements Initializable {
             }
         }
     }
-
+    /**
+    *grid space that can be clicked on map
+    *@param event the on click action
+    */
     public void fourOneClicked(Event event) {
         if (!landTaken[4][1] || mulePlacementMode) {
             if (mulePlacementMode) {
@@ -1731,7 +1884,10 @@ public class Controller implements Initializable {
             }
         }
     }
-
+    /**
+    *grid space that can be clicked on map
+    *@param event the on click action
+    */
     public void fourThreeClicked(Event event) {
         if (!landTaken[4][3] || mulePlacementMode) {
             if (mulePlacementMode) {
@@ -1769,7 +1925,10 @@ public class Controller implements Initializable {
             }
         }
     }
-
+    /**
+    *grid space that can be clicked on map
+    *@param event the on click action
+    */
     public void fourFourClicked(Event event) {
         if (!landTaken[4][4] || mulePlacementMode) {
             if (mulePlacementMode) {
@@ -1807,7 +1966,10 @@ public class Controller implements Initializable {
             }
         }
     }
-
+    /**
+    *grid space that can be clicked on map
+    *@param event the on click action
+    */
     public void fourFiveClicked(Event event) {
         if (!landTaken[4][5] || mulePlacementMode) {
             if (mulePlacementMode) {
@@ -1845,7 +2007,10 @@ public class Controller implements Initializable {
             }
         }
     }
-
+    /**
+    *grid space that can be clicked on map
+    *@param event the on click action
+    */
     public void fourSixClicked(Event event) {
         if (!landTaken[4][6] || mulePlacementMode) {
             if (mulePlacementMode) {
@@ -1883,7 +2048,10 @@ public class Controller implements Initializable {
             }
         }
     }
-
+    /**
+    *grid space that can be clicked on map
+    *@param event the on click action
+    */
     public void fourEightClicked(Event event) {
         if (!landTaken[4][8] || mulePlacementMode) {
             if (mulePlacementMode) {
@@ -1921,7 +2089,10 @@ public class Controller implements Initializable {
             }
         }
     }
-
+    /**
+    *grid space that can be clicked on map
+    *@param event the on click action
+    */
     public void fourSevenClicked(Event event) {
         if (!landTaken[4][7] || mulePlacementMode) {
             if (mulePlacementMode) {
@@ -1959,19 +2130,31 @@ public class Controller implements Initializable {
             }
         }
     }
-
+    /**
+    *player goes to the pub in town
+    *@param event the on click action
+    *@throws IOException in an unexpected occurence
+    */
     @FXML
     public void goToPub(Event event) throws IOException {
         screenController sc = screenController.getInstance();
         sc.setPub();
     }
-
+    /**
+    *leaves pub to go to town 
+    *@param event on click action
+    *@throws IOException in an unexpected occurence
+    */
     @FXML
     public void returnToTown(Event event) throws IOException {
         screenController sc = screenController.getInstance();
         sc.setTown();
     }
-
+    /**
+    *player goes to gamble 
+    *@param event 
+    *@throws IOException 
+    */
     @FXML
     public void gamble(Event event) throws IOException {
         Duration timeToGamble = timer.stopTimer();
@@ -1984,71 +2167,135 @@ public class Controller implements Initializable {
         returnToMap();
         GameController.nextTurn();
     }
-
+    /**
+    *returns from gambling back to the map
+    *@throws IOException in an unexpected event
+    */
     public void returnToMap() throws IOException {
         screenController sc = screenController.getInstance();
         sc.setMainMap();
     }
-
+    /**
+    *enters the store
+    *@param event on click event
+    *@throws IOException in an unexpected event 
+    */
     public void enterStore(Event event) throws IOException {
         screenController sc = screenController.getInstance();
         sc.setResourceStore();
     }
-
+    /**
+    *leaves the store
+    *@param event on click event
+    *@throws IOException in an unexpected event 
+    */
     public void exitStore(Event event) throws IOException {
         screenController sc = screenController.getInstance();
         sc.setTown();
     }
-
+    /**
+    *enters the mule purchase
+    *@param event on click event
+    *@throws IOException in an unexpected event 
+    */
     public void toMuleSales(Event event) throws IOException {
         screenController sc = screenController.getInstance();
         sc.setMuleStore();
     }
-
+    /**
+    *ends mule purchase
+    *@param event on click event
+    *@throws IOException in an unexpected event 
+    */
     public void exitMuleStore(Event event) throws IOException {
         screenController sc = screenController.getInstance();
         sc.setResourceStore();
     }
-
+    /**
+    *purchase food
+    *@param event on click event
+    *@throws IOException in an unexpected event 
+    */
     public void buyFood(Event event) throws IOException {
         GameController.store.buyFood(1);
     }
-
+    /**
+    *purchase energy
+    *@param event on click event
+    *@throws IOException in an unexpected event 
+    */
     public void buyEnergy(Event event) throws IOException {
         GameController.store.buyEnergy(1);
     }
-
+    /**
+    *player purchase ore
+    *@param event on click event
+    *@throws IOException in an unexpected event 
+    */
     public void buyOre(Event event) throws IOException {
         GameController.store.buyOre(1);
     }
-
+    /**
+    *player sells food
+    *@param event on click event
+    *@throws IOException in an unexpected event 
+    */
     public void sellFood(Event event) throws IOException {
         GameController.store.sellFood(1);
     }
-
+    /**
+    *player sells  energy
+    *@param event on click event
+    *@throws IOException in an unexpected event 
+    */
     public void sellEnergy(Event event) throws IOException {
         GameController.store.sellEnergy(1);
     }
-
+    /**
+    *player sells ore
+    *@param event on click event
+    *@throws IOException in an unexpected event 
+    */
     public void sellOre(Event event) throws IOException {
         GameController.store.sellOre(1);
     }
-
+    /**
+    *player sells mule
+    *@param event on click event
+    *@throws IOException in an unexpected event 
+    */
     public void sellMule(Event event) throws IOException {
         GameController.store.sellMule();
     }
-
+    /**
+    *player buy mule ore
+    *@param event on click event
+    *@throws IOException in an unexpected event 
+    */
     public void buyOreMule(Event event) throws IOException {
         GameController.store.buyMule(Mule.Configuration.ORE);
     }
-
+    /**
+    *player buys mule food
+    *@param event on click event
+    *@throws IOException in an unexpected event 
+    */
     public void buyFoodMule(Event event) throws IOException {
         GameController.store.buyMule(Mule.Configuration.FOOD);
     }
-
+    /**
+    *player buys mule energy
+    *@param event on click event
+    *@throws IOException in an unexpected event 
+    */
     public void buyEnergyMule(Event event) throws IOException {
         GameController.store.buyMule(Mule.Configuration.ENERGY);
     }
+    /**
+    *player places mules
+    *@param event on click event
+    *@throws IOException in an unexpected event 
+    */
 
     @FXML
     public void placeMule(Event event) {
@@ -2063,7 +2310,10 @@ public class Controller implements Initializable {
             System.out.println("Silly " + cur.getName() + " - You don't have a MULE in your inventory.");
         }
     }
-
+    /**
+    *saves game
+    *@param event on click event
+    */
     @FXML
     public void saveGame(Event event) {
         try {
@@ -2134,7 +2384,10 @@ public class Controller implements Initializable {
         }
         System.out.println("Game saved");
     }
-
+    /**
+    *loads saved game
+    *@param event on click event
+    */
     @FXML
     public void loadGame(Event event) {
         try {
@@ -2216,7 +2469,9 @@ public class Controller implements Initializable {
         System.out.println("Game Loaded");
         timer.startTimer();
     }
-
+    /**
+    *initializes map buttons
+    */
     private void setMapButtons() {
         map[0][0] = zeroZero;
         map[0][1] = zeroOne;
