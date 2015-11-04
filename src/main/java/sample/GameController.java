@@ -7,14 +7,23 @@ import java.util.Comparator;
 
 /**
  * Created by mani on 9/24/15.
+ * Edited by Joanna Parkhurst on 11/4/15
+ *
+ * Directs the dynamics of the player controls and turns.
+ * Contains methods for each player to select land.
  */
-
     public class GameController {
 
         public static Store store;
         public static RandomEvents randEvents;
 
     //***************************** Land Selection ********************************************************************
+
+    /**
+     * Dictates the player and turn throughout the game.
+     * Conditions for the first turn or end of loop in players.
+     * Otherwise increments the currentPlayerTurn for the Controller.
+     */
     public static void nextTurn() {
         Controller.mulePlacementMode = false;
         if (Controller.currentPlayerTurn == 0 && Controller.roundNum == 0) {
@@ -43,6 +52,10 @@ import java.util.Comparator;
         startTurn();
     }
 
+    /**
+     * Calculates the player's production at the end of his/her turn.
+     * @param p The player who's production will be calculated.
+     */
     private static void calculateProduction(Player p) {
         System.out.println("\n" + p.getName() +"'s production at the end of the turn: ");
 
@@ -72,6 +85,9 @@ import java.util.Comparator;
         System.out.println("Total Ore Produced: " + totalOre);
     }
 
+    /**
+     * Calculates the round order based on the player's scores.
+     */
     private static void calculateRoundOrder() {
         Controller.players.sort(new Comparator<Player>() {
             @Override
@@ -83,6 +99,11 @@ import java.util.Comparator;
         });
     }
 
+    /**
+     * Allows the current player to buy property.
+     * Tells whether or not the player can do so.
+     * @return boolean as to whether or not he/she has enough money to do so.
+     */
     public static boolean buyProperty() {
         Player cur = Controller.players.get(Controller.currentPlayerTurn);
         if (cur.getMoneyStash() - 300 < 0) {
@@ -95,6 +116,9 @@ import java.util.Comparator;
         }
     }
 
+    /**
+     * Controls the beginning of the land selection phase.
+     */
     public static void landSelectionPhase() {
         System.out.println("\nSince this is Land Selection mode...");
         System.out.println(Controller.players.get(Controller.currentPlayerTurn).getName() + " please select a free plot of land...\n");
@@ -102,10 +126,20 @@ import java.util.Comparator;
 
     //********************************** Main Game Controls *********************************************
 
+    /**
+     * Controls the begining of the game.
+     * Initializes a new store and random events object.
+     */
     public static void startGame() {
         store = new Store();
         randEvents = new RandomEvents();
     }
+
+    /**
+     * Dictates the start of a turn.
+     * Calculates the turn time and random events.
+     * Keeps track of an individuals time in turn.
+     */
     public static void startTurn() {
         Player cur = Controller.players.get(Controller.currentPlayerTurn);
         System.out.println(cur.getName() + ", your turn starts now!\n");
@@ -136,6 +170,9 @@ import java.util.Comparator;
         Controller.timer.startTimer();
     }
 
+    /**
+     * Dictates the end of a player's turn.
+     */
     public static void endTurn() {
         Controller.timer.stopTimer();
         Player cur = Controller.players.get(Controller.currentPlayerTurn);
