@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import javafx.scene.control.Button;
 /**
  * Created by mani on 9/10/15.
+ * Edited by McKenzie Elliott on 11/4/15.
  *
  * Creates a Player object to interact with the MULE game and to
  * maintain an inventory of items necessary to survive in the game.

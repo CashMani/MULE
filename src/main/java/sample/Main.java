@@ -7,6 +7,14 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.util.ArrayList;
 
+/**
+ * Created by Mani Japra and Alex Link.
+ * Edited by McKenzie Elliott on 11/4/15.
+ *
+ * Sets the stage for the user's visuals and sets details of a Player's
+ * potential attributes as well as sets up the basics of the game's core
+ * variable values.
+ */
 public class Main extends Application {
 
     public enum Difficulty { BEGINNER, STANDARD, TOURNAMENT};
@@ -30,7 +38,10 @@ public class Main extends Application {
         stage.show();
     }
 
-
+    /**
+     * Runs the game.
+     * @param args all the game items to be run
+     */
     public static void main(String[] args) {
         launch(args);
     }
