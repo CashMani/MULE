@@ -2,7 +2,6 @@ package sample;
 
 import javafx.scene.paint.Color;
 
-import java.awt.*;
 import java.io.Serializable;
 import java.util.ArrayList;
 import javafx.scene.control.Button;
@@ -126,11 +125,12 @@ public class Player implements InventoryInterface, Serializable {
      * @param p the user clicking on a plot of land
      * @return true if Player owns land, false if not
      */
-    public boolean ownsLand(Point p) {
+    public boolean ownsLand(Button p) {
         boolean isOwner = false;
         for (LandPlot l : landOwned) {
-            if (l.getCoord().equals(p)) isOwner = true;
+            if (l.getButton().equals(p)) isOwner = true;
         }
+
         return isOwner;
     }
 
@@ -140,11 +140,12 @@ public class Player implements InventoryInterface, Serializable {
      *          requesting land ownership
      * @return land plot owned
      */
-    public LandPlot getLand(Point p) {
+    public LandPlot getLand(Button p) {
         LandPlot land = null;
         for (LandPlot l : landOwned) {
-            if (l.getCoord().equals(p)) land = l;
+            if (l.getButton().equals(p)) land = l;
         }
+
         return land;
     }
 

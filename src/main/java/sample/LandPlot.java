@@ -16,7 +16,6 @@ public class LandPlot implements Serializable {
     private Player owner;
     private transient Color color; // transient means not serializable
     private transient Button location;
-    private Point coord;
     private Mule muleOnProp;
     private int energyProd;
     private int foodProd;
@@ -29,12 +28,11 @@ public class LandPlot implements Serializable {
      * @param color color of land on map
      * @param location where the land button is located
      */
-    public LandPlot(String type, Player owner, Color color, Button location, Point coord) {
+    public LandPlot(String type, Player owner, Color color, Button location) {
         this.type = type;
         this.owner = owner;
         this.color = color;
         this.location = location;
-        this.coord = coord;
         setProductionRates();
         muleOnProp = null;
         System.out.println("Landplot successfully assigned to " + owner.getName());
@@ -167,8 +165,5 @@ public class LandPlot implements Serializable {
         this.location = location;
     }
 
-    public void setCoord(Point coord) { this.coord = coord; }
-
-    public Point getCoord() { return this.coord; }
 
 }
