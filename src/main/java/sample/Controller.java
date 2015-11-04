@@ -96,6 +96,7 @@ public class Controller implements Initializable {
     public Button twoOne;
     public Button twoTwo;
     public Button twoThree;
+    public Button twoFour;
     public Button twoFive;
     public Button twoSix;
     public Button twoSeven;
@@ -281,8 +282,6 @@ public class Controller implements Initializable {
         }
 
         if (validNames) {
-            setMapButtons();
-
             screenController sc = screenController.getInstance();
             sc.setMainMap();
 
@@ -317,372 +316,63 @@ public class Controller implements Initializable {
     *@param event the on click action
     */
     public void zeroZeroClicked(Event event) {
-        if (!landTaken[0][0] || mulePlacementMode) {
-            if (mulePlacementMode) {
-                if (players.get(currentPlayerTurn).ownsLand(zeroZero)) {
-                    LandPlot land = players.get(currentPlayerTurn).getLand(zeroZero);
-                    if (!land.hasMule()) {
-                        land.setMule(muleToAdd);
-                        muleToAdd = null;
-                    } else {
-                        System.out.println("There is already a MULE there.");
-                        System.out.println("Your MULE ran away.");
-                        muleToAdd = null;
-                    }
-                } else {
-                    System.out.println("You do not own that land!!");
-                    System.out.println("Your MULE ran away.");
-                    muleToAdd = null;
-                }
-                mulePlacementMode = false;
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-            }
-            else if (landSelectionMode || GameController.buyProperty()) {
-                zeroZero.setBackground(
-                        new Background(
-                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
-                                        null,
-                                        null)));
-                //Adding land plot to person's land plot array list
-                players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(), zeroZero));
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-                landTaken[0][0] = true;
-            }
-        }
+        btnHandlerHelper(event, 0, 0, zeroZero);
     }
     /**
     *grid space that can be clicked on map
     *@param event the on click action
     */
     public void zeroTwoClicked(Event event) {
-        if (!landTaken[0][2] || mulePlacementMode) {
-            if (mulePlacementMode) {
-                if (players.get(currentPlayerTurn).ownsLand(zeroTwo)) {
-                    LandPlot land = players.get(currentPlayerTurn).getLand(zeroTwo);
-                    if (!land.hasMule()) {
-                        land.setMule(muleToAdd);
-                        muleToAdd = null;
-                    } else {
-                        System.out.println("There is already a MULE there.");
-                        System.out.println("Your MULE ran away.");
-                        muleToAdd = null;
-                    }
-                } else {
-                    System.out.println("You do not own that land!!");
-                    System.out.println("Your MULE ran away.");
-                    muleToAdd = null;
-                }
-                mulePlacementMode = false;
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-            }
-            else if (landSelectionMode || GameController.buyProperty()) {
-                zeroTwo.setBackground(
-                        new Background(
-                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
-                                        null,
-                                        null)));
-                //Adding land plot to person's land plot array list
-                players.get(currentPlayerTurn).addLand(new LandPlot("1 Mountain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(), zeroTwo));
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-                landTaken[0][2] = true;
-
-            }
-        }
+        btnHandlerHelper(event, 0, 2, zeroTwo);
     }
     /**
     *grid that can be clicked on map
     *@param event the on click action
     */
     public void zeroOneClicked(Event event) {
-        if (!landTaken[0][1] || mulePlacementMode) {
-            if (mulePlacementMode) {
-                if (players.get(currentPlayerTurn).ownsLand(zeroOne)) {
-                    LandPlot land = players.get(currentPlayerTurn).getLand(zeroOne);
-                    if (!land.hasMule()) {
-                        land.setMule(muleToAdd);
-                        muleToAdd = null;
-                    } else {
-                        System.out.println("There is already a MULE there.");
-                        System.out.println("Your MULE ran away.");
-                        muleToAdd = null;
-                    }
-                } else {
-                    System.out.println("You do not own that land!!");
-                    System.out.println("Your MULE ran away.");
-                    muleToAdd = null;
-                }
-                mulePlacementMode = false;
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-            }
-            else if (landSelectionMode || GameController.buyProperty()) {
-                zeroOne.setBackground(
-                        new Background(
-                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
-                                        null,
-                                        null)));
-                //Adding land plot to person's land plot array list
-                players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(), zeroOne));
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-                landTaken[0][1] = true;
-            }
-        }
+        btnHandlerHelper(event, 0, 1, zeroOne);
     }
     /**
     *grid space that can be clicked on map
     *@param event the on click action
     */
     public void zeroThreeClicked(Event event) {
-        if (!landTaken[0][3] || mulePlacementMode) {
-            if (mulePlacementMode) {
-                if (players.get(currentPlayerTurn).ownsLand(zeroThree)) {
-                    LandPlot land = players.get(currentPlayerTurn).getLand(zeroThree);
-                    if (!land.hasMule()) {
-                        land.setMule(muleToAdd);
-                        muleToAdd = null;
-                    } else {
-                        System.out.println("There is already a MULE there.");
-                        System.out.println("Your MULE ran away.");
-                        muleToAdd = null;
-                    }
-                } else {
-                    System.out.println("You do not own that land!!");
-                    System.out.println("Your MULE ran away.");
-                    muleToAdd = null;
-                }
-                mulePlacementMode = false;
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-            }
-            else if (landSelectionMode || GameController.buyProperty()) {
-                zeroThree.setBackground(
-                        new Background(
-                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
-                                        null,
-                                        null)));
-                //Adding land plot to person's land plot array list
-                players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(), zeroThree));
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-                landTaken[0][3] = true;
-            }
-        }
+        btnHandlerHelper(event, 0, 3, zeroThree);
     }
         /**
     *grid space that can be clicked on map
     *@param event the on click action
     */
     public void zeroFourClicked(Event event) {
-        if (!landTaken[0][4] || mulePlacementMode) {
-            if (mulePlacementMode) {
-                if (players.get(currentPlayerTurn).ownsLand(zeroFour)) {
-                    LandPlot land = players.get(currentPlayerTurn).getLand(zeroFour);
-                    if (!land.hasMule()) {
-                        land.setMule(muleToAdd);
-                        muleToAdd = null;
-                    } else {
-                        System.out.println("There is already a MULE there.");
-                        System.out.println("Your MULE ran away.");
-                        muleToAdd = null;
-                    }
-                } else {
-                    System.out.println("You do not own that land!!");
-                    System.out.println("Your MULE ran away.");
-                    muleToAdd = null;
-                }
-                mulePlacementMode = false;
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-            }
-            else if (landSelectionMode || GameController.buyProperty()) {
-                zeroFour.setBackground(
-                        new Background(
-                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
-                                        null,
-                                        null)));
-                //Adding land plot to person's land plot array list
-                players.get(currentPlayerTurn).addLand(new LandPlot("River", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(), zeroFour));
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-                landTaken[0][4] = true;
-            }
-        }
+        btnHandlerHelper(event, 0, 4, zeroFour);
     }
         /**
     *grid space that can be clicked on map
     *@param event the on click action
     */
     public void zeroFiveClicked(Event event) {
-        if (!landTaken[0][5] || mulePlacementMode) {
-            if (mulePlacementMode) {
-                if (players.get(currentPlayerTurn).ownsLand(zeroFive)) {
-                    LandPlot land = players.get(currentPlayerTurn).getLand(zeroFive);
-                    if (!land.hasMule()) {
-                        land.setMule(muleToAdd);
-                        muleToAdd = null;
-                    } else {
-                        System.out.println("There is already a MULE there.");
-                        System.out.println("Your MULE ran away.");
-                        muleToAdd = null;
-                    }
-                } else {
-                    System.out.println("You do not own that land!!");
-                    System.out.println("Your MULE ran away.");
-                    muleToAdd = null;
-                }
-                mulePlacementMode = false;
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-            }
-            else if (landSelectionMode || GameController.buyProperty()) {
-                zeroFive.setBackground(
-                        new Background(
-                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
-                                        null,
-                                        null)));
-                //Adding land plot to person's land plot array list
-                players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(), zeroFive));
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-                landTaken[0][5] = true;
-
-            }
-        }
+        btnHandlerHelper(event, 0, 5, zeroFive);
     }
     /**
     *grid space that can be clicked on map
     *@param event the on click action
     */
     public void zeroSixClicked(Event event) {
-        if (!landTaken[0][6] || mulePlacementMode) {
-            if (mulePlacementMode) {
-                if (players.get(currentPlayerTurn).ownsLand(zeroSix)) {
-                    LandPlot land = players.get(currentPlayerTurn).getLand(zeroSix);
-                    if (!land.hasMule()) {
-                        land.setMule(muleToAdd);
-                        muleToAdd = null;
-                    } else {
-                        System.out.println("There is already a MULE there.");
-                        System.out.println("Your MULE ran away.");
-                        muleToAdd = null;
-                    }
-                } else {
-                    System.out.println("You do not own that land!!");
-                    System.out.println("Your MULE ran away.");
-                    muleToAdd = null;
-                }
-                mulePlacementMode = false;
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-            }
-            else if (landSelectionMode || GameController.buyProperty()) {
-                zeroSix.setBackground(
-                        new Background(
-                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
-                                        null,
-                                        null)));
-                //Adding land plot to person's land plot array list
-                players.get(currentPlayerTurn).addLand(new LandPlot("3 Mountain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(), zeroZero));
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-                landTaken[0][6] = true;
-            }
-        }
+        btnHandlerHelper(event, 0, 6, zeroSix);
     }
     /**
     *grid space that can be clicked on map
     *@param event the on click action
     */
     public void zeroEightClicked(Event event) {
-        if (!landTaken[0][8] || mulePlacementMode) {
-            if (mulePlacementMode) {
-                if (players.get(currentPlayerTurn).ownsLand(zeroEight)) {
-                    LandPlot land = players.get(currentPlayerTurn).getLand(zeroEight);
-                    if (!land.hasMule()) {
-                        land.setMule(muleToAdd);
-                        muleToAdd = null;
-                    } else {
-                        System.out.println("There is already a MULE there.");
-                        System.out.println("Your MULE ran away.");
-                        muleToAdd = null;
-                    }
-                } else {
-                    System.out.println("You do not own that land!!");
-                    System.out.println("Your MULE ran away.");
-                    muleToAdd = null;
-                }
-                mulePlacementMode = false;
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-            }
-            else if (landSelectionMode || GameController.buyProperty()) {
-                zeroEight.setBackground(
-                        new Background(
-                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
-                                        null,
-                                        null)));
-                //Adding land plot to person's land plot array list
-                players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(), zeroEight));
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-                landTaken[0][8] = true;
-            }
-        }
+        btnHandlerHelper(event, 0, 8, zeroEight);
     }
     /**
     *grid space that can be clicked on map
     *@param event the on click action
     */
     public void zeroSevenClicked(Event event) {
-        if (!landTaken[0][7] || mulePlacementMode) {
-            if (mulePlacementMode) {
-                if (players.get(currentPlayerTurn).ownsLand(zeroSeven)) {
-                    LandPlot land = players.get(currentPlayerTurn).getLand(zeroSeven);
-                    if (!land.hasMule()) {
-                        land.setMule(muleToAdd);
-                        muleToAdd = null;
-                    } else {
-                        System.out.println("There is already a MULE there.");
-                        System.out.println("Your MULE ran away.");
-                        muleToAdd = null;
-                    }
-                } else {
-                    System.out.println("You do not own that land!!");
-                    System.out.println("Your MULE ran away.");
-                    muleToAdd = null;
-                }
-                mulePlacementMode = false;
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-            }
-            else if (landSelectionMode || GameController.buyProperty()) {
-                zeroSeven.setBackground(
-                        new Background(
-                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
-                                        null,
-                                        null)));
-                //Adding land plot to person's land plot array list
-                players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(), zeroSeven));
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-                landTaken[0][7] = true;
-
-            }
-        }
+        btnHandlerHelper(event, 0, 7, zeroSeven);
     }
 
     //Row One
@@ -691,372 +381,63 @@ public class Controller implements Initializable {
     *@param event the on click action
     */
     public void oneZeroClicked(Event event) {
-        if (!landTaken[1][0] || mulePlacementMode) {
-            if (mulePlacementMode) {
-                if (players.get(currentPlayerTurn).ownsLand(oneZero)) {
-                    LandPlot land = players.get(currentPlayerTurn).getLand(oneZero);
-                    if (!land.hasMule()) {
-                        land.setMule(muleToAdd);
-                        muleToAdd = null;
-                    } else {
-                        System.out.println("There is already a MULE there.");
-                        System.out.println("Your MULE ran away.");
-                        muleToAdd = null;
-                    }
-                } else {
-                    System.out.println("You do not own that land!!");
-                    System.out.println("Your MULE ran away.");
-                    muleToAdd = null;
-                }
-                mulePlacementMode = false;
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-            }
-            else if (landSelectionMode || GameController.buyProperty()) {
-                oneZero.setBackground(
-                        new Background(
-                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
-                                        null,
-                                        null)));
-                //Adding land plot to person's land plot array list
-                players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(), oneZero));
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-                landTaken[1][0] = true;
-            }
-        }
+        btnHandlerHelper(event, 1, 0, oneZero);
     }
     /**
     *grid space that can be clicked on map
     *@param event the on click action
     */
     public void oneTwoClicked(Event event) {
-        if (!landTaken[1][2] || mulePlacementMode) {
-            if (mulePlacementMode) {
-                if (players.get(currentPlayerTurn).ownsLand(oneTwo)) {
-                    LandPlot land = players.get(currentPlayerTurn).getLand(oneTwo);
-                    if (!land.hasMule()) {
-                        land.setMule(muleToAdd);
-
-                        muleToAdd = null;
-                    } else {
-                        System.out.println("There is already a MULE there.");
-                        System.out.println("Your MULE ran away.");
-                        muleToAdd = null;
-                    }
-                } else {
-                    System.out.println("You do not own that land!!");
-                    System.out.println("Your MULE ran away.");
-                    muleToAdd = null;
-                }
-                mulePlacementMode = false;
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-            }
-            else if (landSelectionMode || GameController.buyProperty()) {
-                oneTwo.setBackground(
-                        new Background(
-                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
-                                        null,
-                                        null)));
-                //Adding land plot to person's land plot array list
-                players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(), oneTwo));
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-                landTaken[1][2] = true;
-            }
-        }
+        btnHandlerHelper(event, 1, 2, oneTwo);
     }
     /**
     *grid space that can be clicked on map
     *@param event the on click action
     */
     public void oneOneClicked(Event event) {
-        if (!landTaken[1][1] || mulePlacementMode) {
-            if (mulePlacementMode) {
-                if (players.get(currentPlayerTurn).ownsLand(oneOne)) {
-                    LandPlot land = players.get(currentPlayerTurn).getLand(oneOne);
-                    if (!land.hasMule()) {
-                        land.setMule(muleToAdd);
-                        muleToAdd = null;
-                    } else {
-                        System.out.println("There is already a MULE there.");
-                        System.out.println("Your MULE ran away.");
-                        muleToAdd = null;
-                    }
-                } else {
-                    System.out.println("You do not own that land!!");
-                    System.out.println("Your MULE ran away.");
-                    muleToAdd = null;
-                }
-                mulePlacementMode = false;
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-            }
-            else if (landSelectionMode || GameController.buyProperty()) {
-                oneOne.setBackground(
-                        new Background(
-                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
-                                        null,
-                                        null)));
-                //Adding land plot to person's land plot array list
-                players.get(currentPlayerTurn).addLand(new LandPlot("1 Mountain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(), zeroZero));
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-                landTaken[1][1] = true;
-            }
-        }
+        btnHandlerHelper(event, 1, 1, oneOne);
     }
     /**
     *grid space that can be clicked on map
     *@param event the on click action
     */
     public void oneThreeClicked(Event event) {
-        if (!landTaken[1][3] || mulePlacementMode) {
-            if (mulePlacementMode) {
-                if (players.get(currentPlayerTurn).ownsLand(oneThree)) {
-                    LandPlot land = players.get(currentPlayerTurn).getLand(oneThree);
-                    if (!land.hasMule()) {
-                        land.setMule(muleToAdd);
-                        muleToAdd = null;
-                    } else {
-                        System.out.println("There is already a MULE there.");
-                        System.out.println("Your MULE ran away.");
-                        muleToAdd = null;
-                    }
-                } else {
-                    System.out.println("You do not own that land!!");
-                    System.out.println("Your MULE ran away.");
-                    muleToAdd = null;
-                }
-                mulePlacementMode = false;
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-            }
-            else if (landSelectionMode || GameController.buyProperty()) {
-                oneThree.setBackground(
-                        new Background(
-                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
-                                        null,
-                                        null)));
-                //Adding land plot to person's land plot array list
-                players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(), oneThree));
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-                landTaken[1][3] = true;
-            }
-        }
+        btnHandlerHelper(event, 1, 3, oneThree);
     }
     /**
     *grid space that can be clicked on map
     *@param event the on click action
     */
     public void oneFourClicked(Event event) {
-        if (!landTaken[1][4] || mulePlacementMode) {
-            if (mulePlacementMode) {
-                if (players.get(currentPlayerTurn).ownsLand(oneFour)) {
-                    LandPlot land = players.get(currentPlayerTurn).getLand(oneFour);
-                    if (!land.hasMule()) {
-                        land.setMule(muleToAdd);
-                        muleToAdd = null;
-                    } else {
-                        System.out.println("There is already a MULE there.");
-                        System.out.println("Your MULE ran away.");
-                        muleToAdd = null;
-                    }
-                } else {
-                    System.out.println("You do not own that land!!");
-                    System.out.println("Your MULE ran away.");
-                    muleToAdd = null;
-                }
-                mulePlacementMode = false;
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-            }
-            else if (landSelectionMode || GameController.buyProperty()) {
-                oneFour.setBackground(
-                        new Background(
-                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
-                                        null,
-                                        null)));
-                //Adding land plot to person's land plot array list
-                players.get(currentPlayerTurn).addLand(new LandPlot("River", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(), oneFour));
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-                landTaken[1][4] = true;
-            }
-        }
+        btnHandlerHelper(event, 1, 4, oneFour);
     }
     /**
     *grid space that can be clicked on map
     *@param event the on click action
     */
     public void oneFiveClicked(Event event) {
-        if (!landTaken[1][5] || mulePlacementMode) {
-            if (mulePlacementMode) {
-                if (players.get(currentPlayerTurn).ownsLand(oneFive)) {
-                    LandPlot land = players.get(currentPlayerTurn).getLand(oneFive);
-                    if (!land.hasMule()) {
-                        land.setMule(muleToAdd);
-                        muleToAdd = null;
-                    } else {
-                        System.out.println("There is already a MULE there.");
-                        System.out.println("Your MULE ran away.");
-                        muleToAdd = null;
-                    }
-                } else {
-                    System.out.println("You do not own that land!!");
-                    System.out.println("Your MULE ran away.");
-                    muleToAdd = null;
-                }
-                mulePlacementMode = false;
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-            }
-            else if (landSelectionMode || GameController.buyProperty()) {
-                oneFive.setBackground(
-                        new Background(
-                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
-                                        null,
-                                        null)));
-                //Adding land plot to person's land plot array list
-                players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(), oneFive));
-
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-                landTaken[1][5] = true;
-            }
-        }
+        btnHandlerHelper(event, 1, 5, oneFive);
     }
     /**
     *grid space that can be clicked on map
     *@param event the on click action
     */
     public void oneSixClicked(Event event) {
-        if (!landTaken[1][6] || mulePlacementMode) {
-            if (mulePlacementMode) {
-                if (players.get(currentPlayerTurn).ownsLand(oneSix)) {
-                    LandPlot land = players.get(currentPlayerTurn).getLand(oneSix);
-                    if (!land.hasMule()) {
-                        land.setMule(muleToAdd);
-                        muleToAdd = null;
-                    } else {
-                        System.out.println("There is already a MULE there.");
-                        System.out.println("Your MULE ran away.");
-                        muleToAdd = null;
-                    }
-                } else {
-                    System.out.println("You do not own that land!!");
-                    System.out.println("Your MULE ran away.");
-                    muleToAdd = null;
-                }
-                mulePlacementMode = false;
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-            }
-            else if (landSelectionMode || GameController.buyProperty()) {
-                oneSix.setBackground(
-                        new Background(
-                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
-                                        null,
-                                        null)));
-                //Adding land plot to person's land plot array list
-                players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(), oneSix));
-
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-                landTaken[1][6] = true;
-            }
-        }
+        btnHandlerHelper(event, 1, 6, oneSix);
     }
     /**
     *grid space that can be clicked on map
     *@param event the on click action
     */
     public void oneEightClicked(Event event) {
-        if (!landTaken[1][8] || mulePlacementMode) {
-            if (mulePlacementMode) {
-                if (players.get(currentPlayerTurn).ownsLand(oneEight)) {
-                    LandPlot land = players.get(currentPlayerTurn).getLand(oneEight);
-                    if (!land.hasMule()) {
-                        land.setMule(muleToAdd);
-                        muleToAdd = null;
-                    } else {
-                        System.out.println("There is already a MULE there.");
-                        System.out.println("Your MULE ran away.");
-                        muleToAdd = null;
-                    }
-                } else {
-                    System.out.println("You do not own that land!!");
-                    System.out.println("Your MULE ran away.");
-                    muleToAdd = null;
-                }
-                mulePlacementMode = false;
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-            }
-            else if (landSelectionMode || GameController.buyProperty()) {
-                oneEight.setBackground(
-                        new Background(
-                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
-                                        null,
-                                        null)));
-                //Adding land plot to person's land plot array list
-                players.get(currentPlayerTurn).addLand(new LandPlot("3 Mountain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(), oneEight));
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-                landTaken[1][8] = true;
-            }
-        }
+        btnHandlerHelper(event, 1, 8, oneEight);
     }
     /**
     *grid space that can be clicked on map
     *@param event the on click action
     */
     public void oneSevenClicked(Event event) {
-        if (!landTaken[1][7] || mulePlacementMode) {
-            if (mulePlacementMode) {
-                if (players.get(currentPlayerTurn).ownsLand(oneSeven)) {
-                    LandPlot land = players.get(currentPlayerTurn).getLand(oneSeven);
-                    if (!land.hasMule()) {
-                        land.setMule(muleToAdd);
-                        muleToAdd = null;
-                    } else {
-                        System.out.println("There is already a MULE there.");
-                        System.out.println("Your MULE ran away.");
-                        muleToAdd = null;
-                    }
-                } else {
-                    System.out.println("You do not own that land!!");
-                    System.out.println("Your MULE ran away.");
-                    muleToAdd = null;
-                }
-                mulePlacementMode = false;
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-            }
-            else if (landSelectionMode || GameController.buyProperty()) {
-                oneSeven.setBackground(
-                        new Background(
-                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
-                                        null,
-                                        null)));
-                //Adding land plot to person's land plot array list
-                players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(), oneSeven));
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-                landTaken[1][7] = true;
-            }
-        }
+        btnHandlerHelper(event, 1, 7, oneSeven);
     }
     /**
     *grid space that can be clicked on map
@@ -1064,329 +445,63 @@ public class Controller implements Initializable {
     */
     //Row Two
     public void twoZeroClicked(Event event) {
-        if (!landTaken[2][0] || mulePlacementMode) {
-            if (mulePlacementMode) {
-                if (players.get(currentPlayerTurn).ownsLand(twoZero)) {
-                    LandPlot land = players.get(currentPlayerTurn).getLand(twoZero);
-                    if (!land.hasMule()) {
-                        land.setMule(muleToAdd);
-                        muleToAdd = null;
-                    } else {
-                        System.out.println("There is already a MULE there.");
-                        System.out.println("Your MULE ran away.");
-                        muleToAdd = null;
-                    }
-                } else {
-                    System.out.println("You do not own that land!!");
-                    System.out.println("Your MULE ran away.");
-                    muleToAdd = null;
-                }
-                mulePlacementMode = false;
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-            }
-            else if (landSelectionMode || GameController.buyProperty()) {
-                twoZero.setBackground(
-                        new Background(
-                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
-                                        null,
-                                        null)));
-                //Adding land plot to person's land plot array list
-                players.get(currentPlayerTurn).addLand(new LandPlot("3 Mountain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(), twoZero));
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-                landTaken[2][0] = true;
-            }
-        }
+        btnHandlerHelper(event, 2, 0, twoZero);
     }
     /**
     *grid space that can be clicked on map
     *@param event the on click action
     */
     public void twoTwoClicked(Event event) {
-        if (!landTaken[2][2] || mulePlacementMode) {
-            if (mulePlacementMode) {
-                if (players.get(currentPlayerTurn).ownsLand(twoTwo)) {
-                    LandPlot land = players.get(currentPlayerTurn).getLand(twoTwo);
-                    if (!land.hasMule()) {
-                        land.setMule(muleToAdd);
-                        muleToAdd = null;
-                    } else {
-                        System.out.println("There is already a MULE there.");
-                        System.out.println("Your MULE ran away.");
-                        muleToAdd = null;
-                    }
-                } else {
-                    System.out.println("You do not own that land!!");
-                    System.out.println("Your MULE ran away.");
-                    muleToAdd = null;
-                }
-                mulePlacementMode = false;
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-            }
-            else if (landSelectionMode || GameController.buyProperty()) {
-                twoTwo.setBackground(
-                        new Background(
-                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
-                                        null,
-                                        null)));
-                //Adding land plot to person's land plot array list
-                players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(), twoTwo));
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-                landTaken[2][2] = true;
-            }
-        }
+        btnHandlerHelper(event, 2, 2, twoTwo);
     }
     /**
     *grid space that can be clicked on map
     *@param event the on click action
     */
     public void twoOneClicked(Event event) {
-        if (!landTaken[2][1] || mulePlacementMode) {
-            if (mulePlacementMode) {
-                if (players.get(currentPlayerTurn).ownsLand(twoOne)) {
-                    LandPlot land = players.get(currentPlayerTurn).getLand(twoOne);
-                    if (!land.hasMule()) {
-                        land.setMule(muleToAdd);
-                        muleToAdd = null;
-                    } else {
-                        System.out.println("There is already a MULE there.");
-                        System.out.println("Your MULE ran away.");
-                        muleToAdd = null;
-                    }
-                } else {
-                    System.out.println("You do not own that land!!");
-                    System.out.println("Your MULE ran away.");
-                    muleToAdd = null;
-                }
-                mulePlacementMode = false;
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-            }
-            else if (landSelectionMode || GameController.buyProperty()) {
-                twoOne.setBackground(
-                        new Background(
-                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
-                                        null,
-                                        null)));
-                //Adding land plot to person's land plot array list
-                players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(), twoOne));
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-                landTaken[2][1] = true;
-            }
-        }
+        btnHandlerHelper(event, 2, 1, twoOne);
     }
     /**
     *grid space that can be clicked on map
     *@param event the on click action
     */
     public void twoThreeClicked(Event event) {
-        if (!landTaken[2][3] || mulePlacementMode) {
-            if (mulePlacementMode) {
-                if (players.get(currentPlayerTurn).ownsLand(twoThree)) {
-                    LandPlot land = players.get(currentPlayerTurn).getLand(twoThree);
-                    if (!land.hasMule()) {
-                        land.setMule(muleToAdd);
-                        muleToAdd = null;
-                    } else {
-                        System.out.println("There is already a MULE there.");
-                        System.out.println("Your MULE ran away.");
-                        muleToAdd = null;
-                    }
-                } else {
-                    System.out.println("You do not own that land!!");
-                    System.out.println("Your MULE ran away.");
-                    muleToAdd = null;
-                }
-                mulePlacementMode = false;
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-            }
-            else if (landSelectionMode || GameController.buyProperty()) {
-                twoThree.setBackground(
-                        new Background(
-                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
-                                        null,
-                                        null)));
-                //Adding land plot to person's land plot array list
-                players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(), twoThree));
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-                landTaken[2][3] = true;
-            }
-        }
+        btnHandlerHelper(event, 2, 3, twoThree);
+    }
+    /**
+     *grid space that can be clicked on map
+     *@param event the on click action
+     */
+    public void twoFourClicked(Event event) {
+        btnHandlerHelper(event, 2, 4, twoFour);
     }
     /**
     *grid space that can be clicked on map
     *@param event the on click action
     */
     public void twoFiveClicked(Event event) {
-        if (!landTaken[2][5] || mulePlacementMode) {
-            if (mulePlacementMode) {
-                if (players.get(currentPlayerTurn).ownsLand(twoFive)) {
-                    LandPlot land = players.get(currentPlayerTurn).getLand(twoFive);
-                    if (!land.hasMule()) {
-                        land.setMule(muleToAdd);
-                        muleToAdd = null;
-                    } else {
-                        System.out.println("There is already a MULE there.");
-                        System.out.println("Your MULE ran away.");
-                        muleToAdd = null;
-                    }
-                } else {
-                    System.out.println("You do not own that land!!");
-                    System.out.println("Your MULE ran away.");
-                    muleToAdd = null;
-                }
-                mulePlacementMode = false;
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-            }
-            else if (landSelectionMode || GameController.buyProperty()) {
-                twoFive.setBackground(
-                        new Background(
-                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
-                                        null,
-                                        null)));
-                //Adding land plot to person's land plot array list
-                players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(), twoFive));
-
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-                landTaken[2][5] = true;
-            }
-        }
+        btnHandlerHelper(event, 2, 5, twoFive);
     }
     /**
     *grid space that can be clicked on map
     *@param event the on click action
     */
     public void twoSixClicked(Event event) {
-        if (!landTaken[2][6] || mulePlacementMode) {
-            if (mulePlacementMode) {
-                if (players.get(currentPlayerTurn).ownsLand(twoSix)) {
-                    LandPlot land = players.get(currentPlayerTurn).getLand(twoSix);
-                    if (!land.hasMule()) {
-                        land.setMule(muleToAdd);
-                        muleToAdd = null;
-                    } else {
-                        System.out.println("There is already a MULE there.");
-                        System.out.println("Your MULE ran away.");
-                        muleToAdd = null;
-                    }
-                } else {
-                    System.out.println("You do not own that land!!");
-                    System.out.println("Your MULE ran away.");
-                    muleToAdd = null;
-                }
-                mulePlacementMode = false;
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-            }
-            else if (landSelectionMode || GameController.buyProperty()) {
-                twoSix.setBackground(
-                        new Background(
-                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
-                                        null,
-                                        null)));
-                //Adding land plot to person's land plot array list
-                players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(), twoSix));
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-                landTaken[2][6] = true;
-            }
-        }
+        btnHandlerHelper(event, 2, 6, twoSix);
     }
     /**
     *grid space that can be clicked on map
     *@param event the on click action
     */
     public void twoEightClicked(Event event) {
-        if (!landTaken[2][8] || mulePlacementMode) {
-            if (mulePlacementMode) {
-                if (players.get(currentPlayerTurn).ownsLand(twoEight)) {
-                    LandPlot land = players.get(currentPlayerTurn).getLand(twoEight);
-                    if (!land.hasMule()) {
-                        land.setMule(muleToAdd);
-                        muleToAdd = null;
-                    } else {
-                        System.out.println("There is already a MULE there.");
-                        System.out.println("Your MULE ran away.");
-                        muleToAdd = null;
-                    }
-                } else {
-                    System.out.println("You do not own that land!!");
-                    System.out.println("Your MULE ran away.");
-                    muleToAdd = null;
-                }
-                mulePlacementMode = false;
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-            }
-            else if (landSelectionMode || GameController.buyProperty()) {
-                twoEight.setBackground(
-                        new Background(
-                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
-                                        null,
-                                        null)));
-                //Adding land plot to person's land plot array list
-                players.get(currentPlayerTurn).addLand(new LandPlot("1 Mountain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(), twoEight));
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-                landTaken[2][8] = true;
-            }
-        }
+        btnHandlerHelper(event, 2, 8, twoEight);
     }
     /**
     *grid space that can be clicked on map
     *@param event the on click action
     */
     public void twoSevenClicked(Event event) {
-        if (!landTaken[2][7] || mulePlacementMode) {
-            if (mulePlacementMode) {
-                if (players.get(currentPlayerTurn).ownsLand(twoSeven)) {
-                    LandPlot land = players.get(currentPlayerTurn).getLand(twoSeven);
-                    if (!land.hasMule()) {
-                        land.setMule(muleToAdd);
-                        muleToAdd = null;
-                    } else {
-                        System.out.println("There is already a MULE there.");
-                        System.out.println("Your MULE ran away.");
-                        muleToAdd = null;
-                    }
-                } else {
-                    System.out.println("You do not own that land!!");
-                    System.out.println("Your MULE ran away.");
-                    muleToAdd = null;
-                }
-                mulePlacementMode = false;
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-            }
-            else if (landSelectionMode || GameController.buyProperty()) {
-                twoSeven.setBackground(
-                        new Background(
-                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
-                                        null,
-                                        null)));
-                //Adding land plot to person's land plot array list
-                players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(), twoSeven));
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-                landTaken[2][7] = true;
-            }
-        }
+        btnHandlerHelper(event, 2, 7, twoSeven);
     }
 
     //Row Three
@@ -1395,369 +510,63 @@ public class Controller implements Initializable {
     *@param event the on click action
     */
     public void threeZeroClicked(Event event) {
-        if (!landTaken[3][0] || mulePlacementMode) {
-            if (landSelectionMode || GameController.buyProperty()) {
-                if (mulePlacementMode) {
-                    if (players.get(currentPlayerTurn).ownsLand(threeZero)) {
-                        LandPlot land = players.get(currentPlayerTurn).getLand(threeZero);
-                        if (!land.hasMule()) {
-                            land.setMule(muleToAdd);
-                            muleToAdd = null;
-                        } else {
-                            System.out.println("There is already a MULE there.");
-                            System.out.println("Your MULE ran away.");
-                            muleToAdd = null;
-                        }
-                    } else {
-                        System.out.println("You do not own that land!!");
-                        System.out.println("Your MULE ran away.");
-                        muleToAdd = null;
-                    }
-                    mulePlacementMode = false;
-                    GameController.nextTurn();
-                    if (landSelectionMode) GameController.landSelectionPhase();
-                }
-                else threeZero.setBackground(
-                        new Background(
-                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
-                                        null,
-                                        null)));
-                //Adding land plot to person's land plot array list
-                players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(), threeZero));
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-                landTaken[3][0] = true;
-            }
-        }
+        btnHandlerHelper(event, 3, 0, threeZero);
     }
     /**
     *grid space that can be clicked on map
     *@param event the on click action
     */
     public void threeTwoClicked(Event event) {
-        if (!landTaken[3][2] || mulePlacementMode) {
-            if (mulePlacementMode) {
-                if (players.get(currentPlayerTurn).ownsLand(threeTwo)) {
-                    LandPlot land = players.get(currentPlayerTurn).getLand(threeTwo);
-                    if (!land.hasMule()) {
-                        land.setMule(muleToAdd);
-                        muleToAdd = null;
-                    } else {
-                        System.out.println("There is already a MULE there.");
-                        System.out.println("Your MULE ran away.");
-                        muleToAdd = null;
-                    }
-                } else {
-                    System.out.println("You do not own that land!!");
-                    System.out.println("Your MULE ran away.");
-                    muleToAdd = null;
-                }
-                mulePlacementMode = false;
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-            }
-            else if (landSelectionMode || GameController.buyProperty()) {
-                threeTwo.setBackground(
-                        new Background(
-                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
-                                        null,
-                                        null)));
-                //Adding land plot to person's land plot array list
-                players.get(currentPlayerTurn).addLand(new LandPlot("Plains", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(), threeTwo));
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-                landTaken[3][2] = true;
-            }
-        }
+        btnHandlerHelper(event, 3, 2, threeTwo);
     }
     /**
     *grid space that can be clicked on map
     *@param event the on click action
     */
     public void threeOneClicked(Event event) {
-        if (!landTaken[3][1] || mulePlacementMode) {
-            if (mulePlacementMode) {
-                if (players.get(currentPlayerTurn).ownsLand(threeOne)) {
-                    LandPlot land = players.get(currentPlayerTurn).getLand(threeOne);
-                    if (!land.hasMule()) {
-                        land.setMule(muleToAdd);
-                        muleToAdd = null;
-                    } else {
-                        System.out.println("There is already a MULE there.");
-                        System.out.println("Your MULE ran away.");
-                        muleToAdd = null;
-                    }
-                } else {
-                    System.out.println("You do not own that land!!");
-                    System.out.println("Your MULE ran away.");
-                    muleToAdd = null;
-                }
-                mulePlacementMode = false;
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-            }
-            else if (landSelectionMode || GameController.buyProperty()) {
-                threeOne.setBackground(
-                        new Background(
-                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
-                                        null,
-                                        null)));
-                //Adding land plot to person's land plot array list
-                players.get(currentPlayerTurn).addLand(new LandPlot("2 Mountains", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(), zeroZero));
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-                landTaken[3][1] = true;
-            }
-        }
+        btnHandlerHelper(event, 3, 1, threeOne);
     }
     /**
     *grid space that can be clicked on map
     *@param event the on click action
     */
     public void threeThreeClicked(Event event) {
-        if (!landTaken[3][3] || mulePlacementMode) {
-            if (mulePlacementMode) {
-                if (players.get(currentPlayerTurn).ownsLand(threeThree)) {
-                    LandPlot land = players.get(currentPlayerTurn).getLand(threeThree);
-                    if (!land.hasMule()) {
-                        land.setMule(muleToAdd);
-                        muleToAdd = null;
-                    } else {
-                        System.out.println("There is already a MULE there.");
-                        System.out.println("Your MULE ran away.");
-                        muleToAdd = null;
-                    }
-                } else {
-                    System.out.println("You do not own that land!!");
-                    System.out.println("Your MULE ran away.");
-                    muleToAdd = null;
-                }
-                mulePlacementMode = false;
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-            }
-            else if (landSelectionMode || GameController.buyProperty()) {
-                threeThree.setBackground(
-                        new Background(
-                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
-                                        null,
-                                        null)));
-                //Adding land plot to person's land plot array list
-                players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(), threeThree));
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-                landTaken[3][3] = true;
-            }
-        }
+        btnHandlerHelper(event, 3, 3, threeThree);
     }
     /**
     *grid space that can be clicked on map
     *@param event the on click action
     */
     public void threeFourClicked(Event event) {
-        if (!landTaken[3][4] || mulePlacementMode) {
-            if (mulePlacementMode) {
-                if (players.get(currentPlayerTurn).ownsLand(threeFour)) {
-                    LandPlot land = players.get(currentPlayerTurn).getLand(threeFour);
-                    if (!land.hasMule()) {
-                        land.setMule(muleToAdd);
-                        muleToAdd = null;
-                    } else {
-                        System.out.println("There is already a MULE there.");
-                        System.out.println("Your MULE ran away.");
-                        muleToAdd = null;
-                    }
-                } else {
-                    System.out.println("You do not own that land!!");
-                    System.out.println("Your MULE ran away.");
-                    muleToAdd = null;
-                }
-                mulePlacementMode = false;
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-            }
-            else if (landSelectionMode || GameController.buyProperty()) {
-                threeFour.setBackground(
-                        new Background(
-                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
-                                        null,
-                                        null)));
-                //Adding land plot to person's land plot array list
-                players.get(currentPlayerTurn).addLand(new LandPlot("River", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(), threeFour));
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-                landTaken[3][4] = true;
-            }
-        }
+        btnHandlerHelper(event, 3, 4, threeFour);
     }
     /**
     *grid space that can be clicked on map
     *@param event the on click action
     */
     public void threeFiveClicked(Event event) {
-        if (!landTaken[3][5] || mulePlacementMode) {
-            if (mulePlacementMode) {
-                if (players.get(currentPlayerTurn).ownsLand(threeFive)) {
-                    LandPlot land = players.get(currentPlayerTurn).getLand(threeFive);
-                    if (!land.hasMule()) {
-                        land.setMule(muleToAdd);
-                        muleToAdd = null;
-                    } else {
-                        System.out.println("There is already a MULE there.");
-                        System.out.println("Your MULE ran away.");
-                        muleToAdd = null;
-                    }
-                } else {
-                    System.out.println("You do not own that land!!");
-                    System.out.println("Your MULE ran away.");
-                    muleToAdd = null;
-                }
-                mulePlacementMode = false;
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-            }
-            else if (landSelectionMode || GameController.buyProperty()) {
-                threeFive.setBackground(
-                        new Background(
-                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
-                                        null,
-                                        null)));
-                //Adding land plot to person's land plot array list
-                players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(), threeFive));
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-                landTaken[3][5] = true;
-            }
-        }
+        btnHandlerHelper(event, 3, 5, threeFive);
     }
     /**
     *grid space that can be clicked on map
     *@param event the on click action
     */
     public void threeSixClicked(Event event) {
-        if (!landTaken[3][6] || mulePlacementMode) {
-            if (mulePlacementMode) {
-                if (players.get(currentPlayerTurn).ownsLand(threeSix)) {
-                    LandPlot land = players.get(currentPlayerTurn).getLand(threeSix);
-                    if (!land.hasMule()) {
-                        land.setMule(muleToAdd);
-                        muleToAdd = null;
-                    } else {
-                        System.out.println("There is already a MULE there.");
-                        System.out.println("Your MULE ran away.");
-                        muleToAdd = null;
-                    }
-                } else {
-                    System.out.println("You do not own that land!!");
-                    System.out.println("Your MULE ran away.");
-                    muleToAdd = null;
-                }
-                mulePlacementMode = false;
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-            }
-            else if (landSelectionMode || GameController.buyProperty()) {
-                threeSix.setBackground(
-                        new Background(
-                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
-                                        null,
-                                        null)));
-                //Adding land plot to person's land plot array list
-                players.get(currentPlayerTurn).addLand(new LandPlot("2 Mountains", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(), threeSix));
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-                landTaken[3][6] = true;
-            }
-        }
+        btnHandlerHelper(event, 3, 6, threeSix);
     }
     /**
     *grid space that can be clicked on map
     *@param event the on click action
     */
     public void threeEightClicked(Event event) {
-        if (!landTaken[3][8] || mulePlacementMode) {
-            if (mulePlacementMode) {
-                if (players.get(currentPlayerTurn).ownsLand(threeEight)) {
-                    LandPlot land = players.get(currentPlayerTurn).getLand(threeEight);
-                    if (!land.hasMule()) {
-                        land.setMule(muleToAdd);
-                        muleToAdd = null;
-                    } else {
-                        System.out.println("There is already a MULE there.");
-                        System.out.println("Your MULE ran away.");
-                        muleToAdd = null;
-                    }
-                } else {
-                    System.out.println("You do not own that land!!");
-                    System.out.println("Your MULE ran away.");
-                    muleToAdd = null;
-                }
-                mulePlacementMode = false;
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-            }
-            else if (landSelectionMode || GameController.buyProperty()) {
-                threeEight.setBackground(
-                        new Background(
-                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
-                                        null,
-                                        null)));
-                //Adding land plot to person's land plot array list
-                players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(), threeEight));
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-                landTaken[3][8] = true;
-            }
-        }
+        btnHandlerHelper(event, 3, 8, threeEight);
     }
     /**
     *grid space that can be clicked on map
     *@param event the on click action
     */
     public void threeSevenClicked(Event event) {
-        if (!landTaken[3][7] || mulePlacementMode) {
-            if (mulePlacementMode) {
-                if (players.get(currentPlayerTurn).ownsLand(threeSeven)) {
-                    LandPlot land = players.get(currentPlayerTurn).getLand(threeSeven);
-                    if (!land.hasMule()) {
-                        land.setMule(muleToAdd);
-                        muleToAdd = null;
-                    } else {
-                        System.out.println("There is already a MULE there.");
-                        System.out.println("Your MULE ran away.");
-                        muleToAdd = null;
-                    }
-                } else {
-                    System.out.println("You do not own that land!!");
-                    System.out.println("Your MULE ran away.");
-                    muleToAdd = null;
-                }
-                mulePlacementMode = false;
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-            }
-            else if (landSelectionMode || GameController.buyProperty()) {
-                threeSeven.setBackground(
-                        new Background(
-                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
-                                        null,
-                                        null)));
-                //Adding land plot to person's land plot array list
-                players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(), threeSeven));
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-                landTaken[3][7] = true;
-            }
-        }
+        btnHandlerHelper(event, 3, 7, threeSeven);
     }
 
     //Row Four
@@ -1766,338 +575,73 @@ public class Controller implements Initializable {
     *@param event the on click action
     */
     public void fourZeroClicked(Event event) {
-        if (!landTaken[4][0] || mulePlacementMode) {
-            if (mulePlacementMode) {
-                if (players.get(currentPlayerTurn).ownsLand(fourZero)) {
-                    LandPlot land = players.get(currentPlayerTurn).getLand(fourZero);
-                    if (!land.hasMule()) {
-                        land.setMule(muleToAdd);
-                        muleToAdd = null;
-                    } else {
-                        System.out.println("There is already a MULE there.");
-                        System.out.println("Your MULE ran away.");
-                        muleToAdd = null;
-                    }
-                } else {
-                    System.out.println("You do not own that land!!");
-                    System.out.println("Your MULE ran away.");
-                    muleToAdd = null;
-                }
-                mulePlacementMode = false;
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-            }
-            else if (landSelectionMode || GameController.buyProperty()) {
-                fourZero.setBackground(
-                        new Background(
-                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
-                                        null,
-                                        null)));
-                //Adding land plot to person's land plot array list
-                players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(), fourZero));
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-                landTaken[4][0] = true;
-            }
-        }
+        btnHandlerHelper(event, 4, 0, fourZero);
     }
     /**
     *grid space that can be clicked on map
     *@param event the on click action
     */
     public void fourTwoClicked(Event event) {
-        if (!landTaken[4][2] || mulePlacementMode) {
-            if (mulePlacementMode) {
-                if (players.get(currentPlayerTurn).ownsLand(fourTwo)) {
-                    LandPlot land = players.get(currentPlayerTurn).getLand(fourTwo);
-                    if (!land.hasMule()) {
-                        land.setMule(muleToAdd);
-                        muleToAdd = null;
-                    } else {
-                        System.out.println("There is already a MULE there.");
-                        System.out.println("Your MULE ran away.");
-                        muleToAdd = null;
-                    }
-                } else {
-                    System.out.println("You do not own that land!!");
-                    System.out.println("Your MULE ran away.");
-                    muleToAdd = null;
-                }
-                mulePlacementMode = false;
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-            }
-            else if (landSelectionMode || GameController.buyProperty()) {
-                fourTwo.setBackground(
-                        new Background(
-                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
-                                        null,
-                                        null)));
-                //Adding land plot to person's land plot array list
-                players.get(currentPlayerTurn).addLand(new LandPlot("2 Mountain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(), fourTwo));
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-                landTaken[4][2] = true;
-            }
-        }
+        btnHandlerHelper(event, 4, 2, fourTwo);
     }
     /**
     *grid space that can be clicked on map
     *@param event the on click action
     */
     public void fourOneClicked(Event event) {
-        if (!landTaken[4][1] || mulePlacementMode) {
-            if (mulePlacementMode) {
-                if (players.get(currentPlayerTurn).ownsLand(fourOne)) {
-                    LandPlot land = players.get(currentPlayerTurn).getLand(fourOne);
-                    if (!land.hasMule()) {
-                        land.setMule(muleToAdd);
-                        muleToAdd = null;
-                    } else {
-                        System.out.println("There is already a MULE there.");
-                        System.out.println("Your MULE ran away.");
-                        muleToAdd = null;
-                    }
-                } else {
-                    System.out.println("You do not own that land!!");
-                    System.out.println("Your MULE ran away.");
-                    muleToAdd = null;
-                }
-                mulePlacementMode = false;
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-            }
-            else if (landSelectionMode || GameController.buyProperty()) {
-                fourOne.setBackground(
-                        new Background(
-                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
-                                        null,
-                                        null)));
-                //Adding land plot to person's land plot array list
-                players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(), fourOne));
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-                landTaken[4][1] = true;
-            }
-        }
+        btnHandlerHelper(event, 4, 1, fourOne);
     }
     /**
     *grid space that can be clicked on map
     *@param event the on click action
     */
     public void fourThreeClicked(Event event) {
-        if (!landTaken[4][3] || mulePlacementMode) {
-            if (mulePlacementMode) {
-                if (players.get(currentPlayerTurn).ownsLand(fourThree)) {
-                    LandPlot land = players.get(currentPlayerTurn).getLand(fourThree);
-                    if (!land.hasMule()) {
-                        land.setMule(muleToAdd);
-                        muleToAdd = null;
-                    } else {
-                        System.out.println("There is already a MULE there.");
-                        System.out.println("Your MULE ran away.");
-                        muleToAdd = null;
-                    }
-                } else {
-                    System.out.println("You do not own that land!!");
-                    System.out.println("Your MULE ran away.");
-                    muleToAdd = null;
-                }
-                mulePlacementMode = false;
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-            }
-            else if (landSelectionMode || GameController.buyProperty()) {
-                fourThree.setBackground(
-                        new Background(
-                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
-                                        null,
-                                        null)));
-                //Adding land plot to person's land plot array list
-                players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(), fourThree));
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-                landTaken[4][3] = true;
-            }
-        }
+        btnHandlerHelper(event, 4, 3, fourThree);
     }
     /**
     *grid space that can be clicked on map
     *@param event the on click action
     */
     public void fourFourClicked(Event event) {
-        if (!landTaken[4][4] || mulePlacementMode) {
-            if (mulePlacementMode) {
-                if (players.get(currentPlayerTurn).ownsLand(fourFour)) {
-                    LandPlot land = players.get(currentPlayerTurn).getLand(fourFour);
-                    if (!land.hasMule()) {
-                        land.setMule(muleToAdd);
-                        muleToAdd = null;
-                    } else {
-                        System.out.println("There is already a MULE there.");
-                        System.out.println("Your MULE ran away.");
-                        muleToAdd = null;
-                    }
-                } else {
-                    System.out.println("You do not own that land!!");
-                    System.out.println("Your MULE ran away.");
-                    muleToAdd = null;
-                }
-                mulePlacementMode = false;
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-            }
-            else if (landSelectionMode || GameController.buyProperty()) {
-                fourFour.setBackground(
-                        new Background(
-                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
-                                        null,
-                                        null)));
-                //Adding land plot to person's land plot array list
-                players.get(currentPlayerTurn).addLand(new LandPlot("River", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(), fourFour));
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-                landTaken[4][4] = true;
-            }
-        }
+        btnHandlerHelper(event, 4, 4, fourFour);
     }
     /**
     *grid space that can be clicked on map
     *@param event the on click action
     */
     public void fourFiveClicked(Event event) {
-        if (!landTaken[4][5] || mulePlacementMode) {
-            if (mulePlacementMode) {
-                if (players.get(currentPlayerTurn).ownsLand(fourFive)) {
-                    LandPlot land = players.get(currentPlayerTurn).getLand(fourFive);
-                    if (!land.hasMule()) {
-                        land.setMule(muleToAdd);
-                        muleToAdd = null;
-                    } else {
-                        System.out.println("There is already a MULE there.");
-                        System.out.println("Your MULE ran away.");
-                        muleToAdd = null;
-                    }
-                } else {
-                    System.out.println("You do not own that land!!");
-                    System.out.println("Your MULE ran away.");
-                    muleToAdd = null;
-                }
-                mulePlacementMode = false;
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-            }
-            else if (landSelectionMode || GameController.buyProperty()) {
-                fourFive.setBackground(
-                        new Background(
-                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
-                                        null,
-                                        null)));
-                //Adding land plot to person's land plot array list
-                players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(), fourFive));
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-                landTaken[4][5] = true;
-            }
-        }
+        btnHandlerHelper(event, 4, 5, fourFive);
     }
     /**
     *grid space that can be clicked on map
     *@param event the on click action
     */
     public void fourSixClicked(Event event) {
-        if (!landTaken[4][6] || mulePlacementMode) {
-            if (mulePlacementMode) {
-                if (players.get(currentPlayerTurn).ownsLand(fourSix)) {
-                    LandPlot land = players.get(currentPlayerTurn).getLand(fourSix);
-                    if (!land.hasMule()) {
-                        land.setMule(muleToAdd);
-                        muleToAdd = null;
-                    } else {
-                        System.out.println("There is already a MULE there.");
-                        System.out.println("Your MULE ran away.");
-                        muleToAdd = null;
-                    }
-                } else {
-                    System.out.println("You do not own that land!!");
-                    System.out.println("Your MULE ran away.");
-                    muleToAdd = null;
-                }
-                mulePlacementMode = false;
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-            }
-            else if (landSelectionMode || GameController.buyProperty()) {
-                fourSix.setBackground(
-                        new Background(
-                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
-                                        null,
-                                        null)));
-                //Adding land plot to person's land plot array list
-                players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(), fourSix));
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-                landTaken[4][6] = true;
-            }
-        }
+        btnHandlerHelper(event, 4, 6, fourSix);
     }
     /**
     *grid space that can be clicked on map
     *@param event the on click action
     */
     public void fourEightClicked(Event event) {
-        if (!landTaken[4][8] || mulePlacementMode) {
-            if (mulePlacementMode) {
-                if (players.get(currentPlayerTurn).ownsLand(fourEight)) {
-                    LandPlot land = players.get(currentPlayerTurn).getLand(fourEight);
-                    if (!land.hasMule()) {
-                        land.setMule(muleToAdd);
-                        muleToAdd = null;
-                    } else {
-                        System.out.println("There is already a MULE there.");
-                        System.out.println("Your MULE ran away.");
-                        muleToAdd = null;
-                    }
-                } else {
-                    System.out.println("You do not own that land!!");
-                    System.out.println("Your MULE ran away.");
-                    muleToAdd = null;
-                }
-                mulePlacementMode = false;
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-            }
-            else if (landSelectionMode || GameController.buyProperty()) {
-                fourEight.setBackground(
-                        new Background(
-                                new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
-                                        null,
-                                        null)));
-                //Adding land plot to person's land plot array list
-                players.get(currentPlayerTurn).addLand(new LandPlot("2 Mountain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(), fourEight));
-                GameController.nextTurn();
-                if (landSelectionMode) GameController.landSelectionPhase();
-                landTaken[4][8] = true;
-            }
-        }
+        btnHandlerHelper(event, 4, 8, fourEight);
     }
     /**
     *grid space that can be clicked on map
     *@param event the on click action
     */
     public void fourSevenClicked(Event event) {
-        if (!landTaken[4][7] || mulePlacementMode) {
+        btnHandlerHelper(event, 4, 7, fourSeven);
+    }
+
+    /*
+    Handles button clicks on the map for all buttons
+     */
+    private void btnHandlerHelper(Event event, int x, int y, Button thisButton) {
+        if (!landTaken[x][y] || mulePlacementMode) {
             if (mulePlacementMode) {
-                if (players.get(currentPlayerTurn).ownsLand(fourSeven)) {
-                    LandPlot land = players.get(currentPlayerTurn).getLand(fourSeven);
+                if (players.get(currentPlayerTurn).ownsLand(new Point(x, y))) {
+                    LandPlot land = players.get(currentPlayerTurn).getLand(new Point (x, y));
                     if (!land.hasMule()) {
                         land.setMule(muleToAdd);
                         muleToAdd = null;
@@ -2116,20 +660,21 @@ public class Controller implements Initializable {
                 if (landSelectionMode) GameController.landSelectionPhase();
             }
             else if (landSelectionMode || GameController.buyProperty()) {
-                fourSeven.setBackground(
+                thisButton.setBackground(
                         new Background(
                                 new BackgroundFill(valueOf(players.get(currentPlayerTurn).getColor().toString()),
                                         null,
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(), fourSeven));
+                        players.get(currentPlayerTurn).getColor(), zeroZero, new Point(x, y)));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
-                landTaken[4][7] = true;
+                landTaken[x][y] = true;
             }
         }
     }
+
     /**
     *player goes to the pub in town
     *@param event the on click action
@@ -2340,7 +885,6 @@ public class Controller implements Initializable {
             // save remaining time in current player's turn
             out.writeObject(timer.stopTimer());
 
-
             // saves players' colors
             int numPlayers = 2;
             numPlayers = (howMany == Main.NumPlayers.THREE) ? 3 : numPlayers;
@@ -2350,44 +894,18 @@ public class Controller implements Initializable {
                 out.writeObject(players.get(i).getColor().toString());
             }
 
-            // save each land plot's button location
-            for (int i = 0; i < numPlayers; i++) {
-                for (int j = 0; j < players.get(i).getLandCount(); j++) {
-                    for (int y = 0; y < 5; y++) {
-                        for (int x = 0; x < 9; x++) {
-                            Button btnLandPlot = players.get(i).getLandOwned().get(j).getButton();
-                            if (btnLandPlot.equals(map[y][x])) {
-                                out.writeObject(new Point(x, y));
-                            }
-                        }
-                    }
-                }
-            }
-
-            // saves a String of the player's color for each land plot if the player owns that plot
-            String[][] coloredMapSaver = new String[5][9];
-            for (int y = 0; y < 5; y++)
-                for (int x = 0; x < 9; x++)
-                    for (int i = 0; i < numPlayers; i++)
-                        if (players.get(i).ownsLand(map[y][x]))
-                            coloredMapSaver[y][x] = players.get(i).getColor().toString();
-            out.writeObject(coloredMapSaver);
-
             out.close();
             saveDataOut.close();
         } catch (IOException e) {
-            //e.printStackTrace();
-            return;
-        } catch (Exception e) {
-            //e.printStackTrace();
+            System.out.println("Problem Saving Game.  Game was not saved successfully.");
             return;
         }
         System.out.println("Game saved");
     }
     /**
-    *loads saved game
-    *@param event on click event
-    */
+     *loads saved game
+     *@param event on click event
+     */
     @FXML
     public void loadGame(Event event) {
         try {
@@ -2426,102 +944,99 @@ public class Controller implements Initializable {
             }
 
             Object tempObj = new Object();
-      /*      setMapButtons();
-            // load each land plot's button location
-            try {
-                for (int i = 0; i < numPlayers; i++) {
-                    for (int j = 0; j < players.get(i).getLandCount(); j++) {
-                        for (int y = 0; y < 5; y++) {
-                            for (int x = 0; x < 9; x++) {
-                                tempObj = in.readObject();
-                                if (tempObj instanceof Point) {
-                                    Point coord = (Point) tempObj;
-                                    players.get(i).getLandOwned().get(j).setLocation(map[coord.y][coord.x]);
-                                }
-                            }
-                        }
-                    }
+            // set each land plot's button location
+            for (int i = 0; i < numPlayers; i++) {
+                for (int j = 0; j < players.get(i).getLandCount(); j++) {
+                    LandPlot plot = players.get(i).getLandOwned().get(j);
+                    Button btn = new Button();
+                    btn.setBackground(
+                            new Background(
+                                    new BackgroundFill(valueOf(players.get(i).getColor().toString()), null, null)));
+                    plot.setLocation(btn);
                 }
-            } catch (EOFException e) {
-                // expected
             }
 
-            // load coloredMap array
-            String[][] coloredMapSaver = (String[][]) tempObj;
-            for (int y = 0; y < 5; y++)
-                for (int x = 0; x < 9; x++)
-                    coloredMap[y][x] = (null != coloredMapSaver[y][x]) ? Paint.valueOf(coloredMapSaver[y][x]) : null;
+            /*
+            for (int i = 0; i < numPlayers; i++) {
+                for (int j = 0; j < players.get(i).getLandCount(); j++) {
+                    System.out.println(players.get(i).getLandOwned().get(j).getButton());
+                }
+            }*/
 
-*/
+
             // re set-up game
-            returnToMap();
+            screenController sc = screenController.getInstance();
+            sc.setMainMap();
 
             in.close();
             fileIn.close();
         } catch (IOException i) {
-            //i.printStackTrace();
-            System.out.println("No game saved. \n");
+            System.out.println("No save file found.  Save a game before trying to load.");
             return;
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            System.out.println("No save file found.  Save a game before trying to load.");
             return;
         }
         System.out.println("Game Loaded");
         timer.startTimer();
     }
-    /**
-    *initializes map buttons
-    */
-    private void setMapButtons() {
-        map[0][0] = zeroZero;
-        map[0][1] = zeroOne;
-        map[0][2] = zeroTwo;
-        map[0][3] = zeroThree;
-        map[0][4] = zeroFour;
-        map[0][5] = zeroFive;
-        map[0][6] = zeroSix;
-        map[0][7] = zeroSeven;
-        map[0][8] = zeroEight;
 
-        map[1][0] = oneZero;
-        map[1][1] = oneOne;
-        map[1][2] = oneTwo;
-        map[1][3] = oneThree;
-        map[1][4] = oneFour;
-        map[1][5] = oneFive;
-        map[1][6] = oneSix;
-        map[1][7] = oneSeven;
-        map[1][8] = oneEight;
+    /*
+    Allows access of buttons given their coordinates on the map
+     */
+    private Button getButtonFromMap(int i, int j) {
 
-        map[2][0] = twoZero;
-        map[2][1] = twoOne;
-        map[2][2] = twoTwo;
-        map[2][3] = twoThree;
-        map[2][5] = twoFive;
-        map[2][6] = twoSix;
-        map[2][7] = twoSeven;
-        map[2][8] = twoEight;
+        if (i == 0 && j == 0) return zeroZero;
+        else if (i == 0 && j == 1) return zeroOne;
+        else if (i == 0 && j == 2) return zeroTwo;
+        else if (i == 0 && j == 3) return zeroThree;
+        else if (i == 0 && j == 4) return zeroFour;
+        else if (i == 0 && j == 5) return zeroFive;
+        else if (i == 0 && j == 6) return zeroSix;
+        else if (i == 0 && j == 7) return zeroSeven;
+        else if (i == 0 && j == 8) return zeroEight;
 
-        map[3][0] = threeZero;
-        map[3][1] = threeOne;
-        map[3][2] = threeTwo;
-        map[3][3] = threeThree;
-        map[3][4] = threeFour;
-        map[3][5] = threeFive;
-        map[3][6] = threeSix;
-        map[3][7] = threeSeven;
-        map[3][8] = threeEight;
+        else if (i == 1 && j == 0) return oneZero;
+        else if (i == 1 && j == 1) return oneOne;
+        else if (i == 1 && j == 2) return oneTwo;
+        else if (i == 1 && j == 3) return oneThree;
+        else if (i == 1 && j == 4) return oneFour;
+        else if (i == 1 && j == 5) return oneFive;
+        else if (i == 1 && j == 6) return oneSix;
+        else if (i == 1 && j == 7) return oneSeven;
+        else if (i == 1 && j == 8) return oneEight;
 
-        map[4][0] = fourZero;
-        map[4][1] = fourOne;
-        map[4][2] = fourTwo;
-        map[4][3] = fourThree;
-        map[4][4] = fourFour;
-        map[4][5] = fourFive;
-        map[4][6] = fourSix;
-        map[4][7] = fourSeven;
-        map[4][8] = fourEight;
+        else if (i == 2 && j == 0) return twoZero;
+        else if (i == 2 && j == 1) return twoOne;
+        else if (i == 2 && j == 2) return twoTwo;
+        else if (i == 2 && j == 3) return twoThree;
+        else if (i == 2 && j == 4) return twoFour;
+        else if (i == 2 && j == 5) return twoFive;
+        else if (i == 2 && j == 6) return twoSix;
+        else if (i == 2 && j == 7) return twoSeven;
+        else if (i == 2 && j == 8) return twoEight;
+
+        else if (i == 3 && j == 0) return threeZero;
+        else if (i == 3 && j == 1) return threeOne;
+        else if (i == 3 && j == 2) return threeTwo;
+        else if (i == 3 && j == 3) return threeThree;
+        else if (i == 3 && j == 4) return threeFour;
+        else if (i == 3 && j == 5) return threeFive;
+        else if (i == 3 && j == 6) return threeSix;
+        else if (i == 3 && j == 7) return threeSeven;
+        else if (i == 3 && j == 8) return threeEight;
+
+        else if (i == 4 && j == 0) return fourZero;
+        else if (i == 4 && j == 1) return fourOne;
+        else if (i == 4 && j == 2) return fourTwo;
+        else if (i == 4 && j == 3) return fourThree;
+        else if (i == 4 && j == 4) return fourFour;
+        else if (i == 4 && j == 5) return fourFive;
+        else if (i == 4 && j == 6) return fourSix;
+        else if (i == 4 && j == 7) return fourSeven;
+        else if (i == 4 && j == 8) return fourEight;
+
+        else throw new IllegalArgumentException("There is not button at location (" + i + ", " + j + ")");
     }
-
 
 }
