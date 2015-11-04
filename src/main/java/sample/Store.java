@@ -7,6 +7,9 @@ import java.io.Serializable;
 
 /**
  * Created by Alexandra Link on 10/1/15.
+ *
+ * Creates the Store object that a Player may interact with
+ * in order to make purchaes or sell their own inventory
  */
 public class Store implements Serializable {
 
@@ -17,18 +20,30 @@ public class Store implements Serializable {
 
     public static int[] prices = {30, 25, 50, 100, 100};
 
+    /**
+     * Store object constructor
+     */
     public Store() {
 
     }
 
     //********************************************** BUY FROM STORE ****************************************************
 
+    /**
+     * toString value of store stock
+     * @return the toString version of a Store's inventory
+     */
     public String toString() {
         String stockString = "Store Stock: \n Food: " + stock[0] + "\n Energy: " + stock[1] + "\n Ore: " + stock[2]
                 + "\n Mules: " + stock[4] + "\n";
         return stockString;
     }
 
+    /**
+     * Allows a Player to buy food from the store
+     * Adds food and subtracts money.
+     * @param numWanted the amount of food a Player wishes to purchase
+     */
     public void buyFood(int numWanted) {
         if (verifyAvailability(0, numWanted) && verifyFunds(0, numWanted)) {
             (Controller.players.get(Controller.currentPlayerTurn)).addFood(numWanted);
@@ -40,6 +55,11 @@ public class Store implements Serializable {
         }
     }
 
+    /**
+     * Allows a player to buy energy from the Store
+     * Adds energy and subtracts money.
+     * @param numWanted the amount of energy a Player wishes to purchase
+     */
     public void buyEnergy(int numWanted) {
         if (verifyAvailability(1, numWanted) && verifyFunds(1, numWanted)) {
             (Controller.players.get(Controller.currentPlayerTurn)).addEnergy(numWanted);
@@ -51,6 +71,11 @@ public class Store implements Serializable {
         }
     }
 
+    /**
+     * Allows a Player to buy Ore from the Store
+     * Adds Ore and subtracts money.
+     * @param numWanted the amount of ore a Player wishes to purchase
+     */
     public void buyOre(int numWanted) {
         if (verifyAvailability(2, numWanted) && verifyFunds(2, numWanted)) {
             (Controller.players.get(Controller.currentPlayerTurn)).addOre(numWanted);
@@ -62,6 +87,11 @@ public class Store implements Serializable {
         }
     }
 
+    /**
+     * Allows a Player to purchase Crystite from the Store
+     * Adds Crystite and subtracts money.
+     * @param numWanted amount of Crystite a Player wishes to purchase
+     */
     public void buyCrystite(int numWanted) {
         if (verifyAvailability(3, numWanted) && verifyFunds(3, numWanted)) {
             (Controller.players.get(Controller.currentPlayerTurn)).addCrystite(numWanted);
@@ -73,6 +103,11 @@ public class Store implements Serializable {
         }
     }
 
+    /**
+     * Allows a Player to purchase a Mule from the store.
+     * Adds a Mule and subtracts money.
+     * @param type the type of Mule a Player wishes to purchase
+     */
     public  void buyMule(Mule.Configuration type) {
         if (verifyAvailability(4, 1)) {
             int price;
@@ -102,6 +137,11 @@ public class Store implements Serializable {
 
     //********************************************* SELL BACK TO STORE *************************************************
 
+    /**
+     * Allows a Player to sell food to the Store.
+     * Subtracts food and adds money to a Player's inventory.
+     * @param numSold the amount of food sold by the Player to the Store
+     */
     public void sellFood(int numSold) {
         if (Controller.players.get(Controller.currentPlayerTurn).getFood() >= numSold) {
             stock[0] = stock[0] + numSold;
@@ -113,6 +153,11 @@ public class Store implements Serializable {
         }
     }
 
+    /**
+     * Allows a Player to sell energy to the Store.
+     * Subtracts energy and adds money to a Player's inventory.
+     * @param numSold the amount of Energy a Player wishes to sell
+     */
     public void sellEnergy(int numSold) {
         if (Controller.players.get(Controller.currentPlayerTurn).getEnergy() >= numSold) {
             stock[1] = stock[1] + numSold;
@@ -124,6 +169,11 @@ public class Store implements Serializable {
         }
     }
 
+    /**
+     * Allows a Player to sell Ore to the Store.
+     * Subtracts Ore and adds money to a Player's inventory.
+     * @param numSold the amount of Ore a Player wishes to sell.
+     */
     public void sellOre(int numSold) {
         if (Controller.players.get(Controller.currentPlayerTurn).getOre() >= numSold) {
             stock[2] = stock[2] + numSold;
@@ -135,6 +185,11 @@ public class Store implements Serializable {
         }
     }
 
+    /**
+     * Allows a Player to sell Crystite to the Store.
+     * Subtracts Cyrstite and adds money to a Player's inventory.
+     * @param numSold the amount of Crystite a Player chooses to sell to the Store.
+     */
     public void sellCrystite(int numSold) {
         if (Controller.players.get(Controller.currentPlayerTurn).getOre() >= numSold) {
             stock[3] = stock[3] + numSold;
@@ -146,6 +201,10 @@ public class Store implements Serializable {
         }
     }
 
+    /**
+     * Allows a Player to sell a Mule to the Store.
+     * Subtracts a Mule and adds money to a Player's inventory.
+     */
     public void sellMule() {
         Player curr = Controller.players.get(Controller.currentPlayerTurn);
         if (curr.getMule() != null) {
@@ -171,10 +230,22 @@ public class Store implements Serializable {
 
     //***************************************** Private Helper Methods ************************************************
 
+    /**
+     * Helper method to verify that a requested item is in stock for purchase
+     * @param stockIndex the particular index of the stock item requested
+     * @param numPurchased the amount of stock of that item in inventory in the Store
+     * @return true if a stocked item is available, false if not
+     */
     private boolean verifyAvailability(int stockIndex, int numPurchased) {
         return (stock[stockIndex] >= numPurchased);
     }
 
+    /**
+     * Helper method to verify if a Player has enough money to make a desired purchase.
+     * @param moneyIndex the amount of money necessary to purchase the desired item.
+     * @param numPurchased the number of items to purchase
+     * @return true if a Player can afford the desired Store items, false if not
+     */
     private boolean verifyFunds(int moneyIndex, int numPurchased) {
         int fundsNeeded = prices[moneyIndex] * numPurchased;
         Player curr = Controller.players.get(Controller.currentPlayerTurn);
