@@ -77,6 +77,11 @@ public class screenController {
      */
     public static screenController getInstance() { return instance;}
 
+    public static screenController getNewInstance() {
+        instance = new screenController();
+        return instance;
+    }
+
     /**
      * A setter for the screen's stage.
      * @param stage the stage to set

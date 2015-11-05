@@ -178,8 +178,9 @@ public class Controller implements Initializable {
     */
     @FXML
     public void backToMainMenu(Event event) throws IOException {
-        screenController sc = screenController.getInstance();
-        sc.setStartPage();
+        ////screenController sc = screenController.getInstance();
+        //sc.setStartPage();
+        Main.stage.close();
     }
     /**
     *action when one exits game
@@ -667,7 +668,7 @@ public class Controller implements Initializable {
                                         null)));
                 //Adding land plot to person's land plot array list
                 players.get(currentPlayerTurn).addLand(new LandPlot("Plain", players.get(currentPlayerTurn),
-                        players.get(currentPlayerTurn).getColor(), zeroZero, new Point(x, y)));
+                        players.get(currentPlayerTurn).getColor(), thisButton, new Point(x, y)));
                 GameController.nextTurn();
                 if (landSelectionMode) GameController.landSelectionPhase();
                 landTaken[x][y] = true;
@@ -901,6 +902,10 @@ public class Controller implements Initializable {
             return;
         }
         System.out.println("Game saved");
+
+        for(Player cur: players) {
+            System.out.println(cur.inventoryToString() + "\n");
+        }
     }
     /**
      *loads saved game
@@ -963,7 +968,6 @@ public class Controller implements Initializable {
                 }
             }*/
 
-
             // re set-up game
             screenController sc = screenController.getInstance();
             sc.setMainMap();
@@ -978,6 +982,10 @@ public class Controller implements Initializable {
             return;
         }
         System.out.println("Game Loaded");
+
+        for(Player cur: players) {
+            System.out.println(cur.inventoryToString() + "\n");
+        }
         timer.startTimer();
     }
 
