@@ -1,21 +1,33 @@
 package sample;
 import javafx.scene.paint.Color;
 import javafx.scene.control.Button;
+import java.awt.Point;
+import java.io.Serializable;
 
 /**
  * Created by AlexandraLink on 10/1/15.
  */
-public class LandPlot {
+public class LandPlot implements Serializable {
 
     private final String type;
     private Player owner;
-    private Color color;
-    private final Button location;
+    private transient Color color; // transient means not serializable
+    private transient Button location;
     private Mule muleOnProp;
     private int energyProd;
     private int foodProd;
     private int oreProd;
 
+<<<<<<< HEAD
+=======
+    /**
+     * LandPlot constructor
+      * @param type type of land
+     * @param owner player that owns this land
+     * @param color color of land on map
+     * @param location where the land button is located
+     */
+>>>>>>> parent of 6eb2834... Fixed a bug with placing mules after loading game
     public LandPlot(String type, Player owner, Color color, Button location) {
         this.type = type;
         this.owner = owner;
@@ -95,6 +107,15 @@ public class LandPlot {
             oreProd = 0;
             System.out.println("Error in decided land type for production rates.");
         }
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
+    }
+
+    // used for loading the game
+    public void setLocation(Button location) {
+        this.location = location;
     }
 
 

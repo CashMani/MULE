@@ -3,10 +3,12 @@ package sample;
 import javafx.scene.control.Button;
 import javafx.scene.paint.Color;
 
+import java.io.Serializable;
+
 /**
  * Created by Alexandra Link on 10/1/15.
  */
-public class Store {
+public class Store implements Serializable {
 
     //Stock indexing:
     //Food(0); Energy(1); Smithore(2); Crystite(3); Mule(4)
