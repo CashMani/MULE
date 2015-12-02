@@ -6,6 +6,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.util.ArrayList;
+import javafx.scene.media.MediaPlayer;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaView;
+import java.io.File;
 
 public class Main extends Application {
 
@@ -28,6 +32,11 @@ public class Main extends Application {
         primary.setStage(stage);
         primary.setStartPage();
         stage.show();
+        String path = "barbie girl lyrics.mp3";
+        Media media = new Media(new File(path).toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.setAutoPlay(true);
+        MediaView mediaView = new MediaView(mediaPlayer);
     }
 
 
