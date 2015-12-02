@@ -4,14 +4,27 @@ import java.util.Random;
 
 /**
  * Created by Alexandra Link on 10/21/15.
+ * Edited by McKenzie Elliott on 11/4/15.
+ *
+ * Dictates the Random Events that may occur during MULE game play.
  */
 public class RandomEvents implements Serializable {
     Random rand;
 
+    /**
+     * Random events constructor.
+     */
     public RandomEvents() {
         rand = new Random();
     }
 
+    /**
+     * Determines whether or not a Random event will occur.
+     * Executed by utilization of a random number generator and number comparison
+     * in order to creat probablity. There exists a 26% chance that a random
+     * event will occur.
+     * @return true if a random event is to occur, false if not.
+     */
     public boolean calcRandChance() {
 
         int chance = rand.nextInt(99);
@@ -22,6 +35,13 @@ public class RandomEvents implements Serializable {
         return false;
     }
 
+    /**
+     * The random event that is to occur when calcRandChance returns true.
+     * Uses a switch-case  and random number generator to toggle through
+     * a number of viable event options. Random events may add to or subtract
+     * from a Player's inventory.
+     * @param option the random event that is to occur in the MULE game round.
+     */
     public void randEventOccurs(int option) {
         int event = rand.nextInt(option) + 1;
         int m = Round.getRandEventFactor();

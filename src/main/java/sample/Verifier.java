@@ -7,8 +7,18 @@ import javafx.collections.ObservableMap;
 
 /**
  * Created by mani on 9/24/15.
+ * Edited by McKenzie Elliott on 11/4/15.
+ *
+ * Defines a Player object's name and race.
  */
 public class Verifier {
+
+    /**
+     * Takes in user input to define a custom name for a Player object
+     * @param input a name value inputted by a user
+     * @return the inputted name of the Player
+     * @throws IllegalArgumentException
+     */
     public static String verifyName(String input) throws IllegalArgumentException {
         String name = "";
         if (input == null || input == "" || input.isEmpty()) {
@@ -17,6 +27,11 @@ public class Verifier {
             return input;
     }
 
+    /**
+     * Toggles between possible races in an ENUM category
+     * @param g the series of ENUM items to toggle between
+     * @return type of Race the player is/will be
+     */
     public static Main.Race verifyRace(ToggleGroup g) {
         Toggle toggled = g.getSelectedToggle();
         ObservableList<Toggle> toggles = g.getToggles();

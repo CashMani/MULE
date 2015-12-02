@@ -11,6 +11,14 @@ import javafx.scene.media.Media;
 import javafx.scene.media.MediaView;
 import java.io.File;
 
+/**
+ * Created by Mani Japra and Alex Link.
+ * Edited by McKenzie Elliott on 11/4/15.
+ *
+ * Sets the stage for the user's visuals and sets details of a Player's
+ * potential attributes as well as sets up the basics of the game's core
+ * variable values.
+ */
 public class Main extends Application {
 
     public enum Difficulty { BEGINNER, STANDARD, TOURNAMENT};
@@ -32,14 +40,17 @@ public class Main extends Application {
         primary.setStage(stage);
         primary.setStartPage();
         stage.show();
-        String path = "barbie girl lyrics.mp3";
+        String path = "C64 m.u.l.e. music.mp3";
         Media media = new Media(new File(path).toURI().toString());
         MediaPlayer mediaPlayer = new MediaPlayer(media);
         mediaPlayer.setAutoPlay(true);
         MediaView mediaView = new MediaView(mediaPlayer);
     }
 
-
+    /**
+     * Runs the game.
+     * @param args all the game items to be run
+     */
     public static void main(String[] args) {
         launch(args);
     }
